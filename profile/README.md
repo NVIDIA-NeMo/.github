@@ -11,7 +11,7 @@ This GitHub organization hosts repositories for NeMo's core components and integ
 
 **[Nemo RL](https://github.com/NVIDIA-NeMo/rl)**
 
-- State of the art post-training techniques such as GRPO, DPO, SFT etc.Distributed inference runtime with Rust-based orchestration
+- State of the art post-training techniques such as GRPO, DPO, SFT etc. Distributed inference runtime with Ray-based orchestration
 - Seamless integration with :hugs:Hugging Face for users to try out a wide range of models
 - High performance implementation with Megatron Core with various parallelisms for large models and long context lengths.
 
