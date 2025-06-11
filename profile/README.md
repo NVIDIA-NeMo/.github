@@ -1,1 +1,34 @@
-This is a test message for the NVIDIA-NeMO github org. More details to come
+<!--
+SPDX-FileCopyrightText: Copyright (c) 2024-2025 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+SPDX-License-Identifier: Apache-2.0
+-->
+
+# NVIDIA NeMo Framework
+
+NeMo Framework is NVIDIA's GPU accelerated, end-to-end training framework for large language models (LLMs), multi-modal models and speech models. It enables seamless scaling of training (both pretraining and post-training) workloads from single GPU to thousand-node clusters for both :hugs:Hugging Face models and proprietary ones. 
+
+This GitHub organization hosts repositories for NeMo's core components and integrations, including:
+
+**[Nemo RL](https://github.com/NVIDIA-NeMo/rl)**
+
+- State of the art post-training techniques such as GRPO, DPO, SFT etc.Distributed inference runtime with Rust-based orchestration
+- Seamless integration with :hugs:Hugging Face for users to try out a wide range of models
+- High performance implementation with Megatron Core with various parallelisms for large models and long context lengths.
+
+## Getting Started
+
+To learn more about NVIDIA Dynamo Inference Serving Platform, please refer to the [Dynamo developer page](https://developer.nvidia.com/dynamo) and read our [Quickstart Guide](https://github.com/ai-dynamo/dynamo/blob/main/README.md#quick-start) for container setup and basic workflows.
+
+## Documentation
+
+To learn more about NVIDIA NeMo Framework and all of its various component libraries, please refer to the [NeMo Framework User Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html), which includes quick start guide, tutorials, model-specific recipes, best practice guides and performance benchmarks.  
+
+## Contribution & Support
+
+- Follow [Contribution Guidelines](../CONTRIBUTING.md)
+- Report issues via GitHub Discussions
+- Enterprise support available through NVIDIA AI Enterprise
+
+## License
+
+Apache 2.0 licensed with third-party attributions documented in each repository.
