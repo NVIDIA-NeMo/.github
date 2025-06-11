@@ -15,9 +15,14 @@ This GitHub organization hosts repositories for NeMo's core components and integ
 - Seamless integration with :hugs:Hugging Face for users to try out a wide range of models
 - High performance implementation with Megatron Core with various parallelisms for large models and long context lengths.
 
-## Getting Started
+**[Nemo Curator](https://github.com/NVIDIA-NeMo/curator)**
 
-To learn more about NVIDIA Dynamo Inference Serving Platform, please refer to the [Dynamo developer page](https://developer.nvidia.com/dynamo) and read our [Quickstart Guide](https://github.com/ai-dynamo/dynamo/blob/main/README.md#quick-start) for container setup and basic workflows.
+- Fast and scalable dataset preparation and curation for both pretraining and post-training pipelines.
+- Significant time savings by leveraging GPUs with Dask and RAPIDS.
+- Customizable and modular interface, simplifying pipeline expansion and accelerating model convergence through the preparation of high-quality tokens.
+
+
+
 
 ## Documentation
 
