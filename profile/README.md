@@ -9,6 +9,7 @@ NeMo Framework is NVIDIA's GPU accelerated, end-to-end training framework for la
 
 This GitHub organization hosts repositories for NeMo's core components and integrations, including:
 
+<!--
 **[NeMo RL](https://github.com/NVIDIA-NeMo/rl)**
 
 - State of the art post-training techniques such as GRPO, DPO, SFT etc.
@@ -21,6 +22,7 @@ This GitHub organization hosts repositories for NeMo's core components and integ
 - Fast and scalable dataset preparation and curation for both pretraining and post-training pipelines.
 - Significant time savings by leveraging GPUs with Dask and RAPIDS.
 - Customizable and modular interface, simplifying pipeline expansion and accelerating model convergence through the preparation of high-quality tokens.
+-->
 
 ## Documentation
 
