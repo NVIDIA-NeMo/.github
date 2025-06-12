@@ -28,11 +28,13 @@ This GitHub organization hosts repositories for NeMo's core components and integ
 
 To learn more about NVIDIA NeMo Framework and all of its component libraries, please refer to the [NeMo Framework User Guide](https://docs.nvidia.com/nemo-framework/user-guide/latest/overview.html), which includes quick start guide, tutorials, model-specific recipes, best practice guides and performance benchmarks.  
 
+<!--
 ## Contribution & Support
 
 - Follow [Contribution Guidelines](../CONTRIBUTING.md)
 - Report issues via GitHub Discussions
 - Enterprise support available through NVIDIA AI Enterprise
+-->
 
 ## License
 
