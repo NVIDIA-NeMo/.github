@@ -5,9 +5,17 @@ SPDX-License-Identifier: Apache-2.0
 
 # NVIDIA NeMo Framework
 
-NeMo Framework is NVIDIA's GPU accelerated, end-to-end training framework for large language models (LLMs), multi-modal models and speech models. It enables seamless scaling of training (both pretraining and post-training) workloads from single GPU to thousand-node clusters for both :hugs:Hugging Face, Megatron, and Pytorch models. 
+NeMo Framework is NVIDIA's GPU accelerated, end-to-end training framework for large language models (LLMs), multi-modal models and speech models. It enables seamless scaling of training (both pretraining and post-training) workloads from single GPU to thousand-node clusters for both 🤗Hugging Face/PyTorch and Megatron models. This GitHub organization includes a suite of libraries and recipe collections to help users train models from end to end.
 
-This GitHub organization hosts repositories for NeMo's core components and integrations.
+<div align="center">
+  ![image](../RepoDiagram.png)
+</div>
+
+
+
+<div align="center">
+  Figure 1. NeMo Framework Repo Overview
+</div>
 
 <!--
 **[NeMo RL](https://github.com/NVIDIA-NeMo/rl)**
