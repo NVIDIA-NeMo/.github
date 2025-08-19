@@ -7,37 +7,28 @@ SPDX-License-Identifier: Apache-2.0
 
 NeMo Framework is NVIDIA's GPU accelerated, end-to-end training framework for large language models (LLMs), multi-modal models and speech models. It enables seamless scaling of training (both pretraining and post-training) workloads from single GPU to thousand-node clusters for both 🤗Hugging Face/PyTorch and Megatron models. This GitHub organization includes a suite of libraries and recipe collections to help users train models from end to end.
 
-<div align="center">
-  ![image](../RepoDiagram.png)
-</div>
-
-
-
+  ![image](/RepoDiagram.png)
+  
 <div align="center">
   Figure 1. NeMo Framework Repo Overview
 </div>
 
-<!--
-**[NeMo RL](https://github.com/NVIDIA-NeMo/rl)**
+Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️ and participate in discussion forums 🗣️!
+* [NeMo Curator](https://github.com/NVIDIA-NeMo/Curator)
+* [NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge)
+* [NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel)
+* [NeMo RL](https://github.com/NVIDIA-NeMo/RL)
+* [NeMo Eval](https://github.com/NVIDIA-NeMo/Eval)
+* [NeMo Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy)
+* [NeMo Run](https://github.com/NVIDIA-NeMo/Run)
+* [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) (to be added to the Github Org)
+* [NeMo Speech](https://github.com/NVIDIA-NeMo) (to be added to the Github Org)
+* [NeMo Skills](https://github.com/NVIDIA/NeMo-Skills)
+* NeMo VFM (coming up)
 
-- State of the art post-training techniques such as GRPO, DPO, SFT etc.
-- Distributed inference runtime with Ray-based orchestration.
-- Seamless integration with :hugs:Hugging Face for users to post-train a wide range of models.
-- High performance Megatron Core-based implementation with many parallelisms for large models and long context lengths.
 
-**[NeMo Run](https://github.com/NVIDIA/NeMo-Run)**
+📢 Also take a look at [our blogs](https://nvidia-nemo.github.io/blog/) for the latest exciting things that we are working on!
 
-- Streamlined configuration, execution, and management of machine learning experiments across multiple computing environments.
-- Seamless portability via support for Local, Slurm, Docker, Lepton, RunAI and Skypilot executors.
-- Support for defining complex experiments via a DAG based interface
-
-
-**[NeMo Curator](https://github.com/NVIDIA-NeMo/curator)**
-
-- Fast and scalable dataset preparation and curation for both pretraining and post-training pipelines.
-- Significant time savings by leveraging GPUs with Dask and RAPIDS.
-- Customizable and modular interface, simplifying pipeline expansion and accelerating model convergence through the preparation of high-quality tokens.
--->
 
 ## Documentation
 
