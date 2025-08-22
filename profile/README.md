@@ -28,7 +28,7 @@ Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️
 * [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) (to be added to the Github Org)
 * [NeMo Speech](https://github.com/NVIDIA-NeMo) (to be added to the Github Org)
 * [NeMo Skills](https://github.com/NVIDIA/NeMo-Skills) (to be added to the Github Org)
-* NeMo VFM (coming up - Lightning-free, both Megatron-core and PyTorch backends)
+* NeMo VFM (coming up - PyT native loop, both Megatron-core and PyTorch backends)
 <p></p>
 
 📢 Also take a look at [our blogs](https://nvidia-nemo.github.io/blog/) for the latest exciting things that we are working on!
