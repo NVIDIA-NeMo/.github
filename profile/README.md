@@ -24,7 +24,7 @@ Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️
 * [NeMo Eval](https://github.com/NVIDIA-NeMo/Eval)
 * [NeMo Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy)
 * [NeMo Run](https://github.com/NVIDIA-NeMo/Run)
-* [NeMo Previous (with Lightning)](https://github.com/NVIDIA/NeMo) (This is the previous NeMo 1.x/2.x repo with Lightning that will be added to the GitHub Org and repurposed to focus on Speech)
+* [Previous NeMo (with Lightning)](https://github.com/NVIDIA/NeMo) (This is the previous NeMo 1.x/2.x repo with Lightning that will be added to the GitHub Org and repurposed to focus on Speech)
 * [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) (to be added to the Github Org)
 * [NeMo Speech](https://github.com/NVIDIA-NeMo) (to be added to the Github Org)
 * [NeMo Skills](https://github.com/NVIDIA/NeMo-Skills) (to be added to the Github Org)
@@ -33,6 +33,10 @@ Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️
 
 📢 Also take a look at [our blogs](https://nvidia-nemo.github.io/blog/) for the latest exciting things that we are working on!
 
+## Some background contexts and motivations
+The NeMo GitHub Org and its repo collections are created to address the following problems
+* **Need for composability**: The [Previous NeMo](https://github.com/NVIDIA/NeMo) is monolithic and encompasses too many things, making it hard for users to find what they need. Container size is also an issue. Breaking down the Monolithic repo into a series of functional-focused repos help users discover and find what they need.
+* **Need for customizability**: The [Previous NeMo](https://github.com/NVIDIA/NeMo) uses PyTorch Lighting as the default trainer loop, which provides some out of the box functionality but making it hard to customize. [NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge), [NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel), and [NeMo RL](https://github.com/NVIDIA-NeMo/RL) have adopted pytorch native custom loop to improve flexibility and ease of use for developers. 
 
 ## Documentation
 
