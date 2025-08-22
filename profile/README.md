@@ -17,18 +17,18 @@ NeMo Framework is also a part of the NVIDIA NeMo software suite for managing the
 <p></p>
 
 Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️ and participate in discussion forums 🗣️!
+* [NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge) (Lightning-free, Megatron-core backend trainng)
+* [NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel) (Lightning-free, PyTorch backend training)
+* [NeMo RL](https://github.com/NVIDIA-NeMo/RL) (Lightning-free, with both PyTorch and Megatron-core backends)
 * [NeMo Curator](https://github.com/NVIDIA-NeMo/Curator)
-* [NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge)
-* [NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel)
-* [NeMo RL](https://github.com/NVIDIA-NeMo/RL)
 * [NeMo Eval](https://github.com/NVIDIA-NeMo/Eval)
 * [NeMo Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy)
 * [NeMo Run](https://github.com/NVIDIA-NeMo/Run)
-* [NeMo Previous](https://github.com/NVIDIA/NeMo) (This is the previous NeMo Framework 1.x/2.x repo that will be added to the GitHub Org and repurposed to focus on Speech)
+* [NeMo Previous (with Lightning)](https://github.com/NVIDIA/NeMo) (This is the previous NeMo 1.x/2.x repo with Lightning that will be added to the GitHub Org and repurposed to focus on Speech)
 * [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) (to be added to the Github Org)
 * [NeMo Speech](https://github.com/NVIDIA-NeMo) (to be added to the Github Org)
 * [NeMo Skills](https://github.com/NVIDIA/NeMo-Skills) (to be added to the Github Org)
-* NeMo VFM (coming up)
+* NeMo VFM (coming up - Lightning-free, both Megatron-core and PyTorch backends)
 <p></p>
 
 📢 Also take a look at [our blogs](https://nvidia-nemo.github.io/blog/) for the latest exciting things that we are working on!
