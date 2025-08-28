@@ -24,7 +24,7 @@ Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️
 |[NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge)|Pretraining, LoRA, SFT|PyT native loop|Megatron-core|NA|LLM & VLM|
 |[NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel)|Pretraining, LoRA, SFT|PyT native loop|PyTorch DTensor|NA|LLM, VLM, Omni, VFM|
 |[NeMo RL](https://github.com/NVIDIA-NeMo/RL)|SFT, RL|PyT native loop|Megatron-core, PyT DTensor|vLLM|LLM, VLM|
-|[Previous NeMo 1.x & 2.x (with Lightning)->will repurpose to focus on Speech](https://github.com/NVIDIA/NeMo)|Pretraining,SFT|PyTorch Lightning Loop|PyTorch?|RIVA?|Speech|
+|[NeMo 1.x & 2.x (with Lightning)->will repurpose to focus on Speech](https://github.com/NVIDIA/NeMo)|Pretraining,SFT|PyTorch Lightning Loop|PyTorch?|RIVA?|Speech|
 |[NeMo Curator](https://github.com/NVIDIA-NeMo/Curator)|Data curation|NA|NA|NA|Agnostic|
 |[NeMo Eval](https://github.com/NVIDIA-NeMo/Eval)|Model evaluation|NA|NA|?|Agnostic|
 [NeMo Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy)|Export to Production|NA|NA|vLLM, TRT, TRTLLM, ONNX|Agnostic|
