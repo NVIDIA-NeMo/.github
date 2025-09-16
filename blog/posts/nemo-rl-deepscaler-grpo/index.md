@@ -21,7 +21,12 @@ tags:
     - Qwen
 ---
 
-<!-- nemo_blog: {"repo": "https://github.com/NVIDIA-NeMo/blog-poc", "category": "Show and tell", "authors": ["chtruong814"]} -->
+<!--
+nemo_blog: {
+  "repo": "https://github.com/NVIDIA-NeMo/blog-poc",
+  "authors": ["chtruong814"]
+}
+-->
 
 # Reinforcement Learning with NVIDIA NeMo-RL: Reproducing a DeepScaleR Recipe Using GRPO
 
