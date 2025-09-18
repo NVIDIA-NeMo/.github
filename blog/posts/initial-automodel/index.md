@@ -12,16 +12,12 @@ authors:
 
 <!--
 nemo_blog: {
-  "repo": "https://github.com/NVIDIA-NeMo/blog-poc",
-  "authors": ["chtruong814"]
+  "repo": "https://github.com/NVIDIA-NeMo/Automodel",
+  "authors": ["akoumpa", "shashank3959", "snowmanwwg", "bernardwin"]
 }
 -->
 
 # Fine-tune Hugging Face Models Instantly with Day-0 Support with NVIDIA NeMo AutoModel
-
-
-### Testing a change again
-
 
 ---
 ![](https://developer-blogs.nvidia.com/wp-content/uploads/2025/05/NeMo-AutoModel.png)

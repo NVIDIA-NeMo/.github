@@ -27,3 +27,31 @@ authors:
     name: Sylendran Arunagiri
     description: Technical Product Marketing Manager
     avatar: https://developer-blogs.nvidia.com/wp-content/uploads/2025/03/Sylendran-Arunagiri-131x131.jpg
+  anna_shors:
+    name: Anna Shors
+    description: Senior Deep Learning Algorithm Engineer
+    avatar: https://developer-blogs.nvidia.com/wp-content/uploads/2024/12/Anna-Shors-262x262.jpg
+  parth_chadha:
+    name: Parth Chadha
+    description: Senior Deep Learning Algorithm Engineer
+    avatar: https://developer-blogs.nvidia.com/wp-content/uploads/2021/12/Parth-Chadha.png
+  huiying_li:
+    name: Huiying Li
+    description: Deep Learning Algorithm Engineer
+    avatar: assets/images/authors/huiying_li.png
+  sofia_kostandian:
+    name: Sofia Kostandian
+    description: Deep Learning Software Engineer
+    avatar: https://developer-blogs.nvidia.com/wp-content/uploads/2024/07/Sofia-Kostandian.jpg
+  nithin_rao_koluguri:
+    name: Nithin Rao Koluguri
+    description: Senior Research Scientist
+    avatar: https://developer-blogs.nvidia.com/wp-content/uploads/2024/03/nithin-rao-koluguri.png
+  guyue_huang:
+    name: Guyue Huang
+    description: Deep Learning Architect
+    avatar: assets/images/authors/guyue_huang.png
+  zhiyu_li:
+    name: Zhiyul Li
+    description: Deep Learning Algorithm Engineer
+    avatar: assets/images/authors/zhiyu_li.png
