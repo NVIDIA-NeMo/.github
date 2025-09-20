@@ -25,14 +25,15 @@ Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️
 |[NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel)|Pretraining, LoRA, SFT|PyT native loop|PyTorch DTensor|NA|LLM, VLM, Omni, VFM|
 |[NeMo 1.x & 2.x (with Lightning)->will repurpose to focus on Speech](https://github.com/NVIDIA-NeMo/NeMo)|Pretraining,SFT|PyTorch Lightning Loop|PyTorch|RIVA|Speech|
 |[NeMo RL](https://github.com/NVIDIA-NeMo/RL)|SFT, RL|PyT native loop|Megatron-core, PyT DTensor|vLLM|LLM, VLM|
+|[NeMo Gym](https://github.com/NVIDIA-NeMo/GYM)|RL Environment|PyT native loop|Megatron-core, PyT DTensor|vLLM|LLM, VLM|
 |[NeMo Aligner (deprecated)](https://github.com/NVIDIA/NeMo-Aligner)|SFT, RL|PyT Lightning Loop|Megatron-core|TRTLLM|LLM|
 |[NeMo Curator](https://github.com/NVIDIA-NeMo/Curator)|Data curation|NA|NA|NA|Agnostic|
 |[NeMo Eval](https://github.com/NVIDIA-NeMo/Eval)|Model evaluation|NA|NA||Agnostic|
 [NeMo Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy)|Export to Production|NA|NA|vLLM, TRT, TRTLLM, ONNX|Agnostic|
 [NeMo Run](https://github.com/NVIDIA-NeMo/Run)|Experiment launcher|NA|NA|NA|Agnostic
-[NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) (to be added to the Github Org)|Guardrail model response|NA|NA|NA||
+[NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails)|Guardrail model response|NA|NA|NA||
 |[NeMo Skills](https://github.com/NVIDIA/NeMo-Skills) (to be added to the Github Org)|Reference pipeline for SDG & Eval|NA|NA|NA|Agnostic|
-|NeMo VFM|Video foundation model training|PyT native loop|Megatron-core and PyTorch|PyTorch|VFM, Diffusion|
+|NeMo DFM (WIP)|Diffusion foundation model training|PyT native loop|Megatron-core and PyTorch|PyTorch|VFM, Diffusion|
 
 
 <div align="center">
