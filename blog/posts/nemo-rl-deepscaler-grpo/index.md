@@ -21,6 +21,13 @@ tags:
     - Qwen
 ---
 
+<!--
+nemo_blog: {
+  "repo": "https://github.com/NVIDIA-NeMo/RL",
+  "authors": ["abukharin-nv", "terrykong", "snowmanwwg", "Sylendran95"]
+}
+-->
+
 # Reinforcement Learning with NVIDIA NeMo-RL: Reproducing a DeepScaleR Recipe Using GRPO
 
 [Reinforcement learning (RL)](https://www.nvidia.com/en-us/glossary/reinforcement-learning/) is the backbone of interactive AI. It is fundamental for teaching agents to reason and learn from human preferences, enabling multiturn tool use, and much more. This post introduces [NVIDIA NeMo-RL](https://docs.nvidia.com/nemo/rl/latest/index.html), a new open source post-training library that is built to support everything from single-GPU prototypes to thousand-GPU large models and to orchestrate multicomponent RL pipelines with ease.

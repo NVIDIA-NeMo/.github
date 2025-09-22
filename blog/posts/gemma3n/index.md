@@ -11,6 +11,13 @@ categories:
   - automodel
 ---
 
+<!--
+nemo_blog: {
+  "repo": "https://github.com/NVIDIA-NeMo/Automodel",
+  "authors": ["HuiyingLi", "akoumpa", "snowmanwwg", "Sylendran95"]
+}
+-->
+
 # 🚀 NeMo Framework Now Supports Google Gemma 3n: Efficient Multimodal Fine-tuning Made Simple
 
 ## Introduction

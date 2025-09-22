@@ -20,6 +20,13 @@ tags:
     - DeepSeekV3
 ---
 
+<!--
+nemo_blog: {
+  "repo": "https://github.com/NVIDIA-NeMo/RL",
+  "authors": ["guyueh1", "parthchadha", "terrykong", "snowmanwwg", "ZhiyuLi-Nvidia"]
+}
+-->
+
 # NeMo-RL: Journey of Optimizing Weight Transfer in Large MoE Models by 10x
 
 ## Introduction
