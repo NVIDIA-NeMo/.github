@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block site_meta %} 	
+  <!-- OneTrust Cookies Consent Notice start for nvidia-nemo.github.io -->
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="0198e523-9435-7a10-8df7-0d6e4a052aee" ></script>
+  <script type="text/javascript">
+  function OptanonWrapper() {        
+          var event = new Event('bannerLoaded');
+          window.dispatchEvent(event);
+      }
+  </script>
+  <script type="text/javascript" src="https://images.nvidia.com/aem-dam/Solutions/ot-js/ot-custom.js"></script>
+  <!-- OneTrust Cookies Consent Notice end for nvidia-nemo.github.io -->
+  <!-- Adobe Launch Header -->
+  <script src="https://assets.adobedtm.com/5d4962a43b79/b1aa788cc92c/launch-ed01e456fa26.min.js" type="text/javascript"></script>
+  {{ super() }}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <!-- Adobe Launch Footer -->
+  <script type="text/javascript">_satellite.pageBottom();</script>
+{% endblock %}
