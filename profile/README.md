@@ -72,20 +72,29 @@ To learn more about NVIDIA NeMo Framework and all of its component libraries, pl
 
 ### Discussions by Repo
 
-**Automodel**
+<details>
+<summary><strong>Automodel</strong></summary>
 
 - [🚀 NeMo Framework Now Supports Google Gemma 3n: Efficient Multimodal Fine-tuning Made Simple](https://github.com/NVIDIA-NeMo/Automodel/discussions/494) - September 22, 2025
 - [Fine-tune Hugging Face Models Instantly with Day-0 Support with NVIDIA NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel/discussions/477) - September 18, 2025
 
-**NeMo**
+</details>
+
+<details>
+<summary><strong>NeMo</strong></summary>
 
 - [Guide to Fine-tune Nvidia NeMo models with Granary Data](https://github.com/NVIDIA-NeMo/NeMo/discussions/14758) - September 18, 2025
 
-**RL**
+</details>
+
+<details>
+<summary><strong>RL</strong></summary>
 
 - [NeMo-RL: Journey of Optimizing Weight Transfer in Large MoE Models by 10x](https://github.com/NVIDIA-NeMo/RL/discussions/1189) - September 22, 2025
 - [Reinforcement Learning with NVIDIA NeMo-RL: Reproducing a DeepScaleR Recipe Using GRPO](https://github.com/NVIDIA-NeMo/RL/discussions/1188) - September 22, 2025
 - [NeMo-RL V0.3: Scalable and Performant Post-training with Nemo-RL via Megatron-Core](https://github.com/NVIDIA-NeMo/RL/discussions/1161) - September 18, 2025
+
+</details>
 
 
 <!-- discussions-index-end -->
