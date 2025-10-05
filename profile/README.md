@@ -60,6 +60,11 @@ To learn more about NVIDIA NeMo Framework and all of its component libraries, pl
 -->
 
 <!-- discussions-index-start -->
+## Discussions
+
+### Recent Discussions
+
+### Discussions by Repo
 <!-- discussions-index-end -->
 
 ## License
