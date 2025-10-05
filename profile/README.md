@@ -59,6 +59,18 @@ To learn more about NVIDIA NeMo Framework and all of its component libraries, pl
 - Enterprise support available through NVIDIA AI Enterprise
 -->
 
+## Discussions
+
+### Recent Discussions
+
+<!-- discussions-recent-index-start -->
+<!-- discussions-recent-index-index-end -->
+
+### All Discussions by Repos
+
+<!-- discussions-all-repos-index-start -->
+<!-- discussions-all-repos-index-index-end -->
+
 ## License
 
 Apache 2.0 licensed with third-party attributions documented in each repository.
