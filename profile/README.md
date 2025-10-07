@@ -3,12 +3,31 @@ SPDX-FileCopyrightText: Copyright (c) 2024-2025 NVIDIA CORPORATION & AFFILIATES.
 SPDX-License-Identifier: Apache-2.0
 -->
 
-# NVIDIA NeMo Framework
+## NVIDIA NeMo Framework Overview
 
 NeMo Framework is NVIDIA's GPU accelerated, end-to-end training framework for large language models (LLMs), multi-modal models and speech models. It enables seamless scaling of training (both pretraining and post-training) workloads from single GPU to thousand-node clusters for both 🤗Hugging Face/PyTorch and Megatron models. This GitHub organization includes a suite of libraries and recipe collections to help users train models from end to end. 
 
 NeMo Framework is also a part of the NVIDIA NeMo software suite for managing the AI agent lifecycle.
 
+## Latest 📣 announcements and 🗣️ discussions 
+### 🐳 NeMo AutoModel
+- [Enabling PyTorch Native Pipeline Parallelism for 🤗 Hugging Face Transformer Models](https://github.com/NVIDIA-NeMo/Automodel/discussions/589)
+- [Fine-tune Hugging Face Models Instantly with Day-0 Support with NVIDIA NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel/discussions/477)
+- [🚀 NeMo Framework Now Supports Google Gemma 3n: Efficient Multimodal Fine-tuning Made Simple](https://github.com/NVIDIA-NeMo/Automodel/discussions/494)
+
+### 🔬 NeMo RL
+- [On-policy Distillation (Qwen3-style) (Qwen3-style)](https://github.com/NVIDIA-NeMo/RL/discussions/1254)
+- [FP8 Quantization in NeMo RL](https://github.com/NVIDIA-NeMo/RL/discussions/1216)
+- [NeMo-RL: Journey of Optimizing Weight Transfer in Large MoE Models by 10x](https://github.com/NVIDIA-NeMo/RL/discussions/1189)
+- [NeMo-RL V0.3: Scalable and Performant Post-training with Nemo-RL via Megatron-Core](https://github.com/NVIDIA-NeMo/RL/discussions/1161)
+- [Reinforcement Learning with NVIDIA NeMo-RL: Reproducing a DeepScaleR Recipe Using GRPO ](https://github.com/NVIDIA-NeMo/RL/discussions/1188)
+
+### 💬 NeMo Speech
+- [Guide to Fine-tune Nvidia NeMo models with Granary Data](https://github.com/NVIDIA-NeMo/NeMo/discussions/14758)
+
+More to come and stay tuned!
+
+## Repo orgnization 
   ![image](/RepoDiagram.png)
   
 <div align="center">
@@ -23,15 +42,15 @@ Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️
 |-|-|-|-|-|-|-|
 |[NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge)|Pretraining, LoRA, SFT|PyT native loop|Megatron-core|NA|LLM & VLM|NeMo Framework Container
 |[NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel)|Pretraining, LoRA, SFT|PyT native loop|PyTorch|NA|LLM, VLM, Omni, VFM|NeMo AutoModel Container|
-|[NeMo 1.x & 2.x (with Lightning)->will repurpose to focus on Speech](https://github.com/NVIDIA-NeMo/NeMo)|Pretraining,SFT|PyTorch Lightning Loop|PyTorch|RIVA|Speech|NA|
-|[NeMo RL](https://github.com/NVIDIA-NeMo/RL)|SFT, RL|PyT native loop|Megatron-core, PyT|vLLM|LLM, VLM|NeMo RL container|
+|[NeMo 1.x & 2.x (with Lightning)->will repurpose to focus on Speech](https://github.com/NVIDIA-NeMo/NeMo)|Pretraining,SFT|PyTorch Lightning Loop|Megatron-core & PyTorch|RIVA|Speech|NA|
+|[NeMo RL](https://github.com/NVIDIA-NeMo/RL)|SFT, RL|PyT native loop|Megatron-core & PyTorch|vLLM|LLM, VLM|NeMo RL container|
 |NeMo Gym (WIP)|RL Environment, integrate with RL Framework|NA|NA|NA|NA|NeMo RL Container|
 |[NeMo Aligner (deprecated)](https://github.com/NVIDIA/NeMo-Aligner)|SFT, RL|PyT Lightning Loop|Megatron-core|TRTLLM|LLM|NA
 |[NeMo Curator](https://github.com/NVIDIA-NeMo/Curator)|Data curation|NA|NA|NA|Agnostic|NeMo Curator Container|
 |[NeMo Evaluator](https://github.com/NVIDIA-NeMo/Evaluator)|Model evaluation|NA|NA||Agnostic|NeMo Framework Container|
-[NeMo Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy)|Export to Production|NA|NA|vLLM, TRT, TRTLLM, ONNX|Agnostic|NeMo Framework Container|
-[NeMo Run](https://github.com/NVIDIA-NeMo/Run)|Experiment launcher|NA|NA|NA|Agnostic|NeMo Framework Container|
-[NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails)|Guardrail model response|NA|NA|NA||NA|
+|[NeMo Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy)|Export to Production|NA|NA|vLLM, TRT, TRTLLM, ONNX|Agnostic|NeMo Framework Container|
+|[NeMo Run](https://github.com/NVIDIA-NeMo/Run)|Experiment launcher|NA|NA|NA|Agnostic|NeMo Framework Container|
+|[NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails)|Guardrail model response|NA|NA|NA||NA|
 |[NeMo Skills](https://github.com/NVIDIA/NeMo-Skills) (to be added to the Github Org)|Reference pipeline for SDG & Eval|NA|NA|NA|Agnostic|NA|
 |[NeMo Emerging Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers)|Collection of Optimizers|NA|Agnostic|NA|NA|NA|
 |NeMo DFM (WIP)|Diffusion foundation model training|PyT native loop|Megatron-core and PyTorch|PyTorch|VFM, Diffusion|TBD|
@@ -41,8 +60,6 @@ Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️
   Table 1. NeMo Framework Repos
 </div>
 <p></p>
-
-📢 Also take a look at [our blogs](https://nvidia-nemo.github.io/blog/) for the latest exciting things that we are working on!
 
 ## Some background contexts and motivations
 The NeMo GitHub Org and its repo collections are created to address the following problems
