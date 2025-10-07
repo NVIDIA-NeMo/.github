@@ -27,7 +27,7 @@ NeMo Framework is also a part of the NVIDIA NeMo software suite for managing the
 
 More to come and stay tuned!
 
-## Repo orgnization under NeMo Framework
+## Repo organization under NeMo Framework
   ![image](/RepoDiagram.png)
   
 <div align="center">
