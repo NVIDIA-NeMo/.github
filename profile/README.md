@@ -60,41 +60,7 @@ To learn more about NVIDIA NeMo Framework and all of its component libraries, pl
 -->
 
 <!-- discussions-index-start -->
-## Discussions
-
-### Recent Discussions
-
-- <a href="https://github.com/NVIDIA-NeMo/RL/discussions/1189" target="_blank">NeMo-RL: Journey of Optimizing Weight Transfer in Large MoE Models by 10x</a> - Sep 22, 2025
-- <a href="https://github.com/NVIDIA-NeMo/RL/discussions/1188" target="_blank">Reinforcement Learning with NVIDIA NeMo-RL: Reproducing a DeepScaleR Recipe Using GRPO</a> - Sep 22, 2025
-- <a href="https://github.com/NVIDIA-NeMo/Automodel/discussions/494" target="_blank">🚀 NeMo Framework Now Supports Google Gemma 3n: Efficient Multimodal Fine-tuning Made Simple</a> - Sep 22, 2025
-- <a href="https://github.com/NVIDIA-NeMo/RL/discussions/1161" target="_blank">NeMo-RL V0.3: Scalable and Performant Post-training with Nemo-RL via Megatron-Core</a> - Sep 18, 2025
-- <a href="https://github.com/NVIDIA-NeMo/Automodel/discussions/477" target="_blank">Fine-tune Hugging Face Models Instantly with Day-0 Support with NVIDIA NeMo AutoModel</a> - Sep 18, 2025
-
-### Discussions by Repo
-
-<details>
-<summary><strong>Automodel</strong></summary>
-
-- <a href="https://github.com/NVIDIA-NeMo/Automodel/discussions/494" target="_blank">🚀 NeMo Framework Now Supports Google Gemma 3n: Efficient Multimodal Fine-tuning Made Simple</a> - Sep 22, 2025
-- <a href="https://github.com/NVIDIA-NeMo/Automodel/discussions/477" target="_blank">Fine-tune Hugging Face Models Instantly with Day-0 Support with NVIDIA NeMo AutoModel</a> - Sep 18, 2025
-
-</details>
-
-<details>
-<summary><strong>NeMo</strong></summary>
-
-- <a href="https://github.com/NVIDIA-NeMo/NeMo/discussions/14758" target="_blank">Guide to Fine-tune Nvidia NeMo models with Granary Data</a> - Sep 18, 2025
-
-</details>
-
-<details>
-<summary><strong>RL</strong></summary>
-
-- <a href="https://github.com/NVIDIA-NeMo/RL/discussions/1189" target="_blank">NeMo-RL: Journey of Optimizing Weight Transfer in Large MoE Models by 10x</a> - Sep 22, 2025
-- <a href="https://github.com/NVIDIA-NeMo/RL/discussions/1188" target="_blank">Reinforcement Learning with NVIDIA NeMo-RL: Reproducing a DeepScaleR Recipe Using GRPO</a> - Sep 22, 2025
-- <a href="https://github.com/NVIDIA-NeMo/RL/discussions/1161" target="_blank">NeMo-RL V0.3: Scalable and Performant Post-training with Nemo-RL via Megatron-Core</a> - Sep 18, 2025
-
-</details>
+## Latest 📣 announcements and 🗣️ discussions
 
 
 <!-- discussions-index-end -->
