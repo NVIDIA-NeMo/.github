@@ -71,6 +71,8 @@ To learn more about NVIDIA NeMo Framework and all of its component libraries, pl
 
 ### 🔬 NeMo RL
 
+- [10/2/2025]<a href="https://github.com/NVIDIA-NeMo/RL/discussions/1254" target="_blank">On-policy Distillation (Qwen3-style)</a>
+- [9/27/2025]<a href="https://github.com/NVIDIA-NeMo/RL/discussions/1216" target="_blank">FP8 Quantization in NeMo RL</a>
 - [9/22/2025]<a href="https://github.com/NVIDIA-NeMo/RL/discussions/1189" target="_blank">NeMo-RL: Journey of Optimizing Weight Transfer in Large MoE Models by 10x</a>
 - [9/22/2025]<a href="https://github.com/NVIDIA-NeMo/RL/discussions/1188" target="_blank">Reinforcement Learning with NVIDIA NeMo-RL: Reproducing a DeepScaleR Recipe Using GRPO</a>
 - [9/18/2025]<a href="https://github.com/NVIDIA-NeMo/RL/discussions/1161" target="_blank">NeMo-RL V0.3: Scalable and Performant Post-training with Nemo-RL via Megatron-Core</a>
