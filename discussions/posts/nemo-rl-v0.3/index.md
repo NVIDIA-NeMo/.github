@@ -172,7 +172,7 @@ Megatron-based training supports both dense and Mixture of Experts (MoE) models.
 </tbody>
 </table>
 
-*All runs were conducted with the following settings: max sequence length 4096, rollout batch size 2048, global batch size 512, and sequence packing enabled (see the subsequent section for details on sequence packing). For the Megatron-Core runs, Llama 3.1-8B was run with only data parallel, Llama 3.1-70B was run with 4-way tensor and 4-way pipeline parallel, Qwen3 32B was run with 4-way tensor and 2-way pipeline parallel, and Qwen3 30B-A3B was run with 8-way expert and 2-way tensor parallel.*
+*All runs were conducted on 8xH100 80GB nodes with the following settings: max sequence length 4096, rollout batch size 2048, global batch size 512, and sequence packing enabled (see the subsequent section for details on sequence packing). For the Megatron-Core runs, Llama 3.1-8B was run with only data parallel, Llama 3.1-70B was run with 4-way tensor and 4-way pipeline parallel, Qwen3 32B was run with 4-way tensor and 2-way pipeline parallel, and Qwen3 30B-A3B was run with 8-way expert and 2-way tensor parallel.*
 
 *\*Llama 70B DTensor results were gathered using dynamic batching rather than sequence packing because of a known [out of memory issue with sequence packing](https://github.com/NVIDIA-NeMo/RL/issues/769).*
 
