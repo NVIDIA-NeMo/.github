@@ -51,7 +51,7 @@ Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️
 |[NeMo Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy)|Export to Production|NA|NA|vLLM, TRT, TRTLLM, ONNX|Agnostic|NeMo Framework Container|
 |[NeMo Run](https://github.com/NVIDIA-NeMo/Run)|Experiment launcher|NA|NA|NA|Agnostic|NeMo Framework Container|
 |[NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails)|Guardrail model response|NA|NA|NA||NA|
-|[NeMo Skills](https://github.com/NVIDIA/NeMo-Skills) (to be added to the Github Org)|Reference pipeline for SDG & Eval|NA|NA|NA|Agnostic|NA|
+|[NeMo Skills](https://github.com/NVIDIA-NeMo/Skills)|Reference pipeline for SDG & Eval|NA|NA|NA|Agnostic|NA|
 |[NeMo Emerging Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers)|Collection of Optimizers|NA|Agnostic|NA|NA|NA|
 |NeMo DFM (WIP)|Diffusion foundation model training|PyT native loop|Megatron-core and PyTorch|PyTorch|VFM, Diffusion|TBD|
 
