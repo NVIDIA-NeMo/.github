@@ -15,7 +15,7 @@ nemo_discussion: {
   "authors": ["hemildesai"]
 }
 -->
- 
+
 ## Introduction
 
 As large language models (LLMs) continue to grow in scale - from billions to hundreds of billions of parameters - training these models efficiently across multiple GPU nodes has become increasingly challenging. While data parallelism works well for smaller models, larger models often exceed the memory capacity of a single GPU or a single node, necessitating more sophisticated parallelization strategies.
