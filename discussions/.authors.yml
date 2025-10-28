@@ -59,3 +59,19 @@ authors:
     name: Hemil Desai
     description: Senior Deep Learning Algorithm Engineer
     avatar: https://avatars.githubusercontent.com/hemildesai
+  alex_qiu:
+    name: Zhaopeng Qiu
+    description: Solution Architect
+    avatar: assets/images/authors/alex_qiu.jpg
+  shuo_yang:
+    name: Shuo Yang
+    description: Solution Architect
+    avatar: assets/images/authors/shuo_yang.jpg
+  shuang_yu:
+    name: Shuang Yu
+    description: Solution Architect
+    avatar: assets/images/authors/shuang_yu.png
+  sharath_turuvekere_sreenivas:
+    name: Sharath Turuvekere Sreenivas
+    description: Senior Deep Learning Algorithm Engineer
+    avatar: assets/images/authors/sharath_ts.png
