@@ -16,7 +16,7 @@ NeMo Framework is also a part of the NVIDIA NeMo software suite for managing the
 - [9/18/2025][🚀 NeMo Framework Now Supports Google Gemma 3n: Efficient Multimodal Fine-tuning Made Simple](https://github.com/NVIDIA-NeMo/Automodel/discussions/494)
 
 ### 🔬 NeMo RL
-- [10/1/2025][On-policy Distillation (Qwen3-style) (Qwen3-style)](https://github.com/NVIDIA-NeMo/RL/discussions/1254)
+- [10/1/2025][On-policy Distillation](https://github.com/NVIDIA-NeMo/RL/discussions/1445)
 - [9/27/2025][FP8 Quantization in NeMo RL](https://github.com/NVIDIA-NeMo/RL/discussions/1216)
 - [8/15/2025][NeMo-RL: Journey of Optimizing Weight Transfer in Large MoE Models by 10x](https://github.com/NVIDIA-NeMo/RL/discussions/1189)
 - [7/31/2025][NeMo-RL V0.3: Scalable and Performant Post-training with Nemo-RL via Megatron-Core](https://github.com/NVIDIA-NeMo/RL/discussions/1161)
