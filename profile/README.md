@@ -19,13 +19,20 @@ NeMo Framework is also a part of the NVIDIA NeMo software suite for managing the
 - [10/1/2025][On-policy Distillation (Qwen3-style) (Qwen3-style)](https://github.com/NVIDIA-NeMo/RL/discussions/1254)
 - [9/27/2025][FP8 Quantization in NeMo RL](https://github.com/NVIDIA-NeMo/RL/discussions/1216)
 - [8/15/2025][NeMo-RL: Journey of Optimizing Weight Transfer in Large MoE Models by 10x](https://github.com/NVIDIA-NeMo/RL/discussions/1189)
-- [7/31/2025][NeMo-RL V0.3: Scalable and Performant Post-training with Nemo-RL via Megatron-Core](https://github.com/NVIDIA-NeMo/RL/discussions/1161)
-- [5/15/2025][Reinforcement Learning with NVIDIA NeMo-RL: Reproducing a DeepScaleR Recipe Using GRPO ](https://github.com/NVIDIA-NeMo/RL/discussions/1188)
 
 ### 💬 NeMo Speech
 - [8/1/2025][Guide to Fine-tune Nvidia NeMo models with Granary Data](https://github.com/NVIDIA-NeMo/NeMo/discussions/14758)
 
 More to come and stay tuned!
+
+## Getting Started
+If you are training with under 1,000 GPUs (eg. H100), please follow these (no checkpoint conversion needed):
+- For LLMs: [pre-training](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#llm-pre-training), [SFT](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#llm-supervised-fine-tuning-sft), [LoRA](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#llm-parameter-efficient-fine-tuning-peft), [DPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_dpo.py), [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_grpo_math.py)
+- For VLMs: [SFT](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#vlm-supervised-fine-tuning-sft), [LoRA](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#vlm-parameter-efficient-fine-tuning-peft), [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_vlm_grpo.py)
+
+If you are training with more than 1,000 GPUs (eg. H100), please follow these:
+- For LLMs:
+- For VLMs:
 
 ## Repo organization under NeMo Framework
   ![image](/RepoDiagram.png)
