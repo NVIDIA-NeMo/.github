@@ -46,7 +46,7 @@ Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️
 |[NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel)|Pretraining, LoRA, SFT|PyT native loop|PyTorch|NA|LLM, VLM, Omni, VFM|NeMo AutoModel Container|
 |[NeMo 1.x & 2.x (with Lightning)->will repurpose to focus on Speech](https://github.com/NVIDIA-NeMo/NeMo)|Pretraining,SFT|PyTorch Lightning Loop|Megatron-core & PyTorch|RIVA|Speech|NA|
 |[NeMo RL](https://github.com/NVIDIA-NeMo/RL)|SFT, RL|PyT native loop|Megatron-core & PyTorch|vLLM|LLM, VLM|NeMo RL container|
-|NeMo Gym (WIP)|RL Environment, integrate with RL Framework|NA|NA|NA|NA|NeMo RL Container|
+|[NeMo Gym](https://github.com/NVIDIA-NeMo/Gym)|RL Environment, integrate with RL Framework|NA|NA|NA|NA|NeMo RL Container|
 |[NeMo Aligner (deprecated)](https://github.com/NVIDIA/NeMo-Aligner)|SFT, RL|PyT Lightning Loop|Megatron-core|TRTLLM|LLM|NA
 |[NeMo Curator](https://github.com/NVIDIA-NeMo/Curator)|Data curation|NA|NA|NA|Agnostic|NeMo Curator Container|
 |[NeMo Evaluator](https://github.com/NVIDIA-NeMo/Evaluator)|Model evaluation|NA|NA||Agnostic|NeMo Framework Container|
