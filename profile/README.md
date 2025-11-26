@@ -26,13 +26,11 @@ NeMo Framework is also a part of the NVIDIA NeMo software suite for managing the
 More to come and stay tuned!
 
 ## Getting Started
-If you are training with under 1,000 GPUs (eg. H100), please follow these (no checkpoint conversion needed):
-- For LLMs: [pre-training](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#llm-pre-training), [SFT](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#llm-supervised-fine-tuning-sft), [LoRA](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#llm-parameter-efficient-fine-tuning-peft), [DPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_dpo.py), [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_grpo_math.py)
-- For VLMs: [SFT](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#vlm-supervised-fine-tuning-sft), [LoRA](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#vlm-parameter-efficient-fine-tuning-peft), [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_vlm_grpo.py)
 
-If you are training with more than 1,000 GPUs (eg. H100), please follow these:
-- For LLMs:
-- For VLMs:
+||Installation|Checkpoint Conversion HF<>Megatron|LLM example recipes and scripts|VLM example recipes and scripts|
+|-|-|-|-|-|
+|Under 1,000 GPUs|[NeMo Automodel](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#getting-started), [NeMo RL](https://github.com/NVIDIA-NeMo/RL?tab=readme-ov-file#prerequisites)|No Need|[Pre-training](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#llm-pre-training), [SFT](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#llm-supervised-fine-tuning-sft), [LoRA](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#llm-parameter-efficient-fine-tuning-peft), [DPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_dpo.py), [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_grpo_math.py)|[SFT](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#vlm-supervised-fine-tuning-sft), [LoRA](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#vlm-parameter-efficient-fine-tuning-peft), [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_vlm_grpo.py)
+|Over 1,000 GPUs|[Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge?tab=readme-ov-file#-installation), [NeMo-RL](https://github.com/NVIDIA-NeMo/RL?tab=readme-ov-file#prerequisites)|[Conversion](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/examples/conversion/README.md)|[Pretrain, SFT, and LoRA](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/llama/llama3.py), [DPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_dpo.py) with [megatron_cfg](https://github.com/NVIDIA-NeMo/RL/blob/fa379fffbc9c5580301fa748dbba269c7d90f883/examples/configs/dpo.yaml#L99), [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_grpo_math.py) with [megatron_cfg](https://github.com/NVIDIA-NeMo/RL/blob/fa379fffbc9c5580301fa748dbba269c7d90f883/examples/configs/grpo_math_1B_megatron.yaml#L79)|[SFT, LoRA](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/qwen_vl/qwen25_vl.py), [GRPO megatron config](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/configs/vlm_grpo_3B_megatron.yaml)|
 
 ## Repo organization under NeMo Framework
   ![image](/RepoDiagram.png)
