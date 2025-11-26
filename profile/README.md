@@ -33,14 +33,8 @@ More to come and stay tuned!
 |Over 1,000 GPUs|[NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge?tab=readme-ov-file#-installation), [NeMo-RL](https://github.com/NVIDIA-NeMo/RL?tab=readme-ov-file#prerequisites)|[Conversion](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/examples/conversion/README.md)|[Pretrain, SFT, and LoRA](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/llama/llama3.py), [DPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_dpo.py) with [megatron_cfg](https://github.com/NVIDIA-NeMo/RL/blob/fa379fffbc9c5580301fa748dbba269c7d90f883/examples/configs/dpo.yaml#L99), [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_grpo_math.py) with [megatron_cfg](https://github.com/NVIDIA-NeMo/RL/blob/fa379fffbc9c5580301fa748dbba269c7d90f883/examples/configs/grpo_math_1B_megatron.yaml#L79)|[SFT, LoRA](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/qwen_vl/qwen25_vl.py), [GRPO megatron config](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/configs/vlm_grpo_3B_megatron.yaml)|
 
 ## Repo organization under NeMo Framework
-  ![image](/RepoDiagram.png)
-  
-<div align="center">
-  Figure 1. NeMo Framework Repo Overview
-</div>
-<p></p>
 
-## Summary of key functionalities and container strategy of each repo
+### Summary of key functionalities and container strategy of each repo
 
 Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️ and participate in discussion forums 🗣️!
 <p></p>
@@ -64,13 +58,21 @@ Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️
 |[NeMotron](https://github.com/NVIDIA-NeMo/Nemotron)|Developer asset hub for nemotron models|NA|NA|NA|Nemotron models|NA|
 |[NeMo Data-designer](https://github.com/NVIDIA-NeMo/DataDesigner)|Synthetic data generation toolkit|NA|NA|NA|NA|NA|
 
-
 <div align="center">
   Table 1. NeMo Framework Repos
 </div>
 <p></p>
 
-### Some background contexts and motivations
+### Diagram Ilustration of Repos under NeMo Framework (WIP)
+
+  ![image](/RepoDiagram.png)
+  
+<div align="center">
+  Figure 1. NeMo Framework Repo Overview
+</div>
+<p></p>
+
+### Some background motivations and historical contexts
 The NeMo GitHub Org and its repo collections are created to address the following problems
 * **Need for composability**: The [Previous NeMo](https://github.com/NVIDIA/NeMo) is monolithic and encompasses too many things, making it hard for users to find what they need. Container size is also an issue. Breaking down the Monolithic repo into a series of functional-focused repos to facilitate code discovery.
 * **Need for customizability**: The [Previous NeMo](https://github.com/NVIDIA/NeMo) uses PyTorch Lighting as the default trainer loop, which provides some out of the box functionality but making it hard to customize. [NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge), [NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel), and [NeMo RL](https://github.com/NVIDIA-NeMo/RL) have adopted pytorch native custom loop to improve flexibility and ease of use for developers. 
