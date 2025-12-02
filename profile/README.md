@@ -56,7 +56,7 @@ Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️
 |[NeMo Emerging Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers)|[Collection of Optimizers](https://docs.nvidia.com/nemo/emerging-optimizers/0.1.0/index.html)|NA|Agnostic|NA|NA|NA|
 |NeMo DFM (WIP)|[Diffusion foundation model training](https://docs.nvidia.com/nemo-framework/user-guide/latest/vlms/index.html)|PyT native loop|Megatron-core and PyTorch|PyTorch|VFM, Diffusion|TBD|
 |[NeMotron](https://github.com/NVIDIA-NeMo/Nemotron)|Developer asset hub for nemotron models|NA|NA|NA|Nemotron models|NA|
-|[NeMo Data-Designer](https://github.com/NVIDIA-NeMo/DataDesigner)|Synthetic data generation toolkit|NA|NA|NA|NA|NA|
+|[NeMo Data Designer](https://github.com/NVIDIA-NeMo/DataDesigner)|Synthetic data generation toolkit|NA|NA|NA|NA|NA|
 
 <div align="center">
   Table 1. NeMo Framework Repos
