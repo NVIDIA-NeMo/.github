@@ -54,7 +54,7 @@ Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️
 |[NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails)|[Guardrail model response](https://docs.nvidia.com/nemo/guardrails/latest/)|NA|NA|NA||NA|
 |[NeMo Skills](https://github.com/NVIDIA-NeMo/Skills)|[Reference pipeline for SDG & Eval](https://nvidia.github.io/NeMo-Skills/)|NA|NA|NA|Agnostic|NA|
 |[NeMo Emerging Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers)|[Collection of Optimizers](https://docs.nvidia.com/nemo/emerging-optimizers/0.1.0/index.html)|NA|Agnostic|NA|NA|NA|
-|[NeMo DFM]([https://github.com/NVIDIA-NeMo/Emerging-Optimizers](https://github.com/NVIDIA-NeMo/DFM/tree/main))|[Diffusion foundation model training]([https://docs.nvidia.com/nemo-framework/user-guide/latest/vlms/index.html](https://github.com/NVIDIA-NeMo/DFM/tree/main/docs))|PyT native loop|Megatron-core and PyTorch|NA|DiT|NA|
+|[NeMo DFM](https://github.com/NVIDIA-NeMo/DFM/tree/main))|[Diffusion foundation model training](https://github.com/NVIDIA-NeMo/DFM/tree/main/docs)|PyT native loop|Megatron-core and PyTorch|NA|DiT|NA|
 |[NeMotron](https://github.com/NVIDIA-NeMo/Nemotron)|Developer asset hub for nemotron models|NA|NA|NA|Nemotron models|NA|
 |[NeMo Data Designer](https://github.com/NVIDIA-NeMo/DataDesigner)|Synthetic data generation toolkit|NA|NA|NA|NA|NA|
 
