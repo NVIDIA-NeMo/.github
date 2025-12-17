@@ -59,6 +59,34 @@ authors:
     name: Hemil Desai
     description: Senior Deep Learning Algorithm Engineer
     avatar: https://avatars.githubusercontent.com/hemildesai
+  hao_zhang:
+    name: Hao Zhang
+    description: Reseach Scientist
+    avatar: assets/images/authors/hao_zhang.png
+  mingjie_liu:
+    name: Mingjie Liu
+    description: Reseach Scientist
+    avatar: assets/images/authors/mingjie_liu.png
+  shaokun_zhang:
+    name: Shaokun Zhang
+    description: PhD Student
+    avatar: assets/images/authors/shaokun_zhang.png
+  yi_dong:
+    name: Yi Dong
+    description: Principal Reseach Scientist
+    avatar: assets/images/authors/yi_dong.png
+  yuki_huang:
+    name: Yuki Huang
+    description: Deep Learning Engineer
+    avatar: assets/images/authors/yuki_huang.png
+  jan_kautz:
+    name: Jan Kautz
+    description: Vice President of Research
+    avatar: assets/images/authors/jan_kautz.png
+  jian_hu:
+    name: Jian Hu
+    description: Senior Deep Learning Engineer
+    avatar: assets/images/authors/jian_hu.png
   alex_qiu:
     name: Zhaopeng Qiu
     description: Solution Architect
