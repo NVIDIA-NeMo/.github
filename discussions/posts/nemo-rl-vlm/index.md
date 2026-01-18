@@ -1,6 +1,6 @@
 ---
 date:
-  created: 2025-10-22
+  created: 2026-01-17
 slug: nemo-rl-vlm
 authors:
   - rohit_jena
@@ -24,6 +24,13 @@ tags:
 
 # Multimodal support for NeMo-RL
 
+<!--
+nemo_discussion: {
+  "repo": "https://github.com/NVIDIA-NeMo/RL",
+  "authors": ["yfw", "rohitrango", "terrykong", "snowmanwwg"]
+}
+-->
+
 ## Introduction
 
 The world around us is inherently multimodal. We perceive and interact with it through a rich tapestry of senses: sight, sound, touch, and more. To truly understand and engage with this complexity, artificial intelligence systems must move beyond text-only processing and embrace the power of multimodal models. These models, which integrate information from data streams with diverse modalities like vision, text, and audio, are becoming increasingly vital for building AI that can truly comprehend and respond to the nuances of human experience.
@@ -31,6 +38,8 @@ The world around us is inherently multimodal. We perceive and interact with it t
 Supervised finetuning methods have demonstrated promising performance in adapting large language models to specific tasks, and when coupled with RL-based finetuning, emergent reasoning capabilities lead to advanced problem-solving skills in language models. For multimodal data, reasoning becomes crucial in various scenarios, such as robotics, autonomous vehicles, mathematical geometries and gaming. In these cases, the ability to infer, deduce, and make logical connections across visual, textual, and even audio inputs is essential for accurate and effective task completion.
 
 In this blog, we will demonstrate how NeMo-RL’s Supervised Finetuning (SFT) and Reinforcement Learning (RL) capabilities can be applied to multimodal models.
+
+<!-- more -->
 
 ## What makes multimodal support challenging?
 
