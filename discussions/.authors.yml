@@ -59,6 +59,14 @@ authors:
     name: Hemil Desai
     description: Senior Deep Learning Algorithm Engineer
     avatar: https://avatars.githubusercontent.com/hemildesai
+  yifu_wu:
+    name: Yi-Fu Wu
+    description: Deep Learning Algorithm Engineer
+    avatar: assets/images/authors/yifu_wu.png
+  rohit_jena:
+    name: Rohit Jena
+    description: Deep Learning Research Intern
+    avatar: assets/images/authors/rohit_jena.png
   hao_zhang:
     name: Hao Zhang
     description: Reseach Scientist
