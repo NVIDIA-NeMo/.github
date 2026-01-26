@@ -50,7 +50,7 @@ Choose your training approach:
 
 [→ Training Recipes](#training-recipes)
 
-### Manage Experiments
+### Experiment
 
 [NeMo Run](https://github.com/NVIDIA-NeMo/Run) for launching and tracking experiments across:
 
@@ -109,7 +109,7 @@ Pull optimized containers to get started fast.
 |---------|-------------|-------------|
 | [AutoModel](https://github.com/NVIDIA-NeMo/Automodel) | [Llama](https://github.com/NVIDIA-NeMo/Automodel/tree/main/examples/llm_finetune/llama3_2), [Qwen](https://github.com/NVIDIA-NeMo/Automodel/tree/main/examples/llm_finetune/qwen), [Gemma](https://github.com/NVIDIA-NeMo/Automodel/tree/main/examples/llm_finetune/gemma), [DeepSeek V3](https://github.com/NVIDIA-NeMo/Automodel/blob/main/examples/llm_pretrain/deepseekv3_pretrain.yaml), [Mistral](https://github.com/NVIDIA-NeMo/Automodel/tree/main/examples/llm_finetune/mistral), [Phi](https://github.com/NVIDIA-NeMo/Automodel/tree/main/examples/llm_finetune/phi) | [Gemma 3 VL](https://github.com/NVIDIA-NeMo/Automodel/tree/main/examples/vlm_finetune/gemma3), [Qwen2.5 VL](https://github.com/NVIDIA-NeMo/Automodel/tree/main/examples/vlm_finetune/qwen2_5), [Gemma 3n VL](https://github.com/NVIDIA-NeMo/Automodel/tree/main/examples/vlm_finetune/gemma3n) |
 | [Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge) | [Llama](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/llama/llama3.py), [Qwen](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/qwen/qwen2.py), [DeepSeek V3](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/deepseek/deepseek_v3.py), [Gemma 3](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/gemma/gemma3.py), [Nemotron](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/nemotronh/nemotronh.py) | [Gemma 3 VL](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/gemma3_vl/gemma3_vl.py), [Qwen2.5 VL](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/qwen_vl/qwen25_vl.py), [Qwen3 VL](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/qwen_vl/qwen3vl.py) |
-| [NeMo RL](https://github.com/NVIDIA-NeMo/RL) | [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_grpo_math.py), [DPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_dpo.py), [SFT](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_sft.py) | [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/docs/guides/grpo.md), [SFT](https://github.com/NVIDIA-NeMo/RL/blob/main/docs/guides/sft.md) |
+| [NeMo RL](https://github.com/NVIDIA-NeMo/RL) | [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_grpo_math.py), [DPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_dpo.py), [SFT](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_sft.py) | [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_vlm_grpo.py), [SFT](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_vlm_sft.py) |
 
 
 ---
@@ -221,8 +221,8 @@ flowchart LR
 **[GitHub Discussions](https://github.com/orgs/NVIDIA-NeMo/discussions)** — Questions, ideas, and announcements
 
 - [All Repositories](https://github.com/orgs/NVIDIA-NeMo/repositories)
-- [Contributing Guide](https://github.com/NVIDIA/NeMo/blob/stable/CONTRIBUTING.md)
-- [Release Notes](https://docs.nvidia.com/nemo/releases/)
+- Follow each repos CONTRIBUTING guide to get started
+- [Release Notes](https://docs.nvidia.com/nemo-framework/user-guide/latest/changelog.html)
 
 </td>
 <td width="66%" valign="top">
