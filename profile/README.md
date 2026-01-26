@@ -63,7 +63,7 @@ trainer.train()
 
 ### Explore Libraries
 
-- [Curator](https://github.com/NVIDIA-NeMo/Curator) – Data curation at scale
+- [Curator](https://github.com/NVIDIA-NeMo/Curator) – Data curation
 - [Evaluator](https://github.com/NVIDIA-NeMo/Evaluator) – Model benchmarking
 - [Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy) – Production deployment
 
