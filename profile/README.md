@@ -42,8 +42,6 @@ trainer.train()
 
 ### Scale Training
 
-Choose your training approach:
-
 - **< 1,000 GPUs**: [AutoModel](https://github.com/NVIDIA-NeMo/Automodel)
 - **1,000+ GPUs**: [Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge)
 - **RLHF/DPO**: [NeMo RL](https://github.com/NVIDIA-NeMo/RL)
@@ -68,7 +66,6 @@ Choose your training approach:
 - [Curator](https://github.com/NVIDIA-NeMo/Curator) – Data curation at scale
 - [Evaluator](https://github.com/NVIDIA-NeMo/Evaluator) – Model benchmarking
 - [Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy) – Production deployment
-- [Guardrails](https://github.com/NVIDIA-NeMo/Guardrails) – Safety rails
 
 [→ All Libraries](#all-libraries)
 
