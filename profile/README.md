@@ -169,6 +169,7 @@ flowchart LR
 | [Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge) | Pretraining, SFT, LoRA | Megatron-core | LLM, VLM | [docs](https://docs.nvidia.com/nemo/megatron-bridge/latest/) | [NeMo Framework](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo) |
 | [NeMo Speech](https://github.com/NVIDIA-NeMo/NeMo) | Pretraining, SFT | Megatron-core | Speech | [docs](https://docs.nvidia.com/nemo-framework/user-guide/latest/speech_ai/index.html) | — |
 | [DFM](https://github.com/NVIDIA-NeMo/DFM) | Diffusion training | Megatron-core | Diffusion | [docs](https://github.com/NVIDIA-NeMo/DFM/tree/main/docs) | — |
+| [Emerging-Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers) | Collection of optimizers | — | — | [docs](https://docs.nvidia.com/nemo/emerging-optimizers/latest/index.html) | — |
 
 ### Alignment
 
@@ -191,13 +192,17 @@ flowchart LR
 | [Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy) | Export to production | vLLM, TRT-LLM, ONNX | [docs](https://docs.nvidia.com/nemo/export-deploy/latest/) | [NeMo Framework](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo) |
 | [Guardrails](https://github.com/NVIDIA-NeMo/Guardrails) | Safety rails | — | [docs](https://docs.nvidia.com/nemo/guardrails/latest/) | — |
 
+### Models and Recipes
+
+| Repo | Description | Docs | Container |
+|------|-------------|------|-----------|
+| [Nemotron](https://github.com/NVIDIA-NeMo/Nemotron) | Recipes for Nemotron models | [docs](https://github.com/NVIDIA-NeMo/Nemotron#readme) | — |
+
 ### Infrastructure
 
 | Repo | Description | Docs | Container |
 |------|-------------|------|-----------|
 | [Run](https://github.com/NVIDIA-NeMo/Run) | Experiment launcher | [docs](https://docs.nvidia.com/nemo/run/latest/) | [NeMo Framework](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo) |
-| [Emerging-Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers) | Collection of optimizers | [docs](https://docs.nvidia.com/nemo/emerging-optimizers/latest/index.html) | — |
-| [Nemotron](https://github.com/NVIDIA-NeMo/Nemotron) | Recipes for Nemotron models | [docs](https://github.com/NVIDIA-NeMo/Nemotron#readme) | — |
 
 ### Architecture Reference
 
