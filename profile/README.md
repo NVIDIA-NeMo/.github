@@ -232,11 +232,13 @@ flowchart LR
 ### 📣 Latest
 
 **🐳 AutoModel**
-- [PyTorch Native Pipeline Parallelism for HF Models](https://github.com/orgs/NVIDIA-NeMo/discussions) *(Oct 2025)*
-- [Day-0 Hugging Face Support](https://github.com/orgs/NVIDIA-NeMo/discussions) *(Sep 2025)*
-- [Gemma 3n Multimodal Fine-tuning](https://github.com/orgs/NVIDIA-NeMo/discussions) *(Sep 2025)*
+- [Enabling PyTorch Native Pipeline Parallelism for HF Models](https://github.com/NVIDIA-NeMo/Automodel/discussions/589) *(Oct 2025)*
+- [Day-0 Hugging Face Support](https://github.com/NVIDIA-NeMo/Automodel/discussions/477) *(Sep 2025)*
+- [Gemma 3n Multimodal Fine-tuning](https://github.com/NVIDIA-NeMo/Automodel/discussions/494) *(Sep 2025)*
 
-**🔬 NeMo RL** — [On-policy Distillation](https://github.com/orgs/NVIDIA-NeMo/discussions), [FP8 Quantization](https://github.com/orgs/NVIDIA-NeMo/discussions), [10× MoE Weight Transfer](https://github.com/orgs/NVIDIA-NeMo/discussions)
+**🔬 NeMo RL** — [On-policy Distillation](https://github.com/NVIDIA-NeMo/RL/discussions/1445), [FP8 Quantization](https://github.com/NVIDIA-NeMo/RL/discussions/1216), [10× MoE Weight Transfer](https://github.com/NVIDIA-NeMo/RL/discussions/1189)
+
+**💬 NeMo Speech** — [Fine-tune NeMo models with Granary Data](https://github.com/NVIDIA-NeMo/NeMo/discussions/14758)
 
 </td>
 </tr>
