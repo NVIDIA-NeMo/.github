@@ -58,7 +58,9 @@ Note: The NeMo Framework is currently in the process of restructuring. The origi
 |[NeMo Emerging Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers)|[Collection of Optimizers](https://docs.nvidia.com/nemo/emerging-optimizers/0.1.0/index.html)|NA|Agnostic|NA|NA|NA|
 |[NeMo DFM](https://github.com/NVIDIA-NeMo/DFM/tree/main)|[Diffusion foundation model training](https://github.com/NVIDIA-NeMo/DFM/tree/main/docs)|PyT native loop|Megatron-core and PyTorch|NA|Diffusion models|NA|
 |[Nemotron](https://github.com/NVIDIA-NeMo/Nemotron)|Developer asset hub for Nemotron models|NA|NA|NA|Nemotron models|NA|
-|[NeMo Data Designer](https://github.com/NVIDIA-NeMo/DataDesigner)|Synthetic data generation library|NA|NA|NA|NA|NA|
+|[NeMo Data Designer](https://github.com/NVIDIA-NeMo/DataDesigner)|[Synthetic data generation library](https://docs.nvidia.com/nemo/microservices/latest/design-synthetic-data-from-scratch-or-seeds/)|NA|NA|NA|NA|NA|
+|[NeMo Safe Synthesizer](https://github.com/NVIDIA-NeMo/Safe-Synthesizer)|[Privacy-preserving synthetic tabular data](https://docs.nvidia.com/nemo/microservices/latest/generate-private-synthetic-data/)|HF Trainer|PyTorch, Opacus|vLLM|LLM|NA|
+|[NeMo Anonymizer](https://github.com/NVIDIA-NeMo/Anonymizer)|PII detection and anonymization|NA|NA|NA|Agnostic|NA|
 
 <div align="center">
   Table 1. NeMo Framework Repos
