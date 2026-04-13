@@ -10,6 +10,10 @@ NeMo Framework is NVIDIA's GPU accelerated, fully open-source, end-to-end traini
 NeMo Framework is also a part of the NVIDIA NeMo software suite for managing the AI agent lifecycle.
 
 ## Latest 📣 announcements and 🗣️ discussions 
+
+### 💬 NeMo Assist
+- [4/13/2026][Try NeMo Assist to chat with the NeMo Framework docs and code.](https://nemo-assist.nvidia.com/)
+
 ### 🐳 NeMo AutoModel
 - [10/6/2025][Enabling PyTorch Native Pipeline Parallelism for 🤗 Hugging Face Transformer Models](https://github.com/NVIDIA-NeMo/Automodel/discussions/589)
 - [9/22/2025][Fine-tune Hugging Face Models Instantly with Day-0 Support with NVIDIA NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel/discussions/477)
