@@ -41,7 +41,7 @@ Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️
 Note: The NeMo Framework is currently in the process of restructuring. The original NeMo 2.0 repository will now focus specifically on speech-related components, while other parts of the framework are being modularized into separate libraries such as NeMo Automodel, NeMo Gym, NeMo RL, and more. This transition aims to make NeMo more modular and developer-friendly.
 <p></p>
 
-|Repo|Key Functionality & Documentation Link|Training Loop|Training Backends|Infernece Backends|Model Coverage|Container|
+|Repo|Key Functionality & Documentation Link|Training Loop|Training Backends|Inference Backends|Model Coverage|Container|
 |-|-|-|-|-|-|-|
 |[NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge)|[Pretraining, LoRA, SFT](https://docs.nvidia.com/nemo/megatron-bridge/latest/)|PyT native loop|Megatron-core|NA|LLM & VLM|NeMo Framework Container
 |[NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel)|[Pretraining, LoRA, SFT](https://docs.nvidia.com/nemo/automodel/latest/index.html)|PyT native loop|PyTorch|NA|LLM, VLM, Omni, VFM|NeMo AutoModel Container|
