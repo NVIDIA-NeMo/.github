@@ -111,3 +111,11 @@ authors:
     name: Sharath Turuvekere Sreenivas
     description: Senior Deep Learning Algorithm Engineer
     avatar: assets/images/authors/sharath_ts.png
+  aditya_vavre:
+    name: Aditya Vavre
+    description: Deep Learning Algorithm Engineer
+    avatar: assets/images/authors/avavre.png
+  nima_tajbakhsh:
+    name: Nima Tajbakhsh
+    description: NeMo Engineering Manager
+    avatar: assets/images/authors/nima_tajbakhsh.png
