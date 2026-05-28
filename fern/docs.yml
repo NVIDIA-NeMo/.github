@@ -1,0 +1,56 @@
+# yaml-language-server: $schema=https://schema.buildwithfern.dev/docs-yml.json
+
+instances:
+  - url: nemo-framework.docs.buildwithfern.com/nemo
+    custom-domain: docs.nvidia.com/nemo
+
+title: NVIDIA NeMo Framework
+
+global-theme: nvidia
+
+logo:
+  href: /nemo
+  right-text: NeMo Framework
+
+navbar-links:
+  - type: github
+    value: https://github.com/NVIDIA-NeMo
+
+experimental:
+  mdx-components:
+    - ./components
+
+redirects:
+  - source: "/nemo/libraries"
+    destination: "/nemo/repositories"
+  - source: "/nemo/index.html"
+    destination: "/nemo"
+  - source: "/nemo/index"
+    destination: "/nemo"
+  - source: "/nemo/:path*/index.html"
+    destination: "/nemo/:path*"
+  - source: "/nemo/:path*.html"
+    destination: "/nemo/:path*"
+
+navigation:
+  - section: Overview
+    contents:
+      - page: Home
+        path: docs/pages/index.mdx
+        icon: fa-duotone fa-house
+      - page: Getting Started
+        path: docs/pages/getting-started.mdx
+        icon: fa-duotone fa-rocket
+  - section: Libraries
+    contents:
+      - page: Repositories
+        path: docs/pages/repositories.mdx
+        icon: fa-duotone fa-grid-2
+      - page: Libraries (overview)
+        path: docs/pages/libraries.mdx
+        icon: fa-duotone fa-books
+  - section: Community
+    contents:
+      - page: Community
+        path: docs/pages/community.mdx
+        icon: fa-duotone fa-comments
