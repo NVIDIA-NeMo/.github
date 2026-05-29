@@ -16,13 +16,13 @@ NVIDIA NeMo (commercial suite — OSS + microservices + NIM + services)
 
 | Term | Meaning |
 | --- | --- |
-| **NVIDIA NeMo** | Full software suite. Includes commercial products not listed on this hub. |
-| **NeMo OSS** | Public open source in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) and documentation on **docs.nvidia.com/nemo**. Discovery layer — not a single product. |
-| **NeMo Framework** | Named **model-lifecycle** stack: composable libraries from data through deployment. **Not one codebase.** |
+| **NVIDIA NeMo** | Full software suite spanning open source libraries, commercial products, NIM, microservices, and services. |
+| **NeMo OSS** | Public open source in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) and documentation on **docs.nvidia.com/nemo**. Entry point for choosing a stack, stage, library, or container. |
+| **NeMo Framework** | Named **model-lifecycle** stack: composable libraries from data through deployment, each with its own source and docs. |
 | **NeMo Framework container** | NGC image `nvcr.io/nvidia/nemo:<tag>`. Bundles Megatron-Bridge, Evaluator, Export-Deploy, Run, and NeMo Speech. |
-| **NeMo Platform** | [nemo-platform](https://github.com/NVIDIA-NeMo/nemo-platform) — CLI, SDK, and Studio for **agent** evaluate / secure / tune / deploy. Composes libraries; not a pipeline stage. |
+| **NeMo Platform** | [nemo-platform](https://github.com/NVIDIA-NeMo/nemo-platform) — CLI, SDK, and Studio for **agent** evaluate / secure / tune / deploy. Composes libraries into an agent integration experience. |
 | **Library** | A focused repo with its own docs and release cadence (Curator, AutoModel, RL, …). |
-| **NeMo Speech** | The [NeMo](https://github.com/NVIDIA-NeMo/NeMo) repo — speech AI only. Do not use “NeMo” alone for the whole ecosystem. |
+| **NeMo Speech** | The [NeMo](https://github.com/NVIDIA-NeMo/NeMo) repo — use this wording for speech AI in user-facing copy. |
 
 ## Repo `kind` (catalog metadata)
 
@@ -43,11 +43,28 @@ Data · Pretraining · RL · Inference · E2E — same columns as [profile/READM
 
 | Page | Job |
 | --- | --- |
-| **Concepts** | Glossary |
+| **Concepts** | Core mental models and relationships. Use concept pages for explanatory topics, not term lookup. |
 | **Ecosystem** | Positioning and choices (Framework vs Platform, commercial boundary) |
 | **Architecture** | Structure — pipeline, backends, containers, Platform overlay |
 | **Libraries** | Inventory from `repos.ts` |
+| **Task map** | Task-first routing from user intent to library, runtime path, and owning docs |
+| **Runtime chooser** | Setup-path decision guide for containers, pip/source installs, and Platform setup |
+| **Glossary** | Lookup-oriented definitions for terms, acronyms, and product names |
+| **External learning** | Curated third-party blogs, videos, and partner examples with freshness caveats |
 
-## Out of scope for this hub
+## Concepts section
 
-Customizer, NIM, and other commercial NeMo microservices — link from Ecosystem only; do not duplicate product docs.
+Concepts is a directory, not a glossary. Keep pages focused on stable relationships that help readers reason across repos:
+
+| Concept page | Job |
+| --- | --- |
+| **Framework and Platform** | Distinguish model-lifecycle work from integrated agent workflows |
+| **Lifecycle stages** | Explain Data, Pretraining, RL, Inference, and E2E as workflow stages |
+| **Repository catalog model** | Explain stage, kind, and tags |
+| **Training backends and checkpoints** | Explain AutoModel, Megatron-Bridge, and checkpoint flow at a decision level |
+| **Containers and installs** | Explain Framework container, standalone containers, and library installs |
+| **Documentation surfaces** | Explain what the hub, library docs, repos, release notes, and glossary own |
+
+## Broader suite references
+
+Customizer, NIM, and other commercial NeMo microservices have their own product documentation. Link to them from Ecosystem when they help readers understand the full suite.

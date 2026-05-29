@@ -1,6 +1,6 @@
 ---
 title: Inference
-subtitle: Get started with evaluation, export, and deployment
+subtitle: Get Started With Evaluation, Export, and Deployment
 slug: get-started/inference
 position: 13
 ---
@@ -23,7 +23,9 @@ flowchart LR
 
 <StageGuide stage="inference" />
 
-## Typical workflow (models)
+## Typical Workflow (Models)
+
+Most model inference workflows move from evaluation to export or deployment, with guardrails added where application behavior needs control.
 
 1. **Evaluate** with [Evaluator](https://docs.nvidia.com/nemo/evaluator/latest/) across 100+ harnesses.
 2. **Export** to vLLM, TensorRT-LLM, or ONNX with [Export-Deploy](https://docs.nvidia.com/nemo/export-deploy/latest/).
@@ -31,12 +33,14 @@ flowchart LR
 
 Models usually come from [Pretraining](/get-started/pretraining) or [RL](/get-started/rl). For bundled Framework container versions, refer to [Container releases](/about/release-notes/containers).
 
-## Shipping agents
+## Shipping Agents
 
-If you are building **agents** (not just serving a fine-tuned checkpoint), [NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) integrates evaluation, guardrails, tuning, and deployment in one setup — CLI, SDK, and Studio UI. You can adopt Evaluator or Guardrails standalone; Platform is the umbrella when you want those loops wired together.
+Agent workflows usually start with Platform when you want an integrated CLI, SDK, and Studio experience.
+
+If you are building **agents**, [NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) brings evaluation, guardrails, tuning, and deployment into one workflow with a CLI, SDK, and Studio UI. Use Evaluator or Guardrails directly when you want one library; start with Platform when you want those loops wired together.
 
 <Card title="NeMo Platform" href="https://nvidia-nemo.github.io/nemo-platform/main/">
 Setup, CLI, and docs — evaluate, secure, and optimize agents with NeMo libraries.
 </Card>
 
-For related guidance, refer to [Framework and Platform](/about/concepts#framework-and-platform) and [Ecosystem](/about/ecosystem#choose-framework-or-platform).
+For related guidance, refer to [Framework and Platform](/about/concepts/framework-and-platform) and [Ecosystem](/about/ecosystem#choose-framework-or-platform).

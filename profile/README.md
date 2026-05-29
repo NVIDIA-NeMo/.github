@@ -5,27 +5,45 @@ SPDX-License-Identifier: Apache-2.0
 
 # NeMo OSS
 
-**Train Llama 3.3 · Qwen 2.5 · Mistral · DeepSeek · Gemma · Nemotron on NVIDIA GPUs**
+Open source NVIDIA NeMo libraries for building models and agents on NVIDIA GPUs: data curation, training, alignment, evaluation, deployment, guardrails, and end-to-end recipes.
 
-Open source GPU libraries for data, training, alignment, evaluation, deployment, and agents. Scale from one GPU to 10,000+ nodes with Hugging Face or Megatron backends. Part of the [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/) software suite — this org is the public GitHub home for **NeMo OSS** (Framework libraries + [NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) for agents).
+NeMo OSS is part of the broader [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/) software suite. Use this GitHub organization for source code and issues; use the [NeMo OSS docs](https://docs.nvidia.com/nemo) to choose the right library, runtime, or workflow.
 
-## Libraries by stage
+## Start Here
 
-| Data | Pretraining | RL | Inference | E2E |
-| --- | --- | --- | --- | --- |
-| [Curator](https://github.com/NVIDIA-NeMo/Curator)<br>[Anonymizer](https://github.com/NVIDIA-NeMo/Anonymizer)<br>[Data Designer](https://github.com/NVIDIA-NeMo/DataDesigner)<br>[Safe Synthesizer](https://github.com/NVIDIA-NeMo/Safe-Synthesizer)<br>[SDG-PGMs](https://github.com/NVIDIA-NeMo/SDG-PGMs) | [Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge)<br>[AutoModel](https://github.com/NVIDIA-NeMo/Automodel)<br>[Speech](https://github.com/NVIDIA-NeMo/NeMo)<br>[Emerging Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers) | [RL](https://github.com/NVIDIA-NeMo/RL)<br>[Gym](https://github.com/NVIDIA-NeMo/Gym)<br>[ProRL-Agent-Server](https://github.com/NVIDIA-NeMo/ProRL-Agent-Server) | [Guardrails](https://github.com/NVIDIA-NeMo/Guardrails)<br>[Evaluator](https://github.com/NVIDIA-NeMo/Evaluator)<br>[Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy)<br>[NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) | [Skills](https://github.com/NVIDIA-NeMo/Skills)<br>[Nemotron](https://github.com/NVIDIA-NeMo/Nemotron)<br>[Run](https://github.com/NVIDIA-NeMo/Run) |
+| If you want to... | Go to |
+| --- | --- |
+| Find the right repo for a task | [Task Map](https://docs.nvidia.com/nemo/get-started/task-map) |
+| Choose between containers, pip, source, or Platform setup | [Runtime Chooser](https://docs.nvidia.com/nemo/get-started/runtime-chooser) |
+| Browse all NeMo OSS libraries | [Library Catalog](https://docs.nvidia.com/nemo/about/libraries) |
+| Understand Framework, Platform, stages, and containers | [Concepts](https://docs.nvidia.com/nemo/about/concepts) |
+| Check Framework container releases and known issues | [Release Notes](https://docs.nvidia.com/nemo/about/release-notes) |
+| Ask questions or follow community updates | [Community](https://docs.nvidia.com/nemo/resources/community) |
 
-**[docs.nvidia.com/nemo](https://docs.nvidia.com/nemo)** — NeMo OSS hub: decision guide, all libraries, recipes, and community links.
+## Choose by Workflow
 
-```bash
-pip install nemo-automodel
-```
+| Workflow | Use for | Starting Points |
+| --- | --- | --- |
+| **Data** | Curate, synthesize, anonymize, and prepare datasets | [Curator](https://github.com/NVIDIA-NeMo/Curator), [Data Designer](https://github.com/NVIDIA-NeMo/DataDesigner), [Anonymizer](https://github.com/NVIDIA-NeMo/Anonymizer) |
+| **Pretraining** | Train, fine-tune, adapt, and convert model checkpoints | [AutoModel](https://github.com/NVIDIA-NeMo/Automodel), [Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge), [NeMo Speech](https://github.com/NVIDIA-NeMo/NeMo) |
+| **RL** | Run SFT, DPO, GRPO, RL, environments, and rollouts | [NeMo RL](https://github.com/NVIDIA-NeMo/RL), [Gym](https://github.com/NVIDIA-NeMo/Gym), [ProRL Agent Server](https://github.com/NVIDIA-NeMo/ProRL-Agent-Server) |
+| **Inference** | Evaluate, export, serve, and add guardrails | [Evaluator](https://github.com/NVIDIA-NeMo/Evaluator), [Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy), [Guardrails](https://github.com/NVIDIA-NeMo/Guardrails) |
+| **Agents** | Evaluate, secure, tune, and deploy agent workflows | [NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) |
+| **E2E** | Launch experiments, follow recipes, and use reference assets | [Run](https://github.com/NVIDIA-NeMo/Run), [Skills](https://github.com/NVIDIA-NeMo/Skills), [Nemotron](https://github.com/NVIDIA-NeMo/Nemotron) |
+
+## NeMo Framework and NeMo Platform
+
+- **NeMo Framework** is the model-lifecycle stack: data, training, RL, evaluation, export, and deployment libraries.
+- **NeMo Platform** is the agent workflow entry point: CLI, SDK, and Studio for evaluating, securing, tuning, and deploying agents.
+
+For naming, runtime, and workflow guidance, see [Concepts](https://docs.nvidia.com/nemo/about/concepts) and [Get Started](https://docs.nvidia.com/nemo/get-started).
 
 ## Community
 
 - [GitHub Discussions](https://github.com/orgs/NVIDIA-NeMo/discussions)
-- [All repositories](https://github.com/orgs/NVIDIA-NeMo/repositories)
+- [All Repositories](https://github.com/orgs/NVIDIA-NeMo/repositories)
+- [External Learning](https://docs.nvidia.com/nemo/resources/external-learning)
 
 ## License
 
-Apache 2.0. Third-party attributions in each repository.
+Apache 2.0. Third-party attributions are documented in each repository.

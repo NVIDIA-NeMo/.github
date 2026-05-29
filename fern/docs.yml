@@ -63,14 +63,16 @@ navigation:
       - page: Architecture
         path: docs/pages/about/architecture.mdx
         icon: fa-duotone fa-diagram-project
-      - page: Concepts
-        path: docs/pages/about/concepts.mdx
+      - folder: ./docs/pages/about/concepts
+        title: Concepts
+        slug: about/concepts
         icon: fa-duotone fa-lightbulb
+        title-source: frontmatter
       - page: Libraries
         path: docs/pages/about/libraries.mdx
         icon: fa-duotone fa-grid-2
       - folder: ./docs/pages/about/release-notes
-        title: Release notes
+        title: Release Notes
         slug: about/release-notes
         icon: fa-duotone fa-tag
         title-source: frontmatter
@@ -78,12 +80,18 @@ navigation:
     path: docs/pages/get-started/index.mdx
     icon: fa-duotone fa-rocket
     contents:
+      - page: Task Map
+        path: docs/pages/get-started/task-map.mdx
+        icon: fa-duotone fa-map
       - page: Quickstart
         path: docs/pages/get-started/quickstart.mdx
         icon: fa-duotone fa-bolt
       - page: Installation
         path: docs/pages/get-started/installation.mdx
         icon: fa-duotone fa-download
+      - page: Runtime Chooser
+        path: docs/pages/get-started/runtime-chooser.mdx
+        icon: fa-duotone fa-box
       - section: By lifecycle stage
         contents:
           - page: Data
@@ -102,7 +110,15 @@ navigation:
             path: docs/pages/get-started/e2e.mdx
             icon: fa-duotone fa-diagram-project
   - section: Resources
+    path: docs/pages/resources/index.mdx
+    icon: fa-duotone fa-book-open
     contents:
+      - page: Glossary
+        path: docs/pages/resources/glossary.mdx
+        icon: fa-duotone fa-book
+      - page: External Learning
+        path: docs/pages/resources/external-learning.mdx
+        icon: fa-duotone fa-arrow-up-right-from-square
       - page: Community
         path: docs/pages/resources/community.mdx
         icon: fa-duotone fa-comments

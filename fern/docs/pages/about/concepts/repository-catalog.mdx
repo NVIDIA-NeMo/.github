@@ -1,0 +1,63 @@
+---
+title: Repository Catalog Model
+subtitle: How Stage, Kind, and Tags Describe Each Repo
+slug: about/concepts/repository-catalog
+position: 3
+---
+
+The [Libraries](/about/libraries) catalog uses three signals to describe each GitHub repo: **stage**, **kind**, and **tags**. Together, they answer where a repo fits, what role it plays, and which cross-cutting workflows it supports.
+
+## Three Catalog Signals
+
+The catalog uses three signals so a repo can be found by lifecycle position, adoption role, and cross-cutting topic.
+
+| Signal | What it answers | Example |
+| --- | --- | --- |
+| **Stage** | Where the repo usually sits in the lifecycle | Data, Pretraining, RL, Inference, E2E |
+| **Kind** | The role the repo plays | Library, integration, reference, infrastructure |
+| **Tags** | Cross-cutting concerns | `speech`, `evaluation`, `agents`, `deployment` |
+
+Stages match the NVIDIA-NeMo org README columns. Kind keeps the catalog honest when stage alone would be misleading. Tags help users find workflows that do not fit neatly in one lifecycle stage.
+
+## Kind
+
+Kind explains the adoption role of a repo when stage alone is too broad.
+
+| Kind | Role | Examples |
+| --- | --- | --- |
+| **Library** | Focused product for a lifecycle stage | Curator, AutoModel, RL, Evaluator |
+| **Integration** | Composes libraries into one product surface | NeMo Platform |
+| **Reference** | Recipes, cookbooks, datasets, and example pipelines | Skills, Nemotron |
+| **Infrastructure** | Shared project infrastructure | FW-CI-templates |
+
+For example, Platform appears under Inference because agent builders often arrive through evaluation, guardrails, and deployment. Its kind still tells you that it is an integration product.
+
+## Tags
+
+Tags are search facets, not a second taxonomy. They help connect repos by theme:
+
+| Tag theme | Why it helps |
+| --- | --- |
+| **Modality** | Find speech, vision-language, tabular, or multimodal work. |
+| **Technique** | Find GRPO, DPO, synthetic data, curation, or checkpoint conversion work. |
+| **Role** | Find evaluation, deployment, guardrails, agents, privacy, or orchestration work. |
+
+## When Repo Placement Looks Surprising
+
+Some repos support more than one stage. The catalog places each repo where most readers are likely to begin, then uses kind and tags to show its broader role.
+
+## Continue
+
+Use these pages when you need to move from repo placement to a specific next step.
+
+<Cards>
+
+<Card title="Libraries" href="/about/libraries">
+Search and filter the live catalog.
+</Card>
+
+<Card title="Where to Find Information" href="/about/concepts/documentation-surfaces">
+Find setup, releases, examples, terminology, and support links.
+</Card>
+
+</Cards>

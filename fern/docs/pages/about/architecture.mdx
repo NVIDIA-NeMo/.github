@@ -1,24 +1,26 @@
 ---
 title: Architecture
-subtitle: How NeMo OSS libraries fit together
+subtitle: How NeMo OSS Libraries Fit Together
 slug: about/architecture
 position: 3
 ---
 
-**NeMo OSS** is not one monolithic codebase. It is an organization of focused repos you can use individually or together. Two named stacks sit on top of those repos:
+**NeMo OSS** is an ecosystem of focused repositories that you can use individually or together. Two named stacks organize those repos around common workflows:
 
 - **NeMo Framework** — the **model lifecycle** (data → train → align → evaluate → deploy).
 - **NeMo Platform** — **agent integration** (evaluate, secure, tune, and deploy agents using selected libraries).
 
 <Callout intent="info">
-For positioning within NVIDIA NeMo, refer to [Ecosystem](/about/ecosystem). For term definitions, refer to [Concepts](/about/concepts).
+For positioning within NVIDIA NeMo, refer to [Ecosystem](/about/ecosystem). For the organizing model, refer to [Concepts](/about/concepts).
 </Callout>
 
-## Three layers
+## Three Layers
+
+The architecture is easiest to read as libraries, the Framework stack, and the Platform integration layer.
 
 | Layer | What it is | How you use it |
 | --- | --- | --- |
-| **Libraries** | 22 repos in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) — one product per repo | `pip install`, per-library docs, or standalone NGC images |
+| **Libraries** | 22 repos in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo), each with its own source, releases, and docs | `pip install`, per-library docs, or standalone NGC images |
 | **NeMo Framework** | Model-lifecycle stack — the pipeline below | Pick libraries by stage, or pull the multi-library Framework container |
 | **NeMo Platform** | Agent product — CLI, SDK, Studio | Clone [nemo-platform](https://github.com/NVIDIA-NeMo/nemo-platform), run `nemo setup` |
 
@@ -38,9 +40,9 @@ flowchart TB
     PCLI -.-> PIPE
 ```
 
-Platform **composes** libraries (Guardrails, Evaluator, Data Designer, and others). It is **not** a box in the Framework pipeline — it is a cross-cutting integration layer for agent workflows. Training still starts with Framework libraries such as AutoModel or Megatron-Bridge.
+Platform **composes** libraries such as Guardrails, Evaluator, and Data Designer into agent workflows. For model training, start with Framework libraries such as AutoModel or Megatron-Bridge.
 
-## NeMo Framework pipeline
+## NeMo Framework Pipeline
 
 The diagram shows representative libraries. The live list is [Libraries](/about/libraries) filtered by stage.
 
@@ -86,7 +88,9 @@ flowchart LR
 
 Solid arrows are the typical **model lifecycle**. Dotted lines are **orchestration and reference assets** (Run, Skills, Nemotron) that span stages.
 
-## Functional layers
+## Functional Layers
+
+Functional layers describe the role each stage plays in model development.
 
 | Layer | Purpose |
 | --- | --- |
@@ -98,7 +102,7 @@ Solid arrows are the typical **model lifecycle**. Dotted lines are **orchestrati
 
 Which repos sit in each layer changes over time — use [Libraries](/about/libraries) (filtered by stage) as the live catalog.
 
-## Training backends
+## Training Backends
 
 Two primary training paths coexist:
 
@@ -127,9 +131,9 @@ flowchart TB
 
 Both paths can feed the same **RL**, **Evaluator**, and **Export-Deploy** libraries downstream.
 
-## NeMo Platform overlay
+## NeMo Platform Overlay
 
-[NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) integrates NeMo libraries for **agent** workflows — not for large-scale pretraining today.
+[NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) integrates NeMo libraries for **agent** workflows. Use Framework libraries such as AutoModel, Megatron-Bridge, and NeMo RL for model training and alignment.
 
 | Platform capability | Libraries and services involved |
 | --- | --- |
@@ -139,23 +143,23 @@ Both paths can feed the same **RL**, **Evaluator**, and **Export-Deploy** librar
 | Build agents | NeMo Agent Toolkit (NAT), Inference Gateway |
 | Synthetic data | Data Designer |
 
-Platform is **not** the Framework NGC container. Refer to [Framework and Platform](/about/concepts#framework-and-platform) for naming and [Ecosystem](/about/ecosystem#choose-framework-or-platform) for when to start here.
+Platform has its own CLI, SDK, and Studio experience. Refer to [Framework and Platform](/about/concepts/framework-and-platform) for naming and [Ecosystem](/about/ecosystem#choose-framework-or-platform) for when to start here.
 
 <Cards>
 
-<Card title="NeMo Platform docs" href="https://nvidia-nemo.github.io/nemo-platform/main/">
+<Card title="NeMo Platform Docs" href="https://nvidia-nemo.github.io/nemo-platform/main/">
 Setup, CLI reference, and API for agent hardening and evaluation.
 </Card>
 
-<Card title="Inference get started" href="/get-started/inference">
+<Card title="Inference Get Started" href="/get-started/inference">
 Model evaluation, export, guardrails, and Platform entry points.
 </Card>
 
 </Cards>
 
-## NGC containers
+## NGC Containers
 
-NGC images bundle tested dependency sets. They are **delivery mechanisms** for Framework libraries — not separate products.
+NGC images bundle tested dependency sets for Framework libraries.
 
 | Image | Scope |
 | --- | --- |
@@ -166,12 +170,14 @@ NGC images bundle tested dependency sets. They are **delivery mechanisms** for F
 
 Refer to the [container catalog](/about/release-notes/containers) for pull commands and recent Framework tags.
 
-## Where to go next
+## Where to Go Next
+
+Use these pages when you are ready to choose an entry point or browse the catalog.
 
 <Cards>
 
 <Card title="Concepts" href="/about/concepts">
-Glossary — Framework, Platform, stages, and homonyms.
+How Framework, Platform, stages, libraries, and containers fit together.
 </Card>
 
 <Card title="Get Started" href="/get-started">

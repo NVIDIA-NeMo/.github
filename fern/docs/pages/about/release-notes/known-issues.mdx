@@ -1,6 +1,6 @@
 ---
-title: Known issues
-subtitle: Cross-component issues for NeMo Framework containers
+title: Known Issues
+subtitle: Cross-Component Issues for NeMo Framework Containers
 slug: about/release-notes/known-issues
 position: 3
 ---
@@ -9,11 +9,11 @@ Known issues for **NeMo Framework** NGC containers (`nvcr.io/nvidia/nemo`). Find
 
 <Cards>
 
-<Card title="Container releases" href="/about/release-notes/containers">
+<Card title="Container Releases" href="/about/release-notes/containers">
 Recent container tags and bundled component versions.
 </Card>
 
-<Card title="Software component versions" href="https://docs.nvidia.com/nemo/megatron-bridge/latest/releases/software-versions.html">
+<Card title="Software Component Versions" href="https://docs.nvidia.com/nemo/megatron-bridge/latest/releases/software-versions.html">
 Pinned package versions for 26.02+ containers.
 </Card>
 
@@ -39,15 +39,23 @@ See component release notes for library-specific known issues:
 
 ## 25.09
 
+The following issues apply to the 25.09 Framework container release.
+
 ### AutoModel
+
+These notes apply to AutoModel workflows in this release.
 
 - Knowledge distillation validation has a known issue. Set `--step_scheduler.val_every_steps=9223372036854775807` to bypass the issue.
 
 ### Megatron-Bridge
 
+These notes apply to Megatron-Bridge workflows in this release.
+
 - Pretraining DeepSeek in subchannel FP8 precision is not working. Pretraining DeepSeek with current scaling FP8 is a workaround, but MTP loss does not converge.
 
 ## 25.07
+
+The following issues apply to the 25.07 Framework container release.
 
 - DeepSeek model pretraining has a memory spike at the end of training, after the validation loop and checkpoint saving. The memory spike is linked to the cross-entropy layer. This may lead to an NCCL error at the end of training.
 - When fine-tuning with CP > 1, you might need to set `calculate_per_token_loss = True` for some cases. It depends on the dataset you choose. Note that this will result in slightly different loss from before, but both will lead to model convergence.
@@ -57,6 +65,8 @@ See component release notes for library-specific known issues:
 
 ## 25.04.02 and 25.04.01
 
+The following issues apply to the 25.04.02 and 25.04.01 Framework container releases.
+
 - **Tensor-Parallel Communication Overlap:** Functional errors may occur with specific tensor-parallel communication overlap configurations, including AllGather+GEMM overlap and the ring-exchange algorithm when `aggregate=True`.
 - **LayerNorm Bias Accuracy:** Training models using LayerNorm with bias (e.g., StarCoder2) might exhibit accuracy issues. A fix is available in TransformerEngine commit 1569. This fix is not yet included in the current NeMo release container. **Workaround:** Manually mount or pip install the latest TransformerEngine version in your container.
 - **Large Model Checkpoint NaN Errors (T5 11B, StarCoder2 7B):** Loading trained checkpoints for fine-tuning T5 (11B) and StarCoder2 (7B) models may result in NaN values. This is suspected to be a checkpoint saving/loading error. A potential fix is in Megatron Core PR 48cc46f. This fix is currently under testing.
@@ -65,6 +75,8 @@ See component release notes for library-specific known issues:
 - **HF Export for Llama-3_3-Nemotron-Super-49B-v1:** Hugging Face export is not currently supported for the Llama-3_3-Nemotron-Super-49B-v1 model.
 
 ## 25.04.00
+
+The following issues apply to the 25.04.00 Framework container release.
 
 - Llama 4 accuracy may degrade slightly due to an issue with the order of sigmoid application in the expert routing logic. This has been fixed in [Megatron-LM](https://github.com/NVIDIA/Megatron-LM). However, the fix is not yet included in the current NeMo release container. To apply the fix, manually mount the updated Megatron Core source when building or running your container.
 - Resuming from local checkpoints using the `get_global_step_from_global_checkpoint_path` utility function may face challenges with auto-inserted metrics in the path. This is fixed in [NeMo#13012](https://github.com/NVIDIA/NeMo/pull/13012). However, the fix is not yet included in the current NeMo release container.
@@ -78,7 +90,11 @@ See component release notes for library-specific known issues:
 
 ## 25.02
 
+The following issues apply to the 25.02 Framework container release.
+
 ### AutoModel
+
+These notes apply to AutoModel workflows in this release.
 
 - Primarily a functional release; performance improvements are planned for future versions.
 - For large models (e.g., > 40B) trained with FSDP2, checkpoint saving can take longer than expected.
@@ -89,9 +105,13 @@ See component release notes for library-specific known issues:
 - Support for Context Parallelism with sequence packing + padding between sequences is currently broken (see [NeMo#12174](https://github.com/NVIDIA/NeMo/issues/12174)). Use 24.12 or upgrade to TE 2.0+ for working support.
 - MoE based models are seeing instability with training. Please continue to use 24.12 for MoE training until 25.02 is patched with the fix for MoE.
 
-## 24.12 and earlier
+## 24.12 and Earlier
 
-### Framework and training
+The following issues apply to 24.12 and earlier Framework container releases.
+
+### Framework and Training
+
+These notes apply to framework-level training behavior in older releases.
 
 - In 24.12, NeMo switched from `pytorch_lightning` to `lightning.pytorch`. If you have custom code that imports `pytorch_lightning`, replace the import with `lightning.pytorch`. Failing to do so results in `ValueError: Expected a parent`.
 - When using a 24.12 container or later with LM Evaluation Harness, upgrade LM Evaluation Harness to include the required commit. Otherwise you may see `ValueError: You selected an invalid strategy name...`.
@@ -106,7 +126,9 @@ See component release notes for library-specific known issues:
 - A race condition in the NeMo experiment manager can occur when multiple processes or threads attempt to access and modify shared resources simultaneously.
 - The Mistral and Mixtral tokenizers require a Hugging Face login.
 
-### Export and deployment
+### Export and Deployment
+
+These notes apply to export and deployment behavior in older releases.
 
 - Exporting Gemma, Starcoder, and Falcon 7B models to TRT-LLM only works with a single GPU. If you attempt to export with multiple GPUs, no descriptive error message is shown.
 - Export Llama70B vLLM causes an out-of-memory issue.
@@ -114,7 +136,7 @@ See component release notes for library-specific known issues:
 - In-framework (PyTorch level) deployment with 8 GPUs is encountering an error.
 - Query script under `scripts/deploy/nlp/query.py` returns the error `'output_generation_logits'` in the 24.12 container.
 
-### Notebooks and tutorials
+### Notebooks and Tutorials
 
 The following notebooks had functional issues at the time of the 24.12 release:
 
@@ -129,15 +151,17 @@ The following notebooks had functional issues at the time of the 24.12 release:
 
 ### Multimodal
 
+These notes apply to multimodal tutorials and workflows in older releases.
+
 - LITA tutorial: the data preparation part in `tutorials/multimodal/LITA_Tutorial.ipynb` requires you to manually download the YouMakeup dataset instead of using the provided script.
 - Add `exp_manager.checkpoint_callback_params.save_nemo_on_train_end=True` to the NeVA notebook pretraining procedure to ensure an end-to-end workflow.
 
 ### ASR
 
+These notes apply to ASR workflows in older releases.
+
 - Timestamp misalignment occurs in FastConformer ASR models when using the ASR decoder for diarization. Related issue: [NeMo#8438](https://github.com/NVIDIA/NeMo/issues/8438).
 
-## Report a new issue
+## Report a New Issue
 
 Open an issue or discussion in the [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) repository that owns the component — use [Libraries](/about/libraries) to find the right repo and docs site. For problems that span a container release, use [GitHub Discussions](https://github.com/orgs/NVIDIA-NeMo/discussions) and note your container tag (for example `nvcr.io/nvidia/nemo:26.02`).
-
-When a new container ships, add cross-component known issues to the matching section above.

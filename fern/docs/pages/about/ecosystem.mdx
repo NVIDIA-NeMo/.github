@@ -1,19 +1,19 @@
 ---
 title: Ecosystem
-subtitle: NeMo OSS within the NVIDIA NeMo software suite
+subtitle: NeMo OSS Within the NVIDIA NeMo Software Suite
 slug: about/ecosystem
 position: 2
 ---
 
-**NeMo OSS** is the open source side of [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/) — the public GitHub organization [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) and the documentation hub you are reading now. Commercial NeMo products, enterprise services, and NIM microservices live outside this catalog.
+**NeMo OSS** is the public, open source entry point for [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/): the [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) GitHub organization, and the libraries and containers that support model and agent development.
 
 <Callout intent="info">
-This page explains **where NeMo OSS fits** and **what to choose**. For definitions, refer to [Concepts](/about/concepts). For structure, refer to [Architecture](/about/architecture).
+This page explains **where NeMo OSS fits** and **what to choose**. For the organizing model, refer to [Concepts](/about/concepts). For structure, refer to [Architecture](/about/architecture).
 </Callout>
 
-## What NeMo OSS includes
+## What You Can Build
 
-NeMo OSS is not a single product. It is an **organization of repos** plus two named ways to adopt them:
+NeMo OSS is organized around two adoption paths:
 
 ```mermaid
 flowchart TB
@@ -39,9 +39,9 @@ flowchart TB
 | **Agents** (evaluate, secure, tune, deploy in production) | **NeMo Platform** — or individual inference libraries à la carte |
 | **Not sure yet** | [Libraries](/about/libraries) catalog or [decision guide](/get-started#decision-guide) |
 
-## Framework lifecycle stages
+## Framework Lifecycle Stages
 
-**NeMo Framework** delivers the model pipeline as composable open source libraries:
+NeMo Framework delivers the model pipeline as composable open source libraries:
 
 | Stage | Role in the pipeline |
 | --- | --- |
@@ -55,23 +55,25 @@ Repo names and counts change — [Libraries](/about/libraries) is the searchable
 
 ## Choose Framework or Platform
 
-These names sound similar but address different jobs:
+These names sound similar because they share libraries, but they serve different developer jobs:
 
 | | **NeMo Framework** | **NeMo Platform** |
 | --- | --- | --- |
 | **What it is** | Model-lifecycle **libraries** — data, training, RL, evaluation, export, guardrails | Agent **integration product** — CLI, Python SDK, and web UI |
 | **You adopt it when…** | You are training, aligning, evaluating, or deploying **models** | You are shipping **agents** and want evaluate / secure / tune / deploy in one setup |
 | **Typical entry** | Stage guide → library docs, or Framework NGC container | Clone [nemo-platform](https://github.com/NVIDIA-NeMo/nemo-platform), run `nemo setup` |
-| **Docs** | This hub + per-library Fern sites | [NeMo Platform docs](https://nvidia-nemo.github.io/nemo-platform/main/) |
-| **Relationship** | Libraries are the building blocks | Composes Guardrails, Evaluator, Data Designer, and others — does not replace AutoModel or Megatron-Bridge for training |
+| **Docs** | NeMo OSS pages and library docs | [NeMo Platform docs](https://nvidia-nemo.github.io/nemo-platform/main/) |
+| **Relationship** | Libraries are the building blocks | Composes Guardrails, Evaluator, Data Designer, and others for agent workflows |
 
-**NeMo Framework** also names the multi-library NGC container (`nvcr.io/nvidia/nemo`). Refer to [Concepts](/about/concepts#framework-and-platform) for all uses of “Framework.”
+**NeMo Framework** also names the multi-library NGC container (`nvcr.io/nvidia/nemo`). Refer to [Framework and Platform](/about/concepts/framework-and-platform) for naming details.
 
 Many teams train with **AutoModel or Megatron-Bridge**, align with **NeMo RL**, benchmark with **Evaluator**, and serve with **Export-Deploy**. Agent builders can start from **NeMo Platform** instead of wiring those pieces manually.
 
-## Commercial NeMo boundary
+## Open Source and Commercial Entry Points
 
-| In NeMo OSS hub | Outside this catalog |
+NeMo OSS focuses on open source repositories, OSS documentation, and Framework container releases. The broader NVIDIA NeMo suite also includes commercial products, enterprise services, and NIM microservices with their own product documentation.
+
+| NeMo OSS | Broader NVIDIA NeMo docs |
 | --- | --- |
 | 22 public GitHub repos in NVIDIA-NeMo | Customizer, NIM, enterprise services |
 | Framework container release notes | Per-tenant managed offerings |
@@ -79,12 +81,14 @@ Many teams train with **AutoModel or Megatron-Bridge**, align with **NeMo RL**, 
 
 For the full suite, refer to [NVIDIA NeMo (commercial)](https://www.nvidia.com/en-us/ai-data-science/products/nemo/).
 
-## What this hub covers and product docs
+## OSS and Product Docs
 
-| | **NeMo OSS hub** (this site) | **Per-library docs** |
+Use this comparison to choose between open source entry points and product documentation.
+
+| | **NeMo OSS** | **Library docs** |
 | --- | --- | --- |
-| **Audience** | Choosing Framework vs Platform, stage, or library | Using one product deeply |
-| **Content** | Catalog, get-started by stage, release notes | APIs, tutorials, recipes |
+| **Audience** | Choose a stack, stage, or library | Use one library or product deeply |
+| **Content** | Catalog, get-started paths, release notes | APIs, tutorials, recipes |
 | **Scope** | Orientation across NeMo OSS | One library or Platform at a time |
 
 ## Choosing AutoModel or Megatron-Bridge
@@ -100,12 +104,14 @@ Both train large language models (LLMs) and vision language models (VLMs) on NVI
 
 Speech workloads often start with [NeMo Speech](https://docs.nvidia.com/nemo/speech/nightly/) directly — the [NeMo](https://github.com/NVIDIA-NeMo/NeMo) repo is speech-only today.
 
-## Related entry points
+## Related Entry Points
+
+Use these links to move from ecosystem positioning to concepts, structure, catalog, and setup.
 
 <Cards>
 
 <Card title="Concepts" href="/about/concepts">
-Glossary — OSS, Framework, Platform, homonyms.
+How NeMo OSS organizes stacks, stages, libraries, and docs.
 </Card>
 
 <Card title="Architecture" href="/about/architecture">

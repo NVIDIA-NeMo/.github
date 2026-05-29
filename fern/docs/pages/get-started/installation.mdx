@@ -1,13 +1,15 @@
 ---
 title: Installation
-subtitle: pip, containers, and choosing a backend
+subtitle: Pip, Containers, and Choosing a Backend
 slug: get-started/installation
 position: 3
 ---
 
-How to install NeMo OSS libraries and pick a backend for your GPU scale. For a minimal first run, start with [Quickstart](/get-started/quickstart).
+How to install NeMo OSS libraries and pick a backend for your GPU scale. For a minimal first run, start with [Quickstart](/get-started/quickstart). For a setup decision before commands, use [Runtime chooser](/get-started/runtime-chooser).
 
-## pip install (recommended for development)
+## Pip Install (Recommended for Development)
+
+Use package installs for local development, notebooks, and lightweight experiments when the library docs recommend them.
 
 | Workload | Install | Docs |
 | --- | --- | --- |
@@ -18,13 +20,24 @@ How to install NeMo OSS libraries and pick a backend for your GPU scale. For a m
 
 Each library publishes install extras and version pins in its own documentation. Use [Libraries](/about/libraries) to find the repo and docs site for your stage.
 
-## NGC containers (recommended for production stacks)
+## NGC Containers (Recommended for Production Stacks)
 
 Pre-built images bundle tested dependency sets. Use the [container catalog](/about/release-notes/containers) for current tags and pull commands.
 
 The **NeMo Framework** image (`nvcr.io/nvidia/nemo`) is the multi-library training stack. Standalone images exist for AutoModel, RL, and Curator.
 
-## Scale and backends
+| Runtime path | Typical fit |
+| --- | --- |
+| **Framework container** | Cross-library Framework workflows and tested component sets. |
+| **Standalone container** | Focused library workflows with dedicated images. |
+| **pip or source install** | Local development, notebooks, and contribution workflows. |
+| **Platform setup** | Integrated agent workflows with CLI, SDK, and Studio. |
+
+See [Runtime chooser](/get-started/runtime-chooser) for setup guidance.
+
+## Scale and Backends
+
+Use scale and checkpoint needs to choose between the Hugging Face-native path and the Megatron-Core path.
 
 | GPUs | Libraries | Checkpoint conversion | Notes |
 | --- | --- | --- | --- |
@@ -57,7 +70,9 @@ Skills, Nemotron recipes, NeMo Run.
 
 </Cards>
 
-## Experiment tracking
+## Experiment Tracking
+
+Use NeMo Run when setup choices need to carry into repeatable experiment launch and tracking.
 
 <Card title="NeMo Run" href="https://docs.nvidia.com/nemo/run/latest/">
 Launch and track experiments on local machines, SLURM, and Kubernetes.
