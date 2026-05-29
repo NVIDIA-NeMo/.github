@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 
 **Train Llama 3.3 · Qwen 2.5 · Mistral · DeepSeek · Gemma · Nemotron on NVIDIA GPUs**
 
-Open source GPU libraries for data, training, alignment, evaluation, deployment, and agents. Scale from one GPU to 10,000+ nodes with Hugging Face or Megatron backends. Part of the [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/) software suite — this org is the public GitHub home for NeMo OSS.
+Open source GPU libraries for data, training, alignment, evaluation, deployment, and agents. Scale from one GPU to 10,000+ nodes with Hugging Face or Megatron backends. Part of the [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/) software suite — this org is the public GitHub home for **NeMo OSS** (Framework libraries + [NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) for agents).
 
 ## Libraries by stage
 

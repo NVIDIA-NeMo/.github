@@ -8,12 +8,40 @@ position: 2
 **NeMo OSS** is the open source side of [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/) — the public GitHub organization [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) and the documentation hub you are reading now. Commercial NeMo products, enterprise services, and NIM microservices live outside this catalog.
 
 <Callout intent="info">
-This page explains **where NeMo OSS fits**. For searchable repo listings, use [Libraries](/about/libraries). For how stages connect technically, refer to [Architecture](/about/architecture).
+This page explains **where NeMo OSS fits** and **what to choose**. For definitions, refer to [Concepts](/about/concepts). For structure, refer to [Architecture](/about/architecture).
 </Callout>
 
-## NeMo OSS within NVIDIA NeMo
+## What NeMo OSS includes
 
-NVIDIA NeMo spans data, training, alignment, evaluation, and deployment for generative AI. **NeMo OSS** delivers that pipeline as composable open source libraries you can adopt individually or together:
+NeMo OSS is not a single product. It is an **organization of repos** plus two named ways to adopt them:
+
+```mermaid
+flowchart TB
+    subgraph nemooss ["NeMo OSS"]
+        subgraph framework ["NeMo Framework — models"]
+            STAGES["Data · Pretraining · RL · Inference · E2E"]
+        end
+        subgraph platform ["NeMo Platform — agents"]
+            AGENT["CLI · SDK · Studio"]
+        end
+        REPOS["22 catalog repos"]
+    end
+    COMM["Commercial NVIDIA NeMo"]
+
+    REPOS --> framework
+    AGENT --> REPOS
+    nemooss -.-> COMM
+```
+
+| You are building… | Start with… |
+| --- | --- |
+| **Models** (train, align, evaluate, deploy checkpoints) | **NeMo Framework** — libraries by stage or Framework NGC container |
+| **Agents** (evaluate, secure, tune, deploy in production) | **NeMo Platform** — or individual inference libraries à la carte |
+| **Not sure yet** | [Libraries](/about/libraries) catalog or [decision guide](/get-started#decision-guide) |
+
+## Framework lifecycle stages
+
+**NeMo Framework** delivers the model pipeline as composable open source libraries:
 
 | Stage | Role in the pipeline |
 | --- | --- |
@@ -25,28 +53,39 @@ NVIDIA NeMo spans data, training, alignment, evaluation, and deployment for gene
 
 Repo names and counts change — [Libraries](/about/libraries) is the searchable catalog. Each library's docs site has install steps and tutorials.
 
-## NeMo Framework and NeMo Platform
+## Choose Framework or Platform
 
-These names sound similar but point at different layers of NeMo OSS:
+These names sound similar but address different jobs:
 
 | | **NeMo Framework** | **NeMo Platform** |
 | --- | --- | --- |
-| **What it is** | The composable **library pipeline** in this org — data, training, RL, evaluation, export, guardrails | An integrated **CLI, Python SDK, and web UI** for shipping **agents** |
-| **You adopt it when…** | You want individual libraries (or the multi-library NGC stack) for the **model lifecycle** | You want one local setup to **evaluate, secure, tune, and deploy agents** using those libraries |
-| **Typical entry** | Pick a stage → library docs, or pull the Framework container | Clone [nemo-platform](https://github.com/NVIDIA-NeMo/nemo-platform), run `nemo setup` |
+| **What it is** | Model-lifecycle **libraries** — data, training, RL, evaluation, export, guardrails | Agent **integration product** — CLI, Python SDK, and web UI |
+| **You adopt it when…** | You are training, aligning, evaluating, or deploying **models** | You are shipping **agents** and want evaluate / secure / tune / deploy in one setup |
+| **Typical entry** | Stage guide → library docs, or Framework NGC container | Clone [nemo-platform](https://github.com/NVIDIA-NeMo/nemo-platform), run `nemo setup` |
 | **Docs** | This hub + per-library Fern sites | [NeMo Platform docs](https://nvidia-nemo.github.io/nemo-platform/main/) |
+| **Relationship** | Libraries are the building blocks | Composes Guardrails, Evaluator, Data Designer, and others — does not replace AutoModel or Megatron-Bridge for training |
 
-**NeMo Framework** also names the multi-library NGC container (`nvcr.io/nvidia/nemo`) — refer to [Concepts](/about/concepts#framework-and-platform) for how the terms relate. Platform composes libraries such as Guardrails, Evaluator, and Data Designer; it does not replace training libraries like AutoModel or Megatron-Bridge.
+**NeMo Framework** also names the multi-library NGC container (`nvcr.io/nvidia/nemo`). Refer to [Concepts](/about/concepts#framework-and-platform) for all uses of “Framework.”
 
 Many teams train with **AutoModel or Megatron-Bridge**, align with **NeMo RL**, benchmark with **Evaluator**, and serve with **Export-Deploy**. Agent builders can start from **NeMo Platform** instead of wiring those pieces manually.
+
+## Commercial NeMo boundary
+
+| In NeMo OSS hub | Outside this catalog |
+| --- | --- |
+| 22 public GitHub repos in NVIDIA-NeMo | Customizer, NIM, enterprise services |
+| Framework container release notes | Per-tenant managed offerings |
+| Open source docs on docs.nvidia.com/nemo | Microservice docs under `docs.nvidia.com/nemo/microservices` |
+
+For the full suite, refer to [NVIDIA NeMo (commercial)](https://www.nvidia.com/en-us/ai-data-science/products/nemo/).
 
 ## What this hub covers and product docs
 
 | | **NeMo OSS hub** (this site) | **Per-library docs** |
 | --- | --- | --- |
-| **Audience** | Choosing a library, comparing stages, container releases | Using one product deeply |
+| **Audience** | Choosing Framework vs Platform, stage, or library | Using one product deeply |
 | **Content** | Catalog, get-started by stage, release notes | APIs, tutorials, recipes |
-| **Scope** | 22 public GitHub repos in NVIDIA-NeMo | One library at a time |
+| **Scope** | Orientation across NeMo OSS | One library or Platform at a time |
 
 ## Choosing AutoModel or Megatron-Bridge
 
@@ -59,18 +98,22 @@ Both train large language models (LLMs) and vision language models (VLMs) on NVI
 | **Checkpoint flow** | HF models day-0 | HF ↔ Megatron conversion |
 | **Best for** | Fine-tuning, research, rapid iteration | Large-scale pretraining and SFT |
 
-Many teams use **AutoModel or Megatron-Bridge for training**, then **NeMo RL for alignment**, **Evaluator for benchmarks**, and **Export-Deploy for serving**. Speech workloads often start with [NeMo Speech](https://docs.nvidia.com/nemo/speech/nightly/) directly.
+Speech workloads often start with [NeMo Speech](https://docs.nvidia.com/nemo/speech/nightly/) directly — the [NeMo](https://github.com/NVIDIA-NeMo/NeMo) repo is speech-only today.
 
 ## Related entry points
 
 <Cards>
 
-<Card title="Libraries" href="/about/libraries">
-Search and filter all 22 NVIDIA-NeMo repositories.
+<Card title="Concepts" href="/about/concepts">
+Glossary — OSS, Framework, Platform, homonyms.
 </Card>
 
 <Card title="Architecture" href="/about/architecture">
-How lifecycle stages and backends fit together.
+Three layers, pipeline, backends, containers.
+</Card>
+
+<Card title="Libraries" href="/about/libraries">
+Search and filter all 22 NVIDIA-NeMo repositories.
 </Card>
 
 <Card title="Get Started" href="/get-started">
@@ -79,10 +122,6 @@ Quickstart, installation, and guides by stage.
 
 <Card title="NeMo Platform" href="https://nvidia-nemo.github.io/nemo-platform/main/">
 Agent evaluate, harden, tune, and deploy — CLI, SDK, and Studio.
-</Card>
-
-<Card title="NVIDIA NeMo (commercial)" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">
-Broader NeMo software suite beyond this OSS catalog.
 </Card>
 
 </Cards>

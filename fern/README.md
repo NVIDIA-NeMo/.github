@@ -2,6 +2,8 @@
 
 Hub site for open source [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) GitHub repositories. Routes visitors to each library's documentation using the shared NVIDIA Fern global theme from [fern-components](https://github.com/NVIDIA/fern-components). Commercial NeMo products live outside this catalog — refer to [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/).
 
+**Canonical taxonomy:** [TAXONOMY.md](./TAXONOMY.md) — NeMo OSS, Framework, Platform, stages, and repo kinds.
+
 ## Information architecture
 
 This hub follows the NVIDIA canonical doc IA from [`tpl-new-site`](https://gitlab-master.nvidia.com/tech-docs/template-library) (`::tpl site`), adapted for an **ecosystem catalog** rather than a single-product manual:
@@ -26,7 +28,7 @@ Per-library docs (Curator, AutoModel, Megatron-Bridge, and so on) stay on their 
 
 **Keep on the hub** when it helps a reader **choose** at the umbrella level and is likely to stay valid for a long time:
 
-- Lifecycle stages, pipeline shape, and hub and library docs (refer to [Concepts](/about/concepts))
+- Lifecycle stages, pipeline shape, Framework vs Platform, and homonyms (refer to [Concepts](/about/concepts) and [TAXONOMY.md](./TAXONOMY.md))
 - AutoModel vs Megatron-Bridge and similar **stable forks**
 - Catalogs driven from `repos.ts` / `containers.ts` (not hand-maintained repo lists)
 - Container release metadata and cross-component known issues for Framework tags
@@ -77,6 +79,7 @@ fern/
 
 When NVIDIA-NeMo adds or archives a repo, update `components/repos.ts`:
 - Set **`stage`** to match the org README lifecycle column (Data · Pretraining · RL · Inference · E2E).
+- Set **`kind`** to `library`, `integration`, `reference`, or `infrastructure` — see [TAXONOMY.md](./TAXONOMY.md).
 - Add **`tags`** for search facets (modality, technique, role). See `GH-TOPICS.MD` for optional GitHub topic alignment.
 
 When a new **NeMo Framework** NGC container ships:

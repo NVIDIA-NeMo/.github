@@ -8,6 +8,7 @@ import { useMemo, useState } from "react";
 import {
   NEMO_REPOS,
   REPO_STAGES,
+  kindLabel,
   stageLabel,
   type NemoRepo,
   type RepoStage,
@@ -25,6 +26,8 @@ function matchesQuery(repo: NemoRepo, query: string): boolean {
     repo.description,
     repo.stage,
     stageLabel(repo.stage),
+    repo.kind,
+    kindLabel(repo.kind),
     ...(repo.tags ?? []),
   ]
     .join(" ")
@@ -86,6 +89,20 @@ function RepoCard({ repo }: { repo: NemoRepo }) {
         >
           {stageLabel(repo.stage)}
         </span>
+        {repo.kind !== "library" ? (
+          <span
+            style={{
+              fontSize: "0.7rem",
+              fontWeight: 600,
+              padding: "2px 8px",
+              borderRadius: "4px",
+              background: "#f5f5f5",
+              color: MUTED,
+            }}
+          >
+            {kindLabel(repo.kind)}
+          </span>
+        ) : null}
         {(repo.tags ?? []).slice(0, 3).map((tag) => (
           <span
             key={tag}
@@ -214,9 +231,9 @@ export default function RepoCatalog() {
       </div>
 
       <p style={{ fontSize: "0.875rem", color: MUTED, margin: "0 0 1rem" }}>
-        Showing {filtered.length} of {NEMO_REPOS.length} libraries in{" "}
+        Showing {filtered.length} of {NEMO_REPOS.length} repositories in{" "}
         <a href="https://github.com/orgs/NVIDIA-NeMo/repositories?type=all">NVIDIA-NeMo</a>. Stages match the{" "}
-        <a href="https://github.com/NVIDIA-NeMo">org README</a>; tags add cross-cutting search facets.
+        <a href="https://github.com/NVIDIA-NeMo">org README</a>; kind and tags add role and cross-cutting facets.
       </p>
 
       {filtered.length === 0 ? (

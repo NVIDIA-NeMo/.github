@@ -5,13 +5,44 @@ slug: about/architecture
 position: 3
 ---
 
-NeMo OSS is a **composable pipeline** of libraries — not a single monolithic framework. Data flows from curation through training and alignment to evaluation and deployment, with optional orchestration across stages.
+**NeMo OSS** is not one monolithic codebase. It is an organization of focused repos you can use individually or together. Two named stacks sit on top of those repos:
+
+- **NeMo Framework** — the **model lifecycle** (data → train → align → evaluate → deploy).
+- **NeMo Platform** — **agent integration** (evaluate, secure, tune, and deploy agents using selected libraries).
 
 <Callout intent="info">
-For positioning within NVIDIA NeMo, refer to [Ecosystem](/about/ecosystem). For definitions of terms below, refer to [Concepts](/about/concepts).
+For positioning within NVIDIA NeMo, refer to [Ecosystem](/about/ecosystem). For term definitions, refer to [Concepts](/about/concepts).
 </Callout>
 
-## High-level pipeline
+## Three layers
+
+| Layer | What it is | How you use it |
+| --- | --- | --- |
+| **Libraries** | 22 repos in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) — one product per repo | `pip install`, per-library docs, or standalone NGC images |
+| **NeMo Framework** | Model-lifecycle stack — the pipeline below | Pick libraries by stage, or pull the multi-library Framework container |
+| **NeMo Platform** | Agent product — CLI, SDK, Studio | Clone [nemo-platform](https://github.com/NVIDIA-NeMo/nemo-platform), run `nemo setup` |
+
+```mermaid
+flowchart TB
+    subgraph oss ["NeMo OSS"]
+        LIBS["Libraries — à la carte"]
+        subgraph fw ["NeMo Framework — model lifecycle"]
+            PIPE["Data → Pretraining → RL → Inference"]
+        end
+        subgraph plat ["NeMo Platform — agents"]
+            PCLI["CLI · SDK · Studio"]
+        end
+    end
+
+    LIBS -.-> fw
+    PCLI -.-> PIPE
+```
+
+Platform **composes** libraries (Guardrails, Evaluator, Data Designer, and others). It is **not** a box in the Framework pipeline — it is a cross-cutting integration layer for agent workflows. Training still starts with Framework libraries such as AutoModel or Megatron-Bridge.
+
+## NeMo Framework pipeline
+
+The diagram shows representative libraries. The live list is [Libraries](/about/libraries) filtered by stage.
 
 ```mermaid
 flowchart LR
@@ -53,7 +84,7 @@ flowchart LR
     Skills -.-> Inference
 ```
 
-Solid arrows are the typical **model lifecycle** (data → train → align → evaluate/deploy). Dotted lines show **orchestration and reference pipelines** (Run, Skills, Nemotron) that span stages.
+Solid arrows are the typical **model lifecycle**. Dotted lines are **orchestration and reference assets** (Run, Skills, Nemotron) that span stages.
 
 ## Functional layers
 
@@ -65,7 +96,7 @@ Solid arrows are the typical **model lifecycle** (data → train → align → e
 | **Inference** | Benchmark, export, serve, and apply guardrails |
 | **E2E** | Launch experiments, ship recipes, share reference assets |
 
-Which repos sit in each layer changes over time — use [Libraries](/about/libraries) (filtered by stage) as the live catalog, not this table.
+Which repos sit in each layer changes over time — use [Libraries](/about/libraries) (filtered by stage) as the live catalog.
 
 ## Training backends
 
@@ -96,9 +127,19 @@ flowchart TB
 
 Both paths can feed the same **RL**, **Evaluator**, and **Export-Deploy** libraries downstream.
 
-## Agent platform
+## NeMo Platform overlay
 
-[NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) sits alongside individual inference libraries: it wires Guardrails, Evaluator, Data Designer, and related services into one CLI and SDK for **agent** evaluate / optimize / deploy loops. It is not the Framework NGC container — refer to [Framework and Platform](/about/concepts#framework-and-platform).
+[NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) integrates NeMo libraries for **agent** workflows — not for large-scale pretraining today.
+
+| Platform capability | Libraries and services involved |
+| --- | --- |
+| Secure agents | Guardrails, Anonymizer, Auditor |
+| Evaluate agents | Evaluator, Harbor-backed suites |
+| Tune agents | Skill optimization, Switchyard routing |
+| Build agents | NeMo Agent Toolkit (NAT), Inference Gateway |
+| Synthetic data | Data Designer |
+
+Platform is **not** the Framework NGC container. Refer to [Framework and Platform](/about/concepts#framework-and-platform) for naming and [Ecosystem](/about/ecosystem#choose-framework-or-platform) for when to start here.
 
 <Cards>
 
@@ -107,14 +148,14 @@ Setup, CLI reference, and API for agent hardening and evaluation.
 </Card>
 
 <Card title="Inference get started" href="/get-started/inference">
-Model evaluation, export, guardrails, and when to use Platform or standalone libraries.
+Model evaluation, export, guardrails, and Platform entry points.
 </Card>
 
 </Cards>
 
 ## NGC containers
 
-For production-style stacks, NGC images bundle tested dependency sets:
+NGC images bundle tested dependency sets. They are **delivery mechanisms** for Framework libraries — not separate products.
 
 | Image | Scope |
 | --- | --- |
@@ -130,7 +171,7 @@ Refer to the [container catalog](/about/release-notes/containers) for pull comma
 <Cards>
 
 <Card title="Concepts" href="/about/concepts">
-Lifecycle stages, backends, and hub and product docs.
+Glossary — Framework, Platform, stages, and homonyms.
 </Card>
 
 <Card title="Get Started" href="/get-started">

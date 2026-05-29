@@ -7,20 +7,31 @@ position: 5
 
 import RepoCatalog from "@/components/RepoCatalog";
 
-Browse all **22 open source libraries** in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) by lifecycle stage. For how NeMo OSS fits in NVIDIA NeMo, refer to [Ecosystem](/about/ecosystem). For pipeline structure, refer to [Architecture](/about/architecture).
+Browse **22 open source repositories** in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo). Most are **NeMo Framework** libraries for the model lifecycle; [NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) is an **integration** product that composes several of them for agents.
+
+For positioning, refer to [Ecosystem](/about/ecosystem). For pipeline structure, refer to [Architecture](/about/architecture).
 
 <RepoCatalog />
 
-## How libraries are grouped
+## How repos are grouped
 
-Stages match the [NVIDIA-NeMo org README](https://github.com/NVIDIA-NeMo) lifecycle table. Use **tags** on each card (or the search box) for cross-cutting facets like `speech`, `evaluation`, or `agents`.
+Each card shows a **stage** (org README lifecycle column) and a **kind** (role in the catalog):
+
+| Kind | Role | Examples |
+| --- | --- | --- |
+| **Library** | Focused product for a stage | Curator, AutoModel, RL, Evaluator |
+| **Integration** | Composes libraries into one product | NeMo Platform |
+| **Reference** | Recipes, cookbooks, pipelines | Skills, Nemotron |
+| **Infrastructure** | Shared CI or meta repos | FW-CI-templates |
 
 | Stage | What lives here |
 | --- | --- |
 | **Data** | Curation, synthetic data, PII handling, SDG pipelines |
-| **Pretraining** | Model training and fine-tuning (AutoModel, Megatron-Bridge, Speech, optimizers) |
+| **Pretraining** | Model training and fine-tuning (AutoModel, Megatron-Bridge, NeMo Speech, optimizers) |
 | **RL** | Post-training alignment, environments, agent rollout |
-| **Inference** | Evaluation, export, serving, guardrails, agent platform |
-| **E2E** | Reference pipelines, recipes, experiment orchestration, CI templates |
+| **Inference** | Evaluation, export, serving, guardrails (and Platform for agent integration) |
+| **E2E** | Reference pipelines, recipes, experiment orchestration |
+
+Use **tags** on each card (or the search box) for cross-cutting facets like `speech`, `evaluation`, or `agents`.
 
 Libraries without a published docs site link to GitHub README or microservice docs. Speech AI documentation is at [NeMo Speech](https://docs.nvidia.com/nemo/speech/nightly/).

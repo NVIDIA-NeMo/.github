@@ -5,11 +5,43 @@ slug: about/concepts
 position: 4
 ---
 
-Key concepts for navigating **NeMo OSS** — the hub, the GitHub org, and the libraries it catalogs.
+Key concepts for navigating **NeMo OSS** — the hub, the GitHub org, and the catalogs it maintains.
 
 ## NeMo OSS
 
-**NeMo OSS** refers to open source libraries in the [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) GitHub organization, documented on **docs.nvidia.com/nemo**. It is one part of the broader [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/) software suite, which also includes commercial offerings not listed in this catalog.
+**NeMo OSS** is the public open source side of NVIDIA NeMo: repositories in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo), documented on **docs.nvidia.com/nemo**. It is the **discovery layer** — this hub orients you; each library owns its own manual.
+
+NeMo OSS contains two major stacks:
+
+| Stack | Focus | Entry |
+| --- | --- | --- |
+| **NeMo Framework** | **Model lifecycle** — data through deployment | [Get Started by stage](/get-started) or Framework NGC container |
+| **NeMo Platform** | **Agent lifecycle** — evaluate, secure, tune, deploy agents | [NeMo Platform docs](https://nvidia-nemo.github.io/nemo-platform/main/) |
+
+NeMo OSS is one part of the broader [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/) software suite. Commercial products (Customizer, NIM, microservices) live outside this catalog.
+
+## Framework and Platform
+
+| Term | Meaning |
+| --- | --- |
+| **NeMo Framework** (ecosystem) | The open source **model-lifecycle** library stack in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo). Composable repos from data through deployment. **Named “Framework” but not one monolithic codebase.** |
+| **NeMo Framework container** | NGC image `nvcr.io/nvidia/nemo:<tag>` bundling Megatron-Bridge, Evaluator, Export-Deploy, Run, and NeMo Speech — refer to [Containers and releases](#containers-and-releases) |
+| **NeMo Platform** | Product repo [nemo-platform](https://github.com/NVIDIA-NeMo/nemo-platform) — **CLI, SDK, and Studio UI** that integrate NeMo libraries for **agents**. Cross-cutting; not a pipeline stage. |
+
+Use **Framework** for models and the training/eval/deploy pipeline. Use **Platform** for agent integration. Platform docs: [NeMo Platform documentation](https://nvidia-nemo.github.io/nemo-platform/main/).
+
+When to choose each: [Ecosystem](/about/ecosystem#choose-framework-or-platform). How they connect: [Architecture](/about/architecture#three-layers).
+
+## Homonyms
+
+| Name | Means | Does not mean |
+| --- | --- | --- |
+| **NeMo Framework** | The library ecosystem **or** the multi-library NGC container | A single GitHub repo |
+| **NeMo** ([NeMo repo](https://github.com/NVIDIA-NeMo/NeMo)) | **NeMo Speech** — ASR, TTS, speech-language models | The whole OSS org or Platform |
+| **NeMo Platform** | Agent integration product (`nemo-platform`) | The Framework container or NVIDIA NeMo commercial suite |
+| **NeMo OSS** | This org + hub | Every NVIDIA product with “NeMo” in the name |
+
+Always say **NeMo Speech** when referring to the `NeMo` repository in user-facing copy.
 
 ## Lifecycle stages
 
@@ -23,7 +55,20 @@ Libraries are grouped into five **lifecycle stages** — the same columns as the
 | **Inference** | Evaluate quality, export checkpoints, deploy, or add guardrails |
 | **E2E** | Run multi-step recipes, orchestrate experiments, share reference pipelines |
 
-Stage-specific get-started guides: [Get Started](/get-started) → **By lifecycle stage**.
+Stage guides: [Get Started](/get-started) → **By lifecycle stage**.
+
+## Repo kind
+
+In the [Libraries](/about/libraries) catalog, each repo has a **stage** (README column) and a **kind** (role):
+
+| Kind | Role | Examples |
+| --- | --- | --- |
+| **Library** | Focused product for a stage | Curator, AutoModel, RL, Evaluator |
+| **Integration** | Composes libraries into one product | NeMo Platform |
+| **Reference** | Recipes, cookbooks, example pipelines | Skills, Nemotron |
+| **Infrastructure** | Shared CI or meta repos | FW-CI-templates |
+
+Kind explains repos that do not fit neatly into one pipeline box (for example Platform under Inference for discoverability).
 
 ## Hub and library documentation
 
@@ -39,26 +84,12 @@ The hub answers *which library and where to click next*. Library docs answer *ho
 
 | Keep here | Put in library docs |
 | --- | --- |
-| Lifecycle stages and pipeline shape | Tutorials, APIs, configuration |
+| Lifecycle stages, pipeline shape, Framework vs Platform | Tutorials, APIs, configuration |
 | Choosing AutoModel or Megatron-Bridge | Model-specific recipes and scripts |
 | Catalogs (`repos.ts`, container catalog) | Per-release install pins and changelogs |
 | Framework container tags and cross-component known issues | Library-only bugs and workarounds |
 
 Hub content should help a **decision** and have a **long lifespan**. If it goes stale every release, link out instead.
-
-## Framework and Platform
-
-Three related terms show up across NeMo OSS docs:
-
-| Term | Meaning |
-| --- | --- |
-| **NeMo Framework** (ecosystem) | The open source **library pipeline** in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) — composable repos for data through deployment, documented on this hub |
-| **NeMo Framework container** | NGC image `nvcr.io/nvidia/nemo:<tag>` bundling a tested multi-library training and inference stack — refer to [Containers and releases](#containers-and-releases) |
-| **NeMo Platform** | Product repo [nemo-platform](https://github.com/NVIDIA-NeMo/nemo-platform) — **CLI, SDK, and Studio UI** that integrate NeMo libraries to evaluate, harden, tune, and deploy **agents** |
-
-Use **Framework** when you mean the library ecosystem or the NGC bundle. Use **Platform** when you mean the agent integration layer. Platform docs live on [NeMo Platform documentation](https://nvidia-nemo.github.io/nemo-platform/main/); training and export details stay on each library's site.
-
-Positioning and when to choose each: [Ecosystem](/about/ecosystem#nemo-framework-and-nemo-platform).
 
 ## Training backends
 
@@ -92,11 +123,11 @@ A repo has one stage; tags help you find libraries that span concerns (for examp
 <Cards>
 
 <Card title="Ecosystem" href="/about/ecosystem">
-NeMo OSS within NVIDIA NeMo, Framework and Platform, and AutoModel or Megatron-Bridge.
+NeMo OSS within NVIDIA NeMo and Framework or Platform choices.
 </Card>
 
 <Card title="Architecture" href="/about/architecture">
-Pipeline diagram, layers, and container bundling.
+Three layers, pipeline diagram, backends, and containers.
 </Card>
 
 <Card title="Libraries" href="/about/libraries">
