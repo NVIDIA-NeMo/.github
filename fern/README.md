@@ -30,8 +30,8 @@ Per-library docs own commands, APIs, tutorials, model support, and version-speci
 
 Published targets are configured in [docs.yml](./docs.yml):
 
-- Preview: `nemo-framework.docs.buildwithfern.com/nemo`
-- Production: `docs.nvidia.com/nemo-oss`
+- Preview: `nemo.docs.buildwithfern.com/oss`
+- Production: `docs.nvidia.com/nemo/oss`
 
 ## Site Shape
 

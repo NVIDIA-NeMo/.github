@@ -59,7 +59,7 @@ Data ──▶ Training ──▶ Alignment ──▶ Evaluation ──▶ Deplo
   - **Audio:** ASR transcription, WER filtering, quality assessment.
   - Powered by **NVIDIA RAPIDS** (cuDF, cuML, cuGraph) + Ray for multi-node scaling.
   - Proven results: 16x faster fuzzy dedup on 8 TB dataset; 40% lower TCO vs CPU.
-- **Docs:** [docs.nvidia.com/nemo-oss/curator](https://docs.nvidia.com/nemo-oss/curator/latest/)
+- **Docs:** [docs.nvidia.com/nemo/oss/curator](https://docs.nvidia.com/nemo/oss/curator/latest/)
 - **Container:** [NGC NeMo Curator](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo-curator)
 
 ### 3b. NeMo Data Designer
@@ -111,7 +111,7 @@ Data ──▶ Training ──▶ Alignment ──▶ Evaluation ──▶ Deplo
   - Actively developed — new model support weekly (MiniMax-M2, DeepSeek V3.2, Step 3.5-flash in Feb 2026).
   - Install: `pip install nemo-automodel` or `uv sync`.
   - **Launch options:** `torchrun`, `automodel` CLI (interactive + SLURM), Kubernetes (coming).
-- **Docs:** [docs.nvidia.com/nemo-oss/automodel](https://docs.nvidia.com/nemo-oss/automodel/latest/)
+- **Docs:** [docs.nvidia.com/nemo/oss/automodel](https://docs.nvidia.com/nemo/oss/automodel/latest/)
 - **Container:** [NGC NeMo AutoModel](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo-automodel)
 
 ### 4b. NeMo Megatron-Bridge (Scale — 1K+ GPUs)
@@ -126,7 +126,7 @@ Data ──▶ Training ──▶ Alignment ──▶ Evaluation ──▶ Deplo
   - **Model coverage:** Llama 2–3.3, Qwen 2–3 (incl. MoE and VL), DeepSeek V2/V3, Gemma/Gemma 3 VL, Nemotron-H, Nemotron Nano v2/VL, GPT-OSS, GLM-4.5, Mistral/Ministral, Moonlight, OlMoE.
   - **PyTorch-native training loop** — refactored from the legacy NeMo training stack for greater flexibility.
   - Community adoptions: VeRL, Slime, SkyRL, Mind Lab (trained trillion-parameter GRPO LoRA on 64 H800s).
-- **Docs:** [docs.nvidia.com/nemo-oss/megatron-bridge](https://docs.nvidia.com/nemo-oss/megatron-bridge/latest/)
+- **Docs:** [docs.nvidia.com/nemo/oss/megatron-bridge](https://docs.nvidia.com/nemo/oss/megatron-bridge/latest/)
 - **Container:** [NGC NeMo Framework](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo)
 
 ### 4c. NeMo Speech
@@ -154,7 +154,7 @@ Data ──▶ Training ──▶ Alignment ──▶ Evaluation ──▶ Deplo
 
 - **Repo:** [NVIDIA-NeMo/Emerging-Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers)
 - **What it does:** Collection of cutting-edge optimizers (e.g., Muon, Dion) for use across training libraries.
-- **Docs:** [docs.nvidia.com/nemo-oss/emerging-optimizers](https://docs.nvidia.com/nemo-oss/emerging-optimizers/latest/index.html)
+- **Docs:** [docs.nvidia.com/nemo/oss/emerging-optimizers](https://docs.nvidia.com/nemo/oss/emerging-optimizers/latest/index.html)
 
 ---
 
@@ -178,7 +178,7 @@ Data ──▶ Training ──▶ Alignment ──▶ Evaluation ──▶ Deplo
   - Used to train [Nemotron-3-Nano-30B](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8).
   - Latest release: v0.5.0 (Jan 2026) with LoRA support for DTensor and Megatron backends.
   - Install: `uv venv && uv run python examples/run_grpo.py`
-- **Docs:** [docs.nvidia.com/nemo-oss/rl](https://docs.nvidia.com/nemo-oss/rl/latest/)
+- **Docs:** [docs.nvidia.com/nemo/oss/rl](https://docs.nvidia.com/nemo/oss/rl/latest/)
 - **Container:** [NGC NeMo RL](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo-rl)
 
 ### 5b. NeMo Gym
@@ -197,7 +197,7 @@ Data ──▶ Training ──▶ Alignment ──▶ Evaluation ──▶ Deplo
   - Integrates with NeMo RL and other training frameworks.
   - Responses API-based agent architecture.
   - Early development — APIs evolving.
-- **Docs:** [docs.nvidia.com/nemo-oss/gym](https://docs.nvidia.com/nemo-oss/gym/latest/index.html)
+- **Docs:** [docs.nvidia.com/nemo/oss/gym](https://docs.nvidia.com/nemo/oss/gym/latest/index.html)
 
 ---
 
@@ -221,7 +221,7 @@ Data ──▶ Training ──▶ Alignment ──▶ Evaluation ──▶ Deplo
   - **Reproducibility by default:** All configs, seeds, and software provenance captured automatically.
   - **Scale anywhere:** Local machine, SLURM, Lepton AI, cloud-native backends.
   - Install: `pip install nemo-evaluator-launcher`
-- **Docs:** [docs.nvidia.com/nemo-oss/evaluator](https://docs.nvidia.com/nemo-oss/evaluator/latest/)
+- **Docs:** [docs.nvidia.com/nemo/oss/evaluator](https://docs.nvidia.com/nemo/oss/evaluator/latest/)
 
 ### 6b. NeMo Skills (Evaluation Side)
 
@@ -244,7 +244,7 @@ Data ──▶ Training ──▶ Alignment ──▶ Evaluation ──▶ Deplo
   - **Multi-GPU / Multi-instance** deployment support.
   - Serves as the bridge from training to production inference.
   - Install: `pip install nemo-export-deploy` (lightweight) or use NeMo Framework container for full features.
-- **Docs:** [docs.nvidia.com/nemo-oss/export-deploy](https://docs.nvidia.com/nemo-oss/export-deploy/latest/)
+- **Docs:** [docs.nvidia.com/nemo/oss/export-deploy](https://docs.nvidia.com/nemo/oss/export-deploy/latest/)
 - **Container:** Included in [NGC NeMo Framework](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo)
 
 ### 7b. NeMo Guardrails
@@ -261,7 +261,7 @@ Data ──▶ Training ──▶ Alignment ──▶ Evaluation ──▶ Deplo
   - OpenAI-compatible server endpoint at `/v1/chat/completions`.
   - Published in EMNLP 2023 — academic paper available.
   - Latest version: 0.20.0.
-- **Docs:** [docs.nvidia.com/nemo-oss/guardrails](https://docs.nvidia.com/nemo-oss/guardrails)
+- **Docs:** [docs.nvidia.com/nemo/oss/guardrails](https://docs.nvidia.com/nemo/oss/guardrails)
 
 ---
 
@@ -278,7 +278,7 @@ Data ──▶ Training ──▶ Alignment ──▶ Evaluation ──▶ Deplo
   - **Modular:** Decouple task from executor; reuse environment configs across tasks.
   - Built on Fiddle (Google), TorchX, Skypilot, XManager.
   - Pre-release — API subject to change before v1.0.
-- **Docs:** [docs.nvidia.com/nemo-oss/run](https://docs.nvidia.com/nemo-oss/run/latest/)
+- **Docs:** [docs.nvidia.com/nemo/oss/run](https://docs.nvidia.com/nemo/oss/run/latest/)
 
 ### 8b. Nemotron (Models & Recipes)
 
@@ -347,18 +347,18 @@ Data ──▶ Training ──▶ Alignment ──▶ Evaluation ──▶ Deplo
 
 | Repo | Stage | Stars | One-Liner | Docs |
 |------|-------|-------|-----------|------|
-| [Curator](https://github.com/NVIDIA-NeMo/Curator) | Data | 1,394 | GPU-accelerated data curation (text, image, video, audio) | [link](https://docs.nvidia.com/nemo-oss/curator/latest/) |
+| [Curator](https://github.com/NVIDIA-NeMo/Curator) | Data | 1,394 | GPU-accelerated data curation (text, image, video, audio) | [link](https://docs.nvidia.com/nemo/oss/curator/latest/) |
 | [Data Designer](https://github.com/NVIDIA-NeMo/DataDesigner) | Data | 698 | Synthetic data generation from scratch or seed data | [link](https://nvidia-nemo.github.io/DataDesigner/latest/) |
 | [Skills](https://github.com/NVIDIA-NeMo/Skills) | Data + Eval | 816 | SDG pipelines + evaluation for math, code, science | [link](https://nvidia-nemo.github.io/Skills/) |
-| [AutoModel](https://github.com/NVIDIA-NeMo/Automodel) | Training | 288 | PyTorch DTensor-native training with HF support | [link](https://docs.nvidia.com/nemo-oss/automodel/latest/) |
-| [Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge) | Training | 423 | Megatron-Core training with bidirectional HF conversion | [link](https://docs.nvidia.com/nemo-oss/megatron-bridge/latest/) |
+| [AutoModel](https://github.com/NVIDIA-NeMo/Automodel) | Training | 288 | PyTorch DTensor-native training with HF support | [link](https://docs.nvidia.com/nemo/oss/automodel/latest/) |
+| [Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge) | Training | 423 | Megatron-Core training with bidirectional HF conversion | [link](https://docs.nvidia.com/nemo/oss/megatron-bridge/latest/) |
 | [NeMo (Speech)](https://github.com/NVIDIA-NeMo/NeMo) | Training | — | Speech AI (ASR, TTS) on Megatron-Core | [link](https://docs.nvidia.com/nemo-framework/user-guide/latest/speech_ai/index.html) |
 | [DFM](https://github.com/NVIDIA-NeMo/DFM) | Training | 29 | Diffusion model training (video, image) | [link](https://github.com/NVIDIA-NeMo/DFM/tree/main/docs) |
-| [Emerging-Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers) | Training | — | Collection of cutting-edge optimizers | [link](https://docs.nvidia.com/nemo-oss/emerging-optimizers/latest/) |
-| [NeMo RL](https://github.com/NVIDIA-NeMo/RL) | Alignment | 1,306 | Scalable post-training (GRPO, DPO, SFT, distillation) | [link](https://docs.nvidia.com/nemo-oss/rl/latest/) |
-| [Gym](https://github.com/NVIDIA-NeMo/Gym) | Alignment | 637 | RL environments for LLM training | [link](https://docs.nvidia.com/nemo-oss/gym/latest/) |
-| [Evaluator](https://github.com/NVIDIA-NeMo/Evaluator) | Evaluation | 195 | 100+ benchmarks across 18 harnesses | [link](https://docs.nvidia.com/nemo-oss/evaluator/latest/) |
-| [Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy) | Deployment | 27 | Export to TRT-LLM/vLLM/ONNX + Triton serving | [link](https://docs.nvidia.com/nemo-oss/export-deploy/latest/) |
-| [Guardrails](https://github.com/NVIDIA-NeMo/Guardrails) | Deployment | 5,635 | Programmable safety rails with Colang DSL | [link](https://docs.nvidia.com/nemo-oss/guardrails) |
-| [Run](https://github.com/NVIDIA-NeMo/Run) | Infra | 216 | Experiment launcher (local, SLURM, K8s) | [link](https://docs.nvidia.com/nemo-oss/run/latest/) |
+| [Emerging-Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers) | Training | — | Collection of cutting-edge optimizers | [link](https://docs.nvidia.com/nemo/oss/emerging-optimizers/latest/) |
+| [NeMo RL](https://github.com/NVIDIA-NeMo/RL) | Alignment | 1,306 | Scalable post-training (GRPO, DPO, SFT, distillation) | [link](https://docs.nvidia.com/nemo/oss/rl/latest/) |
+| [Gym](https://github.com/NVIDIA-NeMo/Gym) | Alignment | 637 | RL environments for LLM training | [link](https://docs.nvidia.com/nemo/oss/gym/latest/) |
+| [Evaluator](https://github.com/NVIDIA-NeMo/Evaluator) | Evaluation | 195 | 100+ benchmarks across 18 harnesses | [link](https://docs.nvidia.com/nemo/oss/evaluator/latest/) |
+| [Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy) | Deployment | 27 | Export to TRT-LLM/vLLM/ONNX + Triton serving | [link](https://docs.nvidia.com/nemo/oss/export-deploy/latest/) |
+| [Guardrails](https://github.com/NVIDIA-NeMo/Guardrails) | Deployment | 5,635 | Programmable safety rails with Colang DSL | [link](https://docs.nvidia.com/nemo/oss/guardrails) |
+| [Run](https://github.com/NVIDIA-NeMo/Run) | Infra | 216 | Experiment launcher (local, SLURM, K8s) | [link](https://docs.nvidia.com/nemo/oss/run/latest/) |
 | [Nemotron](https://github.com/NVIDIA-NeMo/Nemotron) | Recipes | — | Nemotron model family recipes | [link](https://github.com/NVIDIA-NeMo/Nemotron#readme) |

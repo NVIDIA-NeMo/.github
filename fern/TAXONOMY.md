@@ -1,6 +1,6 @@
 # NeMo OSS taxonomy
 
-Canonical vocabulary for the staged Fern hub (`docs.nvidia.com/nemo-oss`), org README, and `components/repos.ts`. When copy disagrees, this file wins.
+Canonical vocabulary for the staged Fern hub (`docs.nvidia.com/nemo/oss`), org README, and `components/repos.ts`. When copy disagrees, this file wins.
 
 ## Top-level map
 

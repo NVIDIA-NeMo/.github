@@ -1,15 +1,15 @@
 # yaml-language-server: $schema=https://schema.buildwithfern.dev/docs-yml.json
 
 instances:
-  - url: nemo-framework.docs.buildwithfern.com/nemo
-    custom-domain: docs.nvidia.com/nemo-oss
+  - url: nemo.docs.buildwithfern.com/oss
+    custom-domain: docs.nvidia.com/nemo/oss
 
 title: NeMo OSS
 
 global-theme: nvidia
 
 logo:
-  href: /nemo
+  href: /oss
   right-text: NeMo OSS
 
 # GitHub org link in the top-right header (Fern `github` navbar button).
@@ -27,30 +27,30 @@ experimental:
     - ./components
 
 redirects:
-  - source: "/nemo/repositories"
-    destination: "/nemo/libraries"
-  - source: "/nemo/libraries"
-    destination: "/nemo/about/libraries"
-  - source: "/nemo/containers"
-    destination: "/nemo/about/release-notes/containers"
-  - source: "/nemo/about/containers"
-    destination: "/nemo/about/release-notes/containers"
-  - source: "/nemo/release-notes"
-    destination: "/nemo/about/release-notes"
-  - source: "/nemo/releases"
-    destination: "/nemo/about/release-notes"
-  - source: "/nemo/getting-started"
-    destination: "/nemo/get-started"
-  - source: "/nemo/community"
-    destination: "/nemo/resources/community"
-  - source: "/nemo/index.html"
-    destination: "/nemo"
-  - source: "/nemo/index"
-    destination: "/nemo"
-  - source: "/nemo/:path*/index.html"
-    destination: "/nemo/:path*"
-  - source: "/nemo/:path*.html"
-    destination: "/nemo/:path*"
+  - source: "/oss/repositories"
+    destination: "/oss/libraries"
+  - source: "/oss/libraries"
+    destination: "/oss/about/libraries"
+  - source: "/oss/containers"
+    destination: "/oss/about/release-notes/containers"
+  - source: "/oss/about/containers"
+    destination: "/oss/about/release-notes/containers"
+  - source: "/oss/release-notes"
+    destination: "/oss/about/release-notes"
+  - source: "/oss/releases"
+    destination: "/oss/about/release-notes"
+  - source: "/oss/getting-started"
+    destination: "/oss/get-started"
+  - source: "/oss/community"
+    destination: "/oss/resources/community"
+  - source: "/oss/index.html"
+    destination: "/oss"
+  - source: "/oss/index"
+    destination: "/oss"
+  - source: "/oss/:path*/index.html"
+    destination: "/oss/:path*"
+  - source: "/oss/:path*.html"
+    destination: "/oss/:path*"
 
 navigation:
   - section: About
