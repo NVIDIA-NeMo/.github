@@ -1,0 +1,106 @@
+---
+title: Concepts
+subtitle: Terms and ideas used across NeMo OSS
+slug: about/concepts
+position: 4
+---
+
+Key concepts for navigating **NeMo OSS** — the hub, the GitHub org, and the libraries it catalogs.
+
+## NeMo OSS
+
+**NeMo OSS** refers to open source libraries in the [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) GitHub organization, documented on **docs.nvidia.com/nemo**. It is one part of the broader [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/) software suite, which also includes commercial offerings not listed in this catalog.
+
+## Lifecycle stages
+
+Libraries are grouped into five **lifecycle stages** — the same columns as the [org README](https://github.com/NVIDIA-NeMo):
+
+| Stage | You typically… |
+| --- | --- |
+| **Data** | Curate, filter, synthesize, or anonymize training data |
+| **Pretraining** | Pretrain, fine-tune, or adapt foundation models |
+| **RL** | Align models with SFT, DPO, GRPO, or reinforcement learning |
+| **Inference** | Evaluate quality, export checkpoints, deploy, or add guardrails |
+| **E2E** | Run multi-step recipes, orchestrate experiments, share reference pipelines |
+
+Stage-specific get-started guides: [Get Started](/get-started) → **By lifecycle stage**.
+
+## Hub and library documentation
+
+| Term | Meaning |
+| --- | --- |
+| **Hub** | This site — orientation, catalog, containers, known issues, get-started by stage |
+| **Library docs** | Each product's Fern or docs site (for example `docs.nvidia.com/nemo/curator`) |
+| **Repo** | GitHub source in NVIDIA-NeMo — issues, PRs, and `CONTRIBUTING.md` live there |
+
+The hub answers *which library and where to click next*. Library docs answer *how to use that library*.
+
+## What belongs on this hub
+
+| Keep here | Put in library docs |
+| --- | --- |
+| Lifecycle stages and pipeline shape | Tutorials, APIs, configuration |
+| Choosing AutoModel or Megatron-Bridge | Model-specific recipes and scripts |
+| Catalogs (`repos.ts`, container catalog) | Per-release install pins and changelogs |
+| Framework container tags and cross-component known issues | Library-only bugs and workarounds |
+
+Hub content should help a **decision** and have a **long lifespan**. If it goes stale every release, link out instead.
+
+## Framework and Platform
+
+Three related terms show up across NeMo OSS docs:
+
+| Term | Meaning |
+| --- | --- |
+| **NeMo Framework** (ecosystem) | The open source **library pipeline** in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) — composable repos for data through deployment, documented on this hub |
+| **NeMo Framework container** | NGC image `nvcr.io/nvidia/nemo:<tag>` bundling a tested multi-library training and inference stack — refer to [Containers and releases](#containers-and-releases) |
+| **NeMo Platform** | Product repo [nemo-platform](https://github.com/NVIDIA-NeMo/nemo-platform) — **CLI, SDK, and Studio UI** that integrate NeMo libraries to evaluate, harden, tune, and deploy **agents** |
+
+Use **Framework** when you mean the library ecosystem or the NGC bundle. Use **Platform** when you mean the agent integration layer. Platform docs live on [NeMo Platform documentation](https://nvidia-nemo.github.io/nemo-platform/main/); training and export details stay on each library's site.
+
+Positioning and when to choose each: [Ecosystem](/about/ecosystem#nemo-framework-and-nemo-platform).
+
+## Training backends
+
+| Term | Meaning |
+| --- | --- |
+| **PyTorch / HF path** | Hugging Face models and trainers with [AutoModel](https://docs.nvidia.com/nemo/automodel/latest/) — best default for ≤1K GPUs |
+| **Megatron-Core path** | Large-scale training with [Megatron-Bridge](https://docs.nvidia.com/nemo/megatron-bridge/latest/) and HF ↔ Megatron checkpoint conversion |
+| **Recipe** | Scripted training or alignment configuration (often in library repos or [Nemotron](https://github.com/NVIDIA-NeMo/Nemotron)) |
+
+## Containers and releases
+
+| Term | Meaning |
+| --- | --- |
+| **NeMo Framework container** | Multi-library NGC image `nvcr.io/nvidia/nemo:<tag>` |
+| **Standalone container** | Single-library images (AutoModel, RL, Curator) |
+| **Component versions** | Pinned packages inside a Framework container — refer to [software component versions](https://docs.nvidia.com/nemo/megatron-bridge/latest/releases/software-versions.html) |
+
+Release metadata: [Release notes](/about/release-notes).
+
+## Tags and stages
+
+In the [Libraries](/about/libraries) catalog:
+
+- **Stage** — primary lifecycle column (one per repo).
+- **Tags** — cross-cutting search facets (`speech`, `evaluation`, `agents`, and so on).
+
+A repo has one stage; tags help you find libraries that span concerns (for example Evaluator tagged for benchmarks).
+
+## Related pages
+
+<Cards>
+
+<Card title="Ecosystem" href="/about/ecosystem">
+NeMo OSS within NVIDIA NeMo, Framework and Platform, and AutoModel or Megatron-Bridge.
+</Card>
+
+<Card title="Architecture" href="/about/architecture">
+Pipeline diagram, layers, and container bundling.
+</Card>
+
+<Card title="Libraries" href="/about/libraries">
+Searchable catalog of all repos.
+</Card>
+
+</Cards>

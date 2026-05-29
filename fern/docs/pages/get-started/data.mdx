@@ -1,0 +1,36 @@
+---
+title: Data
+subtitle: Get started with data curation and synthetic data libraries
+slug: get-started/data
+position: 10
+---
+
+import StageGuide from "@/components/StageGuide";
+
+Libraries for **Data** — curation, synthetic generation, PII handling, and SDG pipelines. Install and tutorial steps live on each library's docs site; this page lists every active repo in this stage.
+
+```mermaid
+flowchart LR
+    DATA["Data"] --> PRE["Pretraining"] --> RL["RL"] --> INF["Inference"]
+    E2E["E2E"] -.-> DATA & PRE & RL & INF
+
+    classDef active fill:#76B900,stroke:#3d5c00,stroke-width:3px,color:#fff
+    classDef dim fill:#f5f5f5,stroke:#ccc,color:#666
+
+    class PRE,RL,INF,E2E dim
+    class DATA active
+```
+
+<StageGuide stage="data" />
+
+## Typical workflow
+
+1. **Curate** raw corpora with [Curator](https://docs.nvidia.com/nemo/curator/latest/) (dedup, filtering, multimodal pipelines).
+2. **Generate** synthetic data with [Data Designer](https://nvidia-nemo.github.io/DataDesigner/latest/) or domain SDG tools.
+3. **Protect** sensitive fields with [Anonymizer](https://github.com/NVIDIA-NeMo/Anonymizer) before sharing or training.
+
+Hand off curated datasets to [Pretraining](/get-started/pretraining) or [RL](/get-started/rl) libraries.
+
+<Card title="NeMo Curator on NGC" href="https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo-curator">
+Pre-built container for large-scale curation jobs.
+</Card>

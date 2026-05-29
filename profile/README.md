@@ -3,22 +3,19 @@ SPDX-FileCopyrightText: Copyright (c) 2024-2026 NVIDIA CORPORATION & AFFILIATES.
 SPDX-License-Identifier: Apache-2.0
 -->
 
-# NVIDIA NeMo Framework
+# NeMo OSS
 
 **Train Llama 3.3 · Qwen 2.5 · Mistral · DeepSeek · Gemma · Nemotron on NVIDIA GPUs**
 
-GPU-accelerated, open-source libraries for training, data curation, evaluation, alignment, and deployment. Scale from a single GPU to 10,000+ nodes with Hugging Face or Megatron backends.
+Open source GPU libraries for data, training, alignment, evaluation, deployment, and agents. Scale from one GPU to 10,000+ nodes with Hugging Face or Megatron backends. Part of the [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/) software suite — this org is the public GitHub home for NeMo OSS.
 
-## Documentation
+## Libraries by stage
 
-**[docs.nvidia.com/nemo](https://docs.nvidia.com/nemo)** — framework overview, decision guide, and links to every library's docs.
+| Data | Pretraining | RL | Inference | E2E |
+| --- | --- | --- | --- | --- |
+| [Curator](https://github.com/NVIDIA-NeMo/Curator)<br>[Anonymizer](https://github.com/NVIDIA-NeMo/Anonymizer)<br>[Data Designer](https://github.com/NVIDIA-NeMo/DataDesigner)<br>[Safe Synthesizer](https://github.com/NVIDIA-NeMo/Safe-Synthesizer)<br>[SDG-PGMs](https://github.com/NVIDIA-NeMo/SDG-PGMs) | [Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge)<br>[AutoModel](https://github.com/NVIDIA-NeMo/Automodel)<br>[Speech](https://github.com/NVIDIA-NeMo/NeMo)<br>[Emerging Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers) | [RL](https://github.com/NVIDIA-NeMo/RL)<br>[Gym](https://github.com/NVIDIA-NeMo/Gym)<br>[ProRL-Agent-Server](https://github.com/NVIDIA-NeMo/ProRL-Agent-Server) | [Guardrails](https://github.com/NVIDIA-NeMo/Guardrails)<br>[Evaluator](https://github.com/NVIDIA-NeMo/Evaluator)<br>[Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy)<br>[NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) | [Skills](https://github.com/NVIDIA-NeMo/Skills)<br>[Nemotron](https://github.com/NVIDIA-NeMo/Nemotron)<br>[Run](https://github.com/NVIDIA-NeMo/Run) |
 
-| Start here | Docs |
-| --- | --- |
-| [AutoModel](https://github.com/NVIDIA-NeMo/Automodel) (fine-tune HF models) | [docs](https://docs.nvidia.com/nemo/automodel/latest/) |
-| [Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge) (1K+ GPUs) | [docs](https://docs.nvidia.com/nemo/megatron-bridge/latest/) |
-| [NeMo RL](https://github.com/NVIDIA-NeMo/RL) (DPO / GRPO) | [docs](https://docs.nvidia.com/nemo/rl/latest/) |
-| [Curator](https://github.com/NVIDIA-NeMo/Curator) · [Evaluator](https://github.com/NVIDIA-NeMo/Evaluator) · [Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy) | [All 23 repos →](https://docs.nvidia.com/nemo/repositories) |
+**[docs.nvidia.com/nemo](https://docs.nvidia.com/nemo)** — NeMo OSS hub: decision guide, all libraries, recipes, and community links.
 
 ```bash
 pip install nemo-automodel

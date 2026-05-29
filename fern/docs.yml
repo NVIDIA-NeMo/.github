@@ -4,25 +4,45 @@ instances:
   - url: nemo-framework.docs.buildwithfern.com/nemo
     custom-domain: docs.nvidia.com/nemo
 
-title: NVIDIA NeMo Framework
+title: NeMo OSS
 
 global-theme: nvidia
 
 logo:
   href: /nemo
-  right-text: NeMo Framework
+  right-text: NeMo OSS
 
+# GitHub org link in the top-right header (Fern `github` navbar button).
+# If the link does not appear after publish, the `nvidia` global theme may override
+# navbar-links — request an override in fern-components or add site-specific links there.
 navbar-links:
   - type: github
     value: https://github.com/NVIDIA-NeMo
+
+footer-links:
+  github: https://github.com/NVIDIA-NeMo
 
 experimental:
   mdx-components:
     - ./components
 
 redirects:
+  - source: "/nemo/repositories"
+    destination: "/nemo/libraries"
   - source: "/nemo/libraries"
-    destination: "/nemo/repositories"
+    destination: "/nemo/about/libraries"
+  - source: "/nemo/containers"
+    destination: "/nemo/about/release-notes/containers"
+  - source: "/nemo/about/containers"
+    destination: "/nemo/about/release-notes/containers"
+  - source: "/nemo/release-notes"
+    destination: "/nemo/about/release-notes"
+  - source: "/nemo/releases"
+    destination: "/nemo/about/release-notes"
+  - source: "/nemo/getting-started"
+    destination: "/nemo/get-started"
+  - source: "/nemo/community"
+    destination: "/nemo/resources/community"
   - source: "/nemo/index.html"
     destination: "/nemo"
   - source: "/nemo/index"
@@ -33,24 +53,56 @@ redirects:
     destination: "/nemo/:path*"
 
 navigation:
-  - section: Overview
+  - section: About
+    path: docs/pages/index.mdx
+    icon: fa-duotone fa-house
     contents:
-      - page: Home
-        path: docs/pages/index.mdx
-        icon: fa-duotone fa-house
-      - page: Getting Started
-        path: docs/pages/getting-started.mdx
-        icon: fa-duotone fa-rocket
-  - section: Libraries
-    contents:
-      - page: Repositories
-        path: docs/pages/repositories.mdx
+      - page: Ecosystem
+        path: docs/pages/about/ecosystem.mdx
+        icon: fa-duotone fa-sitemap
+      - page: Architecture
+        path: docs/pages/about/architecture.mdx
+        icon: fa-duotone fa-diagram-project
+      - page: Concepts
+        path: docs/pages/about/concepts.mdx
+        icon: fa-duotone fa-lightbulb
+      - page: Libraries
+        path: docs/pages/about/libraries.mdx
         icon: fa-duotone fa-grid-2
-      - page: Libraries (overview)
-        path: docs/pages/libraries.mdx
-        icon: fa-duotone fa-books
-  - section: Community
+      - folder: ./docs/pages/about/release-notes
+        title: Release notes
+        slug: about/release-notes
+        icon: fa-duotone fa-tag
+        title-source: frontmatter
+  - section: Get Started
+    path: docs/pages/get-started/index.mdx
+    icon: fa-duotone fa-rocket
+    contents:
+      - page: Quickstart
+        path: docs/pages/get-started/quickstart.mdx
+        icon: fa-duotone fa-bolt
+      - page: Installation
+        path: docs/pages/get-started/installation.mdx
+        icon: fa-duotone fa-download
+      - section: By lifecycle stage
+        contents:
+          - page: Data
+            path: docs/pages/get-started/data.mdx
+            icon: fa-duotone fa-database
+          - page: Pretraining
+            path: docs/pages/get-started/pretraining.mdx
+            icon: fa-duotone fa-microchip
+          - page: RL
+            path: docs/pages/get-started/rl.mdx
+            icon: fa-duotone fa-arrows-rotate
+          - page: Inference
+            path: docs/pages/get-started/inference.mdx
+            icon: fa-duotone fa-gauge
+          - page: E2E
+            path: docs/pages/get-started/e2e.mdx
+            icon: fa-duotone fa-diagram-project
+  - section: Resources
     contents:
       - page: Community
-        path: docs/pages/community.mdx
+        path: docs/pages/resources/community.mdx
         icon: fa-duotone fa-comments

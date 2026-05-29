@@ -1,0 +1,66 @@
+---
+title: Installation
+subtitle: pip, containers, and choosing a backend
+slug: get-started/installation
+position: 3
+---
+
+How to install NeMo OSS libraries and pick a backend for your GPU scale. For a minimal first run, start with [Quickstart](/get-started/quickstart).
+
+## pip install (recommended for development)
+
+| Workload | Install | Docs |
+| --- | --- | --- |
+| Hugging Face large language model (LLM) and vision language model (VLM) training | `pip install nemo-automodel` | [AutoModel](https://docs.nvidia.com/nemo/automodel/latest/) |
+| Alignment (DPO, GRPO, SFT) | NeMo RL repo | [NeMo RL](https://docs.nvidia.com/nemo/rl/latest/) |
+| Speech ASR/TTS | `pip install nemo_toolkit[asr,tts]` | [NeMo Speech](https://docs.nvidia.com/nemo/speech/nightly/) |
+| Data curation | Curator repo | [Curator](https://docs.nvidia.com/nemo/curator/latest/) |
+
+Each library publishes install extras and version pins in its own documentation. Use [Libraries](/about/libraries) to find the repo and docs site for your stage.
+
+## NGC containers (recommended for production stacks)
+
+Pre-built images bundle tested dependency sets. Use the [container catalog](/about/release-notes/containers) for current tags and pull commands.
+
+The **NeMo Framework** image (`nvcr.io/nvidia/nemo`) is the multi-library training stack. Standalone images exist for AutoModel, RL, and Curator.
+
+## Scale and backends
+
+| GPUs | Libraries | Checkpoint conversion | Notes |
+| --- | --- | --- | --- |
+| 1–1,000 | [AutoModel](https://github.com/NVIDIA-NeMo/Automodel), [NeMo RL](https://github.com/NVIDIA-NeMo/RL) | Not required for HF-native training | PyTorch / Hugging Face path |
+| 1,000+ | [Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge), [NeMo RL](https://github.com/NVIDIA-NeMo/RL) | [HF ↔ Megatron](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/examples/conversion/README.md) | Megatron-Core at scale |
+
+Stage-specific libraries and entry points:
+
+<Cards>
+
+<Card title="Data" href="/get-started/data">
+Curator, Data Designer, anonymization, SDG.
+</Card>
+
+<Card title="Pretraining" href="/get-started/pretraining">
+AutoModel, Megatron-Bridge, Speech, optimizers.
+</Card>
+
+<Card title="RL" href="/get-started/rl">
+NeMo RL, Gym, agent server.
+</Card>
+
+<Card title="Inference" href="/get-started/inference">
+Evaluator, Export-Deploy, Guardrails.
+</Card>
+
+<Card title="E2E" href="/get-started/e2e">
+Skills, Nemotron recipes, NeMo Run.
+</Card>
+
+</Cards>
+
+## Experiment tracking
+
+<Card title="NeMo Run" href="https://docs.nvidia.com/nemo/run/latest/">
+Launch and track experiments on local machines, SLURM, and Kubernetes.
+</Card>
+
+Also listed under [E2E](/get-started/e2e).

@@ -1,0 +1,88 @@
+---
+title: Ecosystem
+subtitle: NeMo OSS within the NVIDIA NeMo software suite
+slug: about/ecosystem
+position: 2
+---
+
+**NeMo OSS** is the open source side of [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/) — the public GitHub organization [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) and the documentation hub you are reading now. Commercial NeMo products, enterprise services, and NIM microservices live outside this catalog.
+
+<Callout intent="info">
+This page explains **where NeMo OSS fits**. For searchable repo listings, use [Libraries](/about/libraries). For how stages connect technically, refer to [Architecture](/about/architecture).
+</Callout>
+
+## NeMo OSS within NVIDIA NeMo
+
+NVIDIA NeMo spans data, training, alignment, evaluation, and deployment for generative AI. **NeMo OSS** delivers that pipeline as composable open source libraries you can adopt individually or together:
+
+| Stage | Role in the pipeline |
+| --- | --- |
+| **[Data](/get-started/data)** | Prepare and govern training data |
+| **[Pretraining](/get-started/pretraining)** | Train and fine-tune models |
+| **[RL](/get-started/rl)** | Align and improve models with feedback |
+| **[Inference](/get-started/inference)** | Evaluate, export, and safeguard models |
+| **[E2E](/get-started/e2e)** | Recipes, orchestration, reference assets |
+
+Repo names and counts change — [Libraries](/about/libraries) is the searchable catalog. Each library's docs site has install steps and tutorials.
+
+## NeMo Framework and NeMo Platform
+
+These names sound similar but point at different layers of NeMo OSS:
+
+| | **NeMo Framework** | **NeMo Platform** |
+| --- | --- | --- |
+| **What it is** | The composable **library pipeline** in this org — data, training, RL, evaluation, export, guardrails | An integrated **CLI, Python SDK, and web UI** for shipping **agents** |
+| **You adopt it when…** | You want individual libraries (or the multi-library NGC stack) for the **model lifecycle** | You want one local setup to **evaluate, secure, tune, and deploy agents** using those libraries |
+| **Typical entry** | Pick a stage → library docs, or pull the Framework container | Clone [nemo-platform](https://github.com/NVIDIA-NeMo/nemo-platform), run `nemo setup` |
+| **Docs** | This hub + per-library Fern sites | [NeMo Platform docs](https://nvidia-nemo.github.io/nemo-platform/main/) |
+
+**NeMo Framework** also names the multi-library NGC container (`nvcr.io/nvidia/nemo`) — refer to [Concepts](/about/concepts#framework-and-platform) for how the terms relate. Platform composes libraries such as Guardrails, Evaluator, and Data Designer; it does not replace training libraries like AutoModel or Megatron-Bridge.
+
+Many teams train with **AutoModel or Megatron-Bridge**, align with **NeMo RL**, benchmark with **Evaluator**, and serve with **Export-Deploy**. Agent builders can start from **NeMo Platform** instead of wiring those pieces manually.
+
+## What this hub covers and product docs
+
+| | **NeMo OSS hub** (this site) | **Per-library docs** |
+| --- | --- | --- |
+| **Audience** | Choosing a library, comparing stages, container releases | Using one product deeply |
+| **Content** | Catalog, get-started by stage, release notes | APIs, tutorials, recipes |
+| **Scope** | 22 public GitHub repos in NVIDIA-NeMo | One library at a time |
+
+## Choosing AutoModel or Megatron-Bridge
+
+Both train large language models (LLMs) and vision language models (VLMs) on NVIDIA GPUs; they target different scale and stack preferences:
+
+| | **AutoModel** | **Megatron-Bridge** |
+| --- | --- | --- |
+| **Stack** | PyTorch / Hugging Face native | Megatron-Core |
+| **Typical scale** | 1–1,000 GPUs | 1,000+ GPUs |
+| **Checkpoint flow** | HF models day-0 | HF ↔ Megatron conversion |
+| **Best for** | Fine-tuning, research, rapid iteration | Large-scale pretraining and SFT |
+
+Many teams use **AutoModel or Megatron-Bridge for training**, then **NeMo RL for alignment**, **Evaluator for benchmarks**, and **Export-Deploy for serving**. Speech workloads often start with [NeMo Speech](https://docs.nvidia.com/nemo/speech/nightly/) directly.
+
+## Related entry points
+
+<Cards>
+
+<Card title="Libraries" href="/about/libraries">
+Search and filter all 22 NVIDIA-NeMo repositories.
+</Card>
+
+<Card title="Architecture" href="/about/architecture">
+How lifecycle stages and backends fit together.
+</Card>
+
+<Card title="Get Started" href="/get-started">
+Quickstart, installation, and guides by stage.
+</Card>
+
+<Card title="NeMo Platform" href="https://nvidia-nemo.github.io/nemo-platform/main/">
+Agent evaluate, harden, tune, and deploy — CLI, SDK, and Studio.
+</Card>
+
+<Card title="NVIDIA NeMo (commercial)" href="https://www.nvidia.com/en-us/ai-data-science/products/nemo/">
+Broader NeMo software suite beyond this OSS catalog.
+</Card>
+
+</Cards>

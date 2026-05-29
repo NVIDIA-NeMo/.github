@@ -10,6 +10,20 @@
 | **Backend** | `backend-megatron`, `backend-pytorch`, `backend-vllm`, `backend-tensorrt` | Filter by infrastructure |
 | **Meta** | `nvidia-nemo` | All repos in the framework |
 
+### README stage mapping
+
+Org README columns map to catalog **`stage`** filters in `fern/components/repos.ts`. Optional GitHub topics can mirror these for org-wide filtering:
+
+| README stage | Catalog `stage` | Suggested GitHub topic |
+|--------------|-----------------|------------------------|
+| Data | `data` | `stage-data` |
+| Pretraining | `pretraining` | `stage-training` |
+| RL | `rl` | `stage-alignment` |
+| Inference | `inference` | `stage-evaluation`, `stage-deployment`, `stage-safety` |
+| E2E | `e2e` | — (recipes, pipelines, orchestration) |
+
+Use **`tags`** in `repos.ts` (and topic facets below) for cross-cutting search — e.g. Skills is E2E in the README but also spans SDG and evaluation.
+
 <!-- ### Topic Assignments
 
 | Repo | Pipeline Stage | Model Type | Training Method | Backend |

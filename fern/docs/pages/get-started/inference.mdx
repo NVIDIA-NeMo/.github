@@ -1,0 +1,42 @@
+---
+title: Inference
+subtitle: Get started with evaluation, export, and deployment
+slug: get-started/inference
+position: 13
+---
+
+import StageGuide from "@/components/StageGuide";
+
+Libraries for **Inference** — benchmarking, export to serving stacks, guardrails, and agent platforms.
+
+```mermaid
+flowchart LR
+    DATA["Data"] --> PRE["Pretraining"] --> RL["RL"] --> INF["Inference"]
+    E2E["E2E"] -.-> DATA & PRE & RL & INF
+
+    classDef active fill:#76B900,stroke:#3d5c00,stroke-width:3px,color:#fff
+    classDef dim fill:#f5f5f5,stroke:#ccc,color:#666
+
+    class DATA,PRE,RL,E2E dim
+    class INF active
+```
+
+<StageGuide stage="inference" />
+
+## Typical workflow (models)
+
+1. **Evaluate** with [Evaluator](https://docs.nvidia.com/nemo/evaluator/latest/) across 100+ harnesses.
+2. **Export** to vLLM, TensorRT-LLM, or ONNX with [Export-Deploy](https://docs.nvidia.com/nemo/export-deploy/latest/).
+3. **Guard** production apps with [Guardrails](https://docs.nvidia.com/nemo/guardrails/latest/).
+
+Models usually come from [Pretraining](/get-started/pretraining) or [RL](/get-started/rl). For bundled Framework container versions, refer to [Container releases](/about/release-notes/containers).
+
+## Shipping agents
+
+If you are building **agents** (not just serving a fine-tuned checkpoint), [NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) integrates evaluation, guardrails, tuning, and deployment in one setup — CLI, SDK, and Studio UI. You can adopt Evaluator or Guardrails standalone; Platform is the umbrella when you want those loops wired together.
+
+<Card title="NeMo Platform" href="https://nvidia-nemo.github.io/nemo-platform/main/">
+Setup, CLI, and docs — evaluate, secure, and optimize agents with NeMo libraries.
+</Card>
+
+For related guidance, refer to [Framework and Platform](/about/concepts#framework-and-platform) and [Ecosystem](/about/ecosystem#nemo-framework-and-nemo-platform).

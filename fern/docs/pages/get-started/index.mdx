@@ -1,0 +1,61 @@
+---
+title: Get Started
+subtitle: Choose your path into NeMo OSS
+slug: get-started
+position: 1
+---
+
+Pick how you want to begin — a fast quickstart, installation options, or guidance by **lifecycle stage** (the same columns as the [org README](https://github.com/NVIDIA-NeMo) and [Libraries](/about/libraries) catalog).
+
+<Cards>
+
+<Card title="Quickstart" href="/get-started/quickstart">
+Fastest paths: AutoModel fine-tuning and NeMo Speech inference.
+</Card>
+
+<Card title="Installation" href="/get-started/installation">
+pip, NGC containers, scale, and backend choice.
+</Card>
+
+</Cards>
+
+## By lifecycle stage
+
+<Cards>
+
+<Card title="Data" href="/get-started/data">
+Curation, synthetic data, PII handling, and SDG pipelines.
+</Card>
+
+<Card title="Pretraining" href="/get-started/pretraining">
+Model training and fine-tuning — AutoModel, Megatron-Bridge, Speech.
+</Card>
+
+<Card title="RL" href="/get-started/rl">
+Post-training alignment, environments, and agent rollout.
+</Card>
+
+<Card title="Inference" href="/get-started/inference">
+Evaluation, export, serving, guardrails, and NeMo Platform for agents.
+</Card>
+
+<Card title="E2E" href="/get-started/e2e">
+Reference pipelines, recipes, and experiment orchestration.
+</Card>
+
+</Cards>
+
+## Decision guide
+
+| I want to… | Scale | Start here |
+| --- | --- | --- |
+| Curate or synthesize data | Any | [Data](/get-started/data) |
+| Train or fine-tune | ≤1K GPUs | [Pretraining](/get-started/pretraining) → AutoModel |
+| Train at scale | 1K+ GPUs | [Pretraining](/get-started/pretraining) → Megatron-Bridge |
+| Align (DPO/GRPO) | Any | [RL](/get-started/rl) |
+| Evaluate or deploy a model | Any | [Inference](/get-started/inference) |
+| Ship or harden agents | Any | [Inference](/get-started/inference) → [NeMo Platform](https://nvidia-nemo.github.io/nemo-platform/main/) |
+| Run end-to-end recipes | Any | [E2E](/get-started/e2e) |
+| Speech AI | Any | [Pretraining](/get-started/pretraining) → NeMo Speech |
+
+Not sure which library owns your workload? Browse all repos on [Libraries](/about/libraries).

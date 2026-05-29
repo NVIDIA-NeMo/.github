@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
  * SPDX-License-Identifier: Apache-2.0
@@ -5,10 +7,10 @@
 import { useMemo, useState } from "react";
 import {
   NEMO_REPOS,
-  REPO_CATEGORIES,
-  categoryLabel,
+  REPO_STAGES,
+  stageLabel,
   type NemoRepo,
-  type RepoCategory,
+  type RepoStage,
 } from "./repos";
 
 const ACCENT = "#76B900";
@@ -21,8 +23,8 @@ function matchesQuery(repo: NemoRepo, query: string): boolean {
   const haystack = [
     repo.name,
     repo.description,
-    repo.category,
-    categoryLabel(repo.category),
+    repo.stage,
+    stageLabel(repo.stage),
     ...(repo.tags ?? []),
   ]
     .join(" ")
@@ -82,7 +84,7 @@ function RepoCard({ repo }: { repo: NemoRepo }) {
             color: "#3d5c00",
           }}
         >
-          {categoryLabel(repo.category)}
+          {stageLabel(repo.stage)}
         </span>
         {(repo.tags ?? []).slice(0, 3).map((tag) => (
           <span
@@ -120,21 +122,21 @@ function RepoCard({ repo }: { repo: NemoRepo }) {
 
 export default function RepoCatalog() {
   const [query, setQuery] = useState("");
-  const [category, setCategory] = useState<RepoCategory | "all">("all");
+  const [stage, setStage] = useState<RepoStage | "all">("all");
 
   const filtered = useMemo(() => {
     return NEMO_REPOS.filter((repo) => {
-      if (category !== "all" && repo.category !== category) return false;
+      if (stage !== "all" && repo.stage !== stage) return false;
       return matchesQuery(repo, query);
     }).sort((a, b) => a.name.localeCompare(b.name));
-  }, [query, category]);
+  }, [query, stage]);
 
   const counts = useMemo(() => {
-    const byCat: Record<string, number> = { all: NEMO_REPOS.length };
+    const byStage: Record<string, number> = { all: NEMO_REPOS.length };
     for (const repo of NEMO_REPOS) {
-      byCat[repo.category] = (byCat[repo.category] ?? 0) + 1;
+      byStage[repo.stage] = (byStage[repo.stage] ?? 0) + 1;
     }
-    return byCat;
+    return byStage;
   }, []);
 
   return (
@@ -150,7 +152,7 @@ export default function RepoCatalog() {
       >
         <label style={{ flex: "1 1 220px", minWidth: "200px" }}>
           <span className="sr-only" style={{ position: "absolute", width: 1, height: 1, overflow: "hidden" }}>
-            Search repositories
+            Search libraries
           </span>
           <input
             type="search"
@@ -176,7 +178,7 @@ export default function RepoCatalog() {
 
       <div
         role="tablist"
-        aria-label="Filter by category"
+        aria-label="Filter by lifecycle stage"
         style={{
           display: "flex",
           flexWrap: "wrap",
@@ -184,8 +186,8 @@ export default function RepoCatalog() {
           marginBottom: "1.25rem",
         }}
       >
-        {REPO_CATEGORIES.map(({ id, label }) => {
-          const active = category === id;
+        {REPO_STAGES.map(({ id, label }) => {
+          const active = stage === id;
           const count = counts[id] ?? 0;
           return (
             <button
@@ -193,7 +195,7 @@ export default function RepoCatalog() {
               type="button"
               role="tab"
               aria-selected={active}
-              onClick={() => setCategory(id)}
+              onClick={() => setStage(id)}
               style={{
                 padding: "0.35rem 0.85rem",
                 fontSize: "0.8rem",
@@ -212,12 +214,13 @@ export default function RepoCatalog() {
       </div>
 
       <p style={{ fontSize: "0.875rem", color: MUTED, margin: "0 0 1rem" }}>
-        Showing {filtered.length} of {NEMO_REPOS.length} repositories in{" "}
-        <a href="https://github.com/orgs/NVIDIA-NeMo/repositories?type=all">NVIDIA-NeMo</a>.
+        Showing {filtered.length} of {NEMO_REPOS.length} libraries in{" "}
+        <a href="https://github.com/orgs/NVIDIA-NeMo/repositories?type=all">NVIDIA-NeMo</a>. Stages match the{" "}
+        <a href="https://github.com/NVIDIA-NeMo">org README</a>; tags add cross-cutting search facets.
       </p>
 
       {filtered.length === 0 ? (
-        <p style={{ color: MUTED }}>No repositories match your search. Try another filter or clear the search box.</p>
+        <p style={{ color: MUTED }}>No libraries match your search. Try another stage or clear the search box.</p>
       ) : (
         <div
           style={{
