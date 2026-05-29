@@ -2,7 +2,7 @@
 
 instances:
   - url: nemo-framework.docs.buildwithfern.com/nemo
-    custom-domain: docs.nvidia.com/nemo
+    custom-domain: docs.nvidia.com/nemo-oss
 
 title: NeMo OSS
 

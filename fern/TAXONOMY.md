@@ -1,6 +1,6 @@
 # NeMo OSS taxonomy
 
-Canonical vocabulary for the Fern hub (`docs.nvidia.com/nemo`), org README, and `components/repos.ts`. When copy disagrees, this file wins.
+Canonical vocabulary for the Fern hub (`docs.nvidia.com/nemo-oss`), org README, and `components/repos.ts`. When copy disagrees, this file wins.
 
 ## Top-level map
 
@@ -17,7 +17,7 @@ NVIDIA NeMo (commercial suite — OSS + microservices + NIM + services)
 | Term | Meaning |
 | --- | --- |
 | **NVIDIA NeMo** | Full software suite spanning open source libraries, commercial products, NIM, microservices, and services. |
-| **NeMo OSS** | Public open source in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) and documentation on **docs.nvidia.com/nemo**. Entry point for choosing a stack, stage, library, or container. |
+| **NeMo OSS** | Public open source in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) and documentation on **docs.nvidia.com/nemo-oss**. Entry point for choosing a stack, stage, library, or container. |
 | **NeMo Framework** | Named **model-lifecycle** stack: composable libraries from data through deployment, each with its own source and docs. |
 | **NeMo Framework container** | NGC image `nvcr.io/nvidia/nemo:<tag>`. Bundles Megatron-Bridge, Evaluator, Export-Deploy, Run, and NeMo Speech. |
 | **NeMo Platform** | [nemo-platform](https://github.com/NVIDIA-NeMo/nemo-platform) — CLI, SDK, and Studio for **agent** evaluate / secure / tune / deploy. Composes libraries into an agent integration experience. |

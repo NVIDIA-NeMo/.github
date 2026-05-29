@@ -66,7 +66,7 @@ export const FRAMEWORK_RECENT_RELEASES: FrameworkRelease[] = [
 ];
 
 export const SOFTWARE_VERSIONS_URL =
-  "https://docs.nvidia.com/nemo/megatron-bridge/latest/releases/software-versions.html";
+  "https://docs.nvidia.com/nemo-oss/megatron-bridge/latest/releases/software-versions.html";
 
 export const NGC_NEMO_TEAM_URL =
   "https://catalog.ngc.nvidia.com/orgs/nvidia/teams/nemo/containers";
@@ -82,7 +82,7 @@ export const NEMO_CONTAINERS: NemoContainer[] = [
     kind: "multi-library",
     stages: ["pretraining", "rl", "inference", "e2e"],
     latestTag: "26.02",
-    docsUrl: "https://docs.nvidia.com/nemo/megatron-bridge/latest/",
+    docsUrl: "https://docs.nvidia.com/nemo-oss/megatron-bridge/latest/",
     bundledLibraries: ["Megatron-Bridge", "Evaluator", "Export-Deploy", "Run", "NeMo Speech"],
     tags: ["llm", "vlm", "speech", "megatron"],
   },
@@ -93,7 +93,7 @@ export const NEMO_CONTAINERS: NemoContainer[] = [
     description: "PyTorch-native distributed training for LLMs and VLMs with Hugging Face day-0 support.",
     kind: "standalone",
     stages: ["pretraining"],
-    docsUrl: "https://docs.nvidia.com/nemo/automodel/latest/",
+    docsUrl: "https://docs.nvidia.com/nemo-oss/automodel/latest/",
     tags: ["llm", "vlm", "huggingface", "pytorch"],
   },
   {
@@ -103,7 +103,7 @@ export const NEMO_CONTAINERS: NemoContainer[] = [
     description: "Alignment and reinforcement learning — SFT, DPO, GRPO, and distillation.",
     kind: "standalone",
     stages: ["rl"],
-    docsUrl: "https://docs.nvidia.com/nemo/rl/latest/",
+    docsUrl: "https://docs.nvidia.com/nemo-oss/rl/latest/",
     tags: ["dpo", "grpo", "alignment"],
   },
   {
@@ -113,7 +113,7 @@ export const NEMO_CONTAINERS: NemoContainer[] = [
     description: "Data preprocessing and curation for text, image, video, and audio at scale.",
     kind: "standalone",
     stages: ["data"],
-    docsUrl: "https://docs.nvidia.com/nemo/curator/latest/",
+    docsUrl: "https://docs.nvidia.com/nemo-oss/curator/latest/",
     tags: ["curation", "multimodal"],
   },
 ];

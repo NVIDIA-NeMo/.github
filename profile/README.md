@@ -7,7 +7,7 @@ SPDX-License-Identifier: Apache-2.0
 
 Build generative AI models and agents on NVIDIA GPUs with open source NVIDIA NeMo libraries for data curation, training, alignment, evaluation, deployment, guardrails, and end-to-end recipes.
 
-NeMo OSS is part of the broader [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/) software suite. Use this GitHub organization for source code and issues, and use the [NeMo OSS documentation](https://docs.nvidia.com/nemo) to choose the right library, workflow, or runtime path.
+NeMo OSS is part of the broader [NVIDIA NeMo](https://www.nvidia.com/en-us/ai-data-science/products/nemo/) software suite. Use this GitHub organization for source code and issues, and use the [NeMo OSS documentation](https://docs.nvidia.com/nemo-oss) to choose the right library, workflow, or runtime path.
 
 ## Get Started
 
@@ -15,12 +15,12 @@ Use these links to choose where to start and move into the full documentation se
 
 | Goal | Resource |
 | --- | --- |
-| Find the best starting repository for a task | [Task Map](https://docs.nvidia.com/nemo/get-started/task-map) |
-| Choose a runtime path: container, pip, source checkout, or Platform setup | [Runtime Chooser](https://docs.nvidia.com/nemo/get-started/runtime-chooser) |
-| Browse NeMo OSS libraries | [Library Catalog](https://docs.nvidia.com/nemo/about/libraries) |
-| Learn how Framework, Platform, stages, and containers fit together | [Concepts](https://docs.nvidia.com/nemo/about/concepts) |
-| Check Framework container releases and known issues | [Release Notes](https://docs.nvidia.com/nemo/about/release-notes) |
-| Ask questions and follow community updates | [Community](https://docs.nvidia.com/nemo/resources/community) |
+| Find the best starting repository for a task | [Task Map](https://docs.nvidia.com/nemo-oss/get-started/task-map) |
+| Choose a runtime path: container, pip, source checkout, or Platform setup | [Runtime Chooser](https://docs.nvidia.com/nemo-oss/get-started/runtime-chooser) |
+| Browse NeMo OSS libraries | [Library Catalog](https://docs.nvidia.com/nemo-oss/about/libraries) |
+| Learn how Framework, Platform, stages, and containers fit together | [Concepts](https://docs.nvidia.com/nemo-oss/about/concepts) |
+| Check Framework container releases and known issues | [Release Notes](https://docs.nvidia.com/nemo-oss/about/release-notes) |
+| Ask questions and follow community updates | [Community](https://docs.nvidia.com/nemo-oss/resources/community) |
 
 ## Choose by Workflow
 
@@ -42,7 +42,7 @@ Use NeMo Framework for model lifecycle work, and use NeMo Platform for integrate
 - **NeMo Framework** is the model-lifecycle stack: data, training, RL, evaluation, export, and deployment libraries.
 - **NeMo Platform** is the agent workflow entry point: CLI, SDK, and Studio for evaluating, securing, tuning, and deploying agents.
 
-For naming, runtime, and workflow guidance, see [Concepts](https://docs.nvidia.com/nemo/about/concepts) and [Get Started](https://docs.nvidia.com/nemo/get-started).
+For naming, runtime, and workflow guidance, see [Concepts](https://docs.nvidia.com/nemo-oss/about/concepts) and [Get Started](https://docs.nvidia.com/nemo-oss/get-started).
 
 ## Community
 
@@ -50,7 +50,7 @@ Use these links to ask questions, browse repositories, and find community learni
 
 - [GitHub Discussions](https://github.com/orgs/NVIDIA-NeMo/discussions)
 - [All Repositories](https://github.com/orgs/NVIDIA-NeMo/repositories)
-- [External Learning](https://docs.nvidia.com/nemo/resources/external-learning)
+- [External Learning](https://docs.nvidia.com/nemo-oss/resources/external-learning)
 
 ## License
 

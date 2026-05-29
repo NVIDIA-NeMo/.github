@@ -26,16 +26,16 @@ Prepare Data → Train the Model → Align / Improve → Evaluate Quality → De
 
 | # | Product | One-Line Summary | Stage | Docs |
 |---|---------|-----------------|-------|------|
-| 1 | [AutoModel](#1-automodel) | Fine-tune AI models with minimal setup | Training | [docs](https://docs.nvidia.com/nemo/automodel/latest/) |
-| 2 | [Curator](#2-curator--video-curator) | Clean and filter training data at scale | Data | [docs](https://docs.nvidia.com/nemo/curator/latest/) |
-| 3 | [Customizer](#3-customizer) | Fine-tune models via API (managed service) | Training | [docs](https://docs.nvidia.com/nemo/microservices/latest/fine-tune/index.html) |
+| 1 | [AutoModel](#1-automodel) | Fine-tune AI models with minimal setup | Training | [docs](https://docs.nvidia.com/nemo-oss/automodel/latest/) |
+| 2 | [Curator](#2-curator--video-curator) | Clean and filter training data at scale | Data | [docs](https://docs.nvidia.com/nemo-oss/curator/latest/) |
+| 3 | [Customizer](#3-customizer) | Fine-tune models via API (managed service) | Training | [docs](https://docs.nvidia.com/nemo-oss/microservices/latest/fine-tune/index.html) |
 | 4 | [Data Designer](#4-data-designer) | Generate synthetic training data | Data | [docs](https://nvidia-nemo.github.io/DataDesigner/latest/) |
-| 5 | [Evaluator](#5-evaluator) | Benchmark model quality across 100+ tests | Evaluation | [docs](https://docs.nvidia.com/nemo/evaluator/latest/) |
-| 6 | [Gym](#6-gym) | Build practice environments for RL training | Alignment | [docs](https://docs.nvidia.com/nemo/gym/latest/) |
+| 5 | [Evaluator](#5-evaluator) | Benchmark model quality across 100+ tests | Evaluation | [docs](https://docs.nvidia.com/nemo-oss/evaluator/latest/) |
+| 6 | [Gym](#6-gym) | Build practice environments for RL training | Alignment | [docs](https://docs.nvidia.com/nemo-oss/gym/latest/) |
 | 7 | [MCORE](#7-mcore-megatron-core) | Low-level engine for large-scale training | Training (engine) | [docs](https://docs.nvidia.com/Megatron-Core/) |
-| 8 | [Megatron-Bridge](#8-megatron-bridge) | Train at massive scale (1,000+ GPUs) | Training | [docs](https://docs.nvidia.com/nemo/megatron-bridge/latest/) |
-| 9 | [nvFSDP](#9-nvfsdp) | Memory-efficient training technique inside AutoModel | Training (component) | [docs](https://docs.nvidia.com/nemo/automodel/latest/) |
-| 10 | [RL](#10-rl) | Improve models using reinforcement learning | Alignment | [docs](https://docs.nvidia.com/nemo/rl/latest/) |
+| 8 | [Megatron-Bridge](#8-megatron-bridge) | Train at massive scale (1,000+ GPUs) | Training | [docs](https://docs.nvidia.com/nemo-oss/megatron-bridge/latest/) |
+| 9 | [nvFSDP](#9-nvfsdp) | Memory-efficient training technique inside AutoModel | Training (component) | [docs](https://docs.nvidia.com/nemo-oss/automodel/latest/) |
+| 10 | [RL](#10-rl) | Improve models using reinforcement learning | Alignment | [docs](https://docs.nvidia.com/nemo-oss/rl/latest/) |
 | 11 | [Toolkit (Speech)](#11-toolkit-speech) | Train speech recognition and text-to-speech models | Training | [docs](https://docs.nvidia.com/nemo-framework/user-guide/latest/speech_ai/index.html) |
 
 ---
@@ -64,7 +64,7 @@ A short glossary for terms that come up repeatedly across products.
 
 ![NeMo AutoModel](assets/diagram-03-automodel.png)
 
-**Repo:** [NVIDIA-NeMo/Automodel](https://github.com/NVIDIA-NeMo/Automodel) | **Docs:** [docs.nvidia.com/nemo/automodel](https://docs.nvidia.com/nemo/automodel/latest/)
+**Repo:** [NVIDIA-NeMo/Automodel](https://github.com/NVIDIA-NeMo/Automodel) | **Docs:** [docs.nvidia.com/nemo-oss/automodel](https://docs.nvidia.com/nemo-oss/automodel/latest/)
 
 ### What Is It?
 
@@ -101,7 +101,7 @@ AutoModel is the **recommended starting point** for most training tasks. It work
 
 ![NeMo Curator](assets/diagram-01-curator.png)
 
-**Repo:** [NVIDIA-NeMo/Curator](https://github.com/NVIDIA-NeMo/Curator) | **Docs:** [docs.nvidia.com/nemo/curator](https://docs.nvidia.com/nemo/curator/latest/)
+**Repo:** [NVIDIA-NeMo/Curator](https://github.com/NVIDIA-NeMo/Curator) | **Docs:** [docs.nvidia.com/nemo-oss/curator](https://docs.nvidia.com/nemo-oss/curator/latest/)
 
 ### What Is It?
 
@@ -188,7 +188,7 @@ Data Designer sits alongside Curator in the **data preparation stage** — but t
 
 ![NeMo Evaluator](assets/diagram-07-evaluator.png)
 
-**Repo:** [NVIDIA-NeMo/Evaluator](https://github.com/NVIDIA-NeMo/Evaluator) | **Docs:** [docs.nvidia.com/nemo/evaluator](https://docs.nvidia.com/nemo/evaluator/latest/)
+**Repo:** [NVIDIA-NeMo/Evaluator](https://github.com/NVIDIA-NeMo/Evaluator) | **Docs:** [docs.nvidia.com/nemo-oss/evaluator](https://docs.nvidia.com/nemo-oss/evaluator/latest/)
 
 ### What Is It?
 
@@ -228,7 +228,7 @@ Evaluator sits **after training and alignment** — it answers "how good is this
 
 ![NeMo Gym](assets/diagram-06-nemo-gym.png)
 
-**Repo:** [NVIDIA-NeMo/Gym](https://github.com/NVIDIA-NeMo/Gym) | **Docs:** [docs.nvidia.com/nemo/gym](https://docs.nvidia.com/nemo/gym/latest/)
+**Repo:** [NVIDIA-NeMo/Gym](https://github.com/NVIDIA-NeMo/Gym) | **Docs:** [docs.nvidia.com/nemo-oss/gym](https://docs.nvidia.com/nemo-oss/gym/latest/)
 
 ### What Is It?
 
@@ -315,7 +315,7 @@ Under the hood:        PyTorch            MCORE               MCORE
 
 ![NeMo Megatron-Bridge](assets/diagram-04-megatron-bridge.png)
 
-**Repo:** [NVIDIA-NeMo/Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge) | **Docs:** [docs.nvidia.com/nemo/megatron-bridge](https://docs.nvidia.com/nemo/megatron-bridge/latest/)
+**Repo:** [NVIDIA-NeMo/Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge) | **Docs:** [docs.nvidia.com/nemo-oss/megatron-bridge](https://docs.nvidia.com/nemo-oss/megatron-bridge/latest/)
 
 ### What Is It?
 
@@ -362,7 +362,7 @@ Megatron-Bridge is the **heavy-duty training option** — complementary to AutoM
 
 ## 9. nvFSDP
 
-**Location:** Inside [AutoModel](https://github.com/NVIDIA-NeMo/Automodel) | **Docs:** [docs.nvidia.com/nemo/automodel](https://docs.nvidia.com/nemo/automodel/latest/)
+**Location:** Inside [AutoModel](https://github.com/NVIDIA-NeMo/Automodel) | **Docs:** [docs.nvidia.com/nemo-oss/automodel](https://docs.nvidia.com/nemo-oss/automodel/latest/)
 
 ### What Is It?
 
@@ -395,7 +395,7 @@ nvFSDP is an **implementation detail** of AutoModel. Users configure it through 
 
 ![NeMo RL](assets/diagram-05-nemo-rl.png)
 
-**Repo:** [NVIDIA-NeMo/RL](https://github.com/NVIDIA-NeMo/RL) | **Docs:** [docs.nvidia.com/nemo/rl](https://docs.nvidia.com/nemo/rl/latest/)
+**Repo:** [NVIDIA-NeMo/RL](https://github.com/NVIDIA-NeMo/RL) | **Docs:** [docs.nvidia.com/nemo-oss/rl](https://docs.nvidia.com/nemo-oss/rl/latest/)
 
 ### What Is It?
 
@@ -532,8 +532,8 @@ Not all products are documented in the same place:
 
 | Docs Host | Products |
 |-----------|----------|
-| `docs.nvidia.com/nemo/...` | AutoModel, Megatron-Bridge, RL, Gym, Evaluator, Curator |
-| `docs.nvidia.com/nemo/microservices/...` | Customizer |
+| `docs.nvidia.com/nemo-oss/...` | AutoModel, Megatron-Bridge, RL, Gym, Evaluator, Curator |
+| `docs.nvidia.com/nemo-oss/microservices/...` | Customizer |
 | `docs.nvidia.com/Megatron-Core/` | MCORE |
 | `nvidia-nemo.github.io/...` | Data Designer, Skills |
 | `docs.nvidia.com/nemo-framework/user-guide/...` | Toolkit (Speech) |

@@ -13,7 +13,7 @@ Known issues for **NeMo Framework** NGC containers (`nvcr.io/nvidia/nemo`). Find
 Recent container tags and bundled component versions.
 </Card>
 
-<Card title="Software Component Versions" href="https://docs.nvidia.com/nemo/megatron-bridge/latest/releases/software-versions.html">
+<Card title="Software Component Versions" href="https://docs.nvidia.com/nemo-oss/megatron-bridge/latest/releases/software-versions.html">
 Pinned package versions for 26.02+ containers.
 </Card>
 
@@ -23,19 +23,19 @@ Pinned package versions for 26.02+ containers.
 
 See component release notes for library-specific known issues:
 
-- [Megatron-Bridge](https://docs.nvidia.com/nemo/megatron-bridge/latest/)
-- [Export-Deploy](https://docs.nvidia.com/nemo/export-deploy/latest/)
-- [Run](https://docs.nvidia.com/nemo/run/latest/)
-- [NeMo Speech](https://docs.nvidia.com/nemo/speech/nightly/)
+- [Megatron-Bridge](https://docs.nvidia.com/nemo-oss/megatron-bridge/latest/)
+- [Export-Deploy](https://docs.nvidia.com/nemo-oss/export-deploy/latest/)
+- [Run](https://docs.nvidia.com/nemo-oss/run/latest/)
+- [NeMo Speech](https://docs.nvidia.com/nemo-oss/speech/nightly/)
 
 ## 25.11
 
 See component release notes for library-specific known issues:
 
-- [Megatron-Bridge](https://docs.nvidia.com/nemo/megatron-bridge/latest/)
-- [Export-Deploy](https://docs.nvidia.com/nemo/export-deploy/latest/)
-- [Run](https://docs.nvidia.com/nemo/run/latest/)
-- [NeMo Speech](https://docs.nvidia.com/nemo/speech/nightly/)
+- [Megatron-Bridge](https://docs.nvidia.com/nemo-oss/megatron-bridge/latest/)
+- [Export-Deploy](https://docs.nvidia.com/nemo-oss/export-deploy/latest/)
+- [Run](https://docs.nvidia.com/nemo-oss/run/latest/)
+- [NeMo Speech](https://docs.nvidia.com/nemo-oss/speech/nightly/)
 
 ## 25.09
 
@@ -121,7 +121,7 @@ These notes apply to framework-level training behavior in older releases.
 - The Megatron Core Distributed Optimizer currently lacks memory capacity optimization, resulting in higher model state memory usage at small data parallel sizes.
 - The overlap of the data-parallel parameter AllGather with `optimizer.step` (`overlap_param_gather_with_optimizer=true`) does not work with distributed checkpointing.
 - Support for converting models from NeMo 2.0 to 1.0 is not yet available.
-- Transformer Engine changed checkpoint metadata after v1.10, which can cause checkpoint incompatibilities. **Workaround:** use `model.dist_ckpt_load_strictness=log_all` when working with Transformer Engine v1.10 or higher. See [software component versions](https://docs.nvidia.com/nemo/megatron-bridge/latest/releases/software-versions.html) for TE versions per container.
+- Transformer Engine changed checkpoint metadata after v1.10, which can cause checkpoint incompatibilities. **Workaround:** use `model.dist_ckpt_load_strictness=log_all` when working with Transformer Engine v1.10 or higher. See [software component versions](https://docs.nvidia.com/nemo-oss/megatron-bridge/latest/releases/software-versions.html) for TE versions per container.
 - For data preparation of GPT models, use your own dataset or an online dataset legally approved by your organization.
 - A race condition in the NeMo experiment manager can occur when multiple processes or threads attempt to access and modify shared resources simultaneously.
 - The Mistral and Mixtral tokenizers require a Hugging Face login.
