@@ -5,7 +5,7 @@ slug: get-started/installation
 position: 3
 ---
 
-How to install NeMo OSS libraries and pick a backend for your GPU scale. For a minimal first run, start with [Quickstart](/get-started/quickstart). For a setup decision before commands, use [Runtime chooser](/get-started/runtime-chooser).
+How to install NeMo OSS libraries, choose Platform setup for agents, and pick a backend for your GPU scale. For a minimal first run, start with [Quickstart](/get-started/quickstart). For a setup decision before commands, use [Runtime chooser](/get-started/runtime-chooser).
 
 ## Pip Install (Recommended for Development)
 
@@ -17,6 +17,7 @@ Use package installs for local development, notebooks, and lightweight experimen
 | Alignment (DPO, GRPO, SFT) | NeMo RL repo | [NeMo RL](https://docs.nvidia.com/nemo-oss/rl/latest/) |
 | Speech ASR/TTS | `pip install nemo_toolkit[asr,tts]` | [NeMo Speech](https://docs.nvidia.com/nemo-oss/speech/nightly/) |
 | Data curation | Curator repo | [Curator](https://docs.nvidia.com/nemo-oss/curator/latest/) |
+| Integrated agent workflows | NeMo Platform repo | [NeMo Platform](https://nvidia-nemo.github.io/nemo-platform/main/) |
 
 Each library publishes install extras and version pins in its own documentation. Use [Libraries](/about/libraries) to find the repo and docs site for your stage.
 
@@ -34,6 +35,22 @@ The **NeMo Framework** image (`nvcr.io/nvidia/nemo`) is the multi-library traini
 | **Platform setup** | Integrated agent workflows with CLI, SDK, and Studio. |
 
 See [Runtime chooser](/get-started/runtime-chooser) for setup guidance.
+
+## NeMo Platform Setup
+
+Use NeMo Platform when you want an integrated agent workflow with CLI, SDK, and Studio rather than one standalone library.
+
+<Cards>
+
+<Card title="NeMo Platform Docs" href="https://nvidia-nemo.github.io/nemo-platform/main/">
+Follow the current setup path for agent evaluation, guardrails, tuning, and deployment.
+</Card>
+
+<Card title="NeMo Platform Repository" href="https://github.com/NVIDIA-NeMo/nemo-platform">
+Browse source, examples, issues, and release notes for the Platform entry point.
+</Card>
+
+</Cards>
 
 ## Scale and Backends
 
