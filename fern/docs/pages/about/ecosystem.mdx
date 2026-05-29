@@ -61,8 +61,8 @@ These names sound similar because they share libraries, but they serve different
 | --- | --- | --- |
 | **What it is** | Model-lifecycle **libraries** — data, training, RL, evaluation, export, guardrails | Agent **integration product** — CLI, Python SDK, and web UI |
 | **You adopt it when…** | You are training, aligning, evaluating, or deploying **models** | You are shipping **agents** and want evaluate / secure / tune / deploy in one setup |
-| **Typical entry** | Stage guide → library docs, or Framework NGC container | Clone [nemo-platform](https://github.com/NVIDIA-NeMo/nemo-platform), run `nemo setup` |
-| **Docs** | NeMo OSS pages and library docs | [NeMo Platform docs](https://nvidia-nemo.github.io/nemo-platform/main/) |
+| **Typical entry** | Stage guide → library docs, or Framework NGC container | Follow [NeMo Platform setup](https://nvidia-nemo.github.io/nemo-platform/main/get-started/setup/) |
+| **Docs** | NeMo OSS pages and library docs | [NeMo Platform setup](https://nvidia-nemo.github.io/nemo-platform/main/get-started/setup/) |
 | **Relationship** | Libraries are the building blocks | Composes Guardrails, Evaluator, Data Designer, and others for agent workflows |
 
 **NeMo Framework** also names the multi-library NGC container (`nvcr.io/nvidia/nemo`). Refer to [Framework and Platform](/about/concepts/framework-and-platform) for naming details.
@@ -99,10 +99,10 @@ Both train large language models (LLMs) and vision language models (VLMs) on NVI
 | --- | --- | --- |
 | **Stack** | PyTorch / Hugging Face native | Megatron-Core |
 | **Typical scale** | 1–1,000 GPUs | 1,000+ GPUs |
-| **Checkpoint flow** | HF models day-0 | HF ↔ Megatron conversion |
+| **Checkpoint flow** | Hugging Face checkpoints | HF ↔ Megatron conversion |
 | **Best for** | Fine-tuning, research, rapid iteration | Large-scale pretraining and SFT |
 
-Speech workloads often start with [NeMo Speech](https://docs.nvidia.com/nemo-oss/speech/nightly/) directly — the [NeMo](https://github.com/NVIDIA-NeMo/NeMo) repo is speech-only today.
+Speech workloads often start with [NeMo Speech](https://docs.nvidia.com/nemo/speech/nightly/) directly — the [NeMo](https://github.com/NVIDIA-NeMo/NeMo) repo is speech-only today.
 
 ## Related Entry Points
 
@@ -126,7 +126,7 @@ Search and filter all 22 NVIDIA-NeMo repositories.
 Quickstart, installation, and guides by stage.
 </Card>
 
-<Card title="NeMo Platform" href="https://nvidia-nemo.github.io/nemo-platform/main/">
+<Card title="NeMo Platform" href="https://nvidia-nemo.github.io/nemo-platform/main/get-started/setup/">
 Agent evaluate, harden, tune, and deploy — CLI, SDK, and Studio.
 </Card>
 

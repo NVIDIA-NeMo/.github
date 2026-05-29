@@ -14,7 +14,7 @@
  */
 
 /** NeMo Speech docs — use /latest/ when published; /nightly/ is current. */
-export const NEMO_SPEECH_DOCS_URL = "https://docs.nvidia.com/nemo-oss/speech/nightly/";
+export const NEMO_SPEECH_DOCS_URL = "https://docs.nvidia.com/nemo/speech/nightly/";
 
 /** Lifecycle stage — matches profile/README.md "Libraries by stage" columns. */
 export type RepoStage = "data" | "pretraining" | "rl" | "inference" | "e2e";
@@ -66,7 +66,7 @@ export const NEMO_REPOS: NemoRepo[] = [
     stage: "data",
     kind: "library",
     githubUrl: "https://github.com/NVIDIA-NeMo/Curator",
-    docsUrl: "https://docs.nvidia.com/nemo-oss/curator/latest/",
+    docsUrl: "https://docs.nvidia.com/nemo/curator/latest/",
     containerUrl: "https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo-curator",
     tags: ["multimodal", "curation"],
   },
@@ -114,11 +114,11 @@ export const NEMO_REPOS: NemoRepo[] = [
   // Pretraining
   {
     name: "Automodel",
-    description: "PyTorch distributed training for LLMs/VLMs with day-0 Hugging Face support.",
+    description: "PyTorch distributed training for LLMs/VLMs with Hugging Face support.",
     stage: "pretraining",
     kind: "library",
     githubUrl: "https://github.com/NVIDIA-NeMo/Automodel",
-    docsUrl: "https://docs.nvidia.com/nemo-oss/automodel/latest/",
+    docsUrl: "https://docs.nvidia.com/nemo/automodel/latest/",
     containerUrl: "https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo-automodel",
     tags: ["llm", "vlm", "huggingface", "pytorch"],
   },
@@ -128,7 +128,7 @@ export const NEMO_REPOS: NemoRepo[] = [
     stage: "pretraining",
     kind: "library",
     githubUrl: "https://github.com/NVIDIA-NeMo/Megatron-Bridge",
-    docsUrl: "https://docs.nvidia.com/nemo-oss/megatron-bridge/latest/",
+    docsUrl: "https://docs.nvidia.com/nemo/megatron-bridge/latest/",
     containerUrl: "https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo",
     tags: ["llm", "vlm", "megatron"],
   },
@@ -147,7 +147,7 @@ export const NEMO_REPOS: NemoRepo[] = [
     stage: "pretraining",
     kind: "library",
     githubUrl: "https://github.com/NVIDIA-NeMo/Emerging-Optimizers",
-    docsUrl: "https://docs.nvidia.com/nemo-oss/emerging-optimizers/latest/index.html",
+    docsUrl: "https://docs.nvidia.com/nemo/emerging-optimizers/latest/index.html",
     tags: ["optimizers"],
   },
   {
@@ -167,7 +167,7 @@ export const NEMO_REPOS: NemoRepo[] = [
     stage: "rl",
     kind: "library",
     githubUrl: "https://github.com/NVIDIA-NeMo/RL",
-    docsUrl: "https://docs.nvidia.com/nemo-oss/rl/latest/",
+    docsUrl: "https://docs.nvidia.com/nemo/rl/latest/",
     containerUrl: "https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo-rl",
     tags: ["dpo", "grpo", "alignment", "agents"],
   },
@@ -177,7 +177,7 @@ export const NEMO_REPOS: NemoRepo[] = [
     stage: "rl",
     kind: "library",
     githubUrl: "https://github.com/NVIDIA-NeMo/Gym",
-    docsUrl: "https://docs.nvidia.com/nemo-oss/gym/latest/index.html",
+    docsUrl: "https://docs.nvidia.com/nemo/gym/main/about/",
     tags: ["environments", "agents"],
   },
   {
@@ -192,11 +192,11 @@ export const NEMO_REPOS: NemoRepo[] = [
   // Inference
   {
     name: "Evaluator",
-    description: "Scalable, reproducible evaluation across 100+ benchmarks and harnesses.",
+    description: "Scalable, reproducible evaluation across benchmark suites and harnesses.",
     stage: "inference",
     kind: "library",
     githubUrl: "https://github.com/NVIDIA-NeMo/Evaluator",
-    docsUrl: "https://docs.nvidia.com/nemo-oss/evaluator/latest/",
+    docsUrl: "https://docs.nvidia.com/nemo/evaluator/latest/",
     containerUrl: "https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo",
     tags: ["evaluation", "benchmarks"],
   },
@@ -206,7 +206,7 @@ export const NEMO_REPOS: NemoRepo[] = [
     stage: "inference",
     kind: "library",
     githubUrl: "https://github.com/NVIDIA-NeMo/Export-Deploy",
-    docsUrl: "https://docs.nvidia.com/nemo-oss/export-deploy/latest/",
+    docsUrl: "https://docs.nvidia.com/nemo/export-deploy/latest/",
     containerUrl: "https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo",
     tags: ["deployment", "serving", "vllm"],
   },
@@ -216,7 +216,7 @@ export const NEMO_REPOS: NemoRepo[] = [
     stage: "inference",
     kind: "library",
     githubUrl: "https://github.com/NVIDIA-NeMo/Guardrails",
-    docsUrl: "https://docs.nvidia.com/nemo-oss/guardrails/latest/",
+    docsUrl: "https://docs.nvidia.com/nemo/guardrails/latest/",
     tags: ["safety", "agents"],
   },
   {
@@ -254,7 +254,7 @@ export const NEMO_REPOS: NemoRepo[] = [
     stage: "e2e",
     kind: "library",
     githubUrl: "https://github.com/NVIDIA-NeMo/Run",
-    docsUrl: "https://docs.nvidia.com/nemo-oss/run/latest/",
+    docsUrl: "https://docs.nvidia.com/nemo/run/latest/",
     containerUrl: "https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo",
     tags: ["orchestration", "experiments"],
   },
