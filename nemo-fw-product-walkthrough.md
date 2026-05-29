@@ -28,7 +28,7 @@ Prepare Data → Train the Model → Align / Improve → Evaluate Quality → De
 |---|---------|-----------------|-------|------|
 | 1 | [AutoModel](#1-automodel) | Fine-tune AI models with minimal setup | Training | [docs](https://docs.nvidia.com/nemo-oss/automodel/latest/) |
 | 2 | [Curator](#2-curator--video-curator) | Clean and filter training data at scale | Data | [docs](https://docs.nvidia.com/nemo-oss/curator/latest/) |
-| 3 | [Customizer](#3-customizer) | Fine-tune models via API (managed service) | Training | [docs](https://docs.nvidia.com/nemo-oss/microservices/latest/fine-tune/index.html) |
+| 3 | [Customizer](#3-customizer) | Fine-tune models via API (managed service) | Training | Product docs |
 | 4 | [Data Designer](#4-data-designer) | Generate synthetic training data | Data | [docs](https://nvidia-nemo.github.io/DataDesigner/latest/) |
 | 5 | [Evaluator](#5-evaluator) | Benchmark model quality across 100+ tests | Evaluation | [docs](https://docs.nvidia.com/nemo-oss/evaluator/latest/) |
 | 6 | [Gym](#6-gym) | Build practice environments for RL training | Alignment | [docs](https://docs.nvidia.com/nemo-oss/gym/latest/) |
@@ -533,7 +533,6 @@ Not all products are documented in the same place:
 | Docs Host | Products |
 |-----------|----------|
 | `docs.nvidia.com/nemo-oss/...` | AutoModel, Megatron-Bridge, RL, Gym, Evaluator, Curator |
-| `docs.nvidia.com/nemo-oss/microservices/...` | Customizer |
 | `docs.nvidia.com/Megatron-Core/` | MCORE |
 | `nvidia-nemo.github.io/...` | Data Designer, Skills |
 | `docs.nvidia.com/nemo-framework/user-guide/...` | Toolkit (Speech) |

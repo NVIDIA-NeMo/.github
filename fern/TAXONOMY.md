@@ -67,4 +67,4 @@ Concepts is a directory, not a glossary. Keep pages focused on stable relationsh
 
 ## Broader suite references
 
-Customizer, NIM, and other commercial NeMo microservices have their own product documentation. Link to them from Ecosystem when they help readers understand the full suite.
+Customizer, NIM, and other commercial NeMo microservices have their own product documentation. Mention them only when needed to explain the broader suite; do not use commercial microservice docs as OSS setup destinations.

@@ -101,8 +101,6 @@ export const NEMO_REPOS: NemoRepo[] = [
     stage: "data",
     kind: "library",
     githubUrl: "https://github.com/NVIDIA-NeMo/Safe-Synthesizer",
-    docsUrl:
-      "https://docs.nvidia.com/nemo-oss/microservices/latest/generate-private-synthetic-data/",
     tags: ["privacy", "tabular"],
   },
   {
@@ -228,7 +226,7 @@ export const NEMO_REPOS: NemoRepo[] = [
     stage: "inference",
     kind: "integration",
     githubUrl: "https://github.com/NVIDIA-NeMo/nemo-platform",
-    docsUrl: "https://nvidia-nemo.github.io/nemo-platform/main/",
+    docsUrl: "https://nvidia-nemo.github.io/nemo-platform/main/get-started/setup/",
     tags: ["agents", "platform", "deployment"],
   },
   // E2E
