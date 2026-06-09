@@ -36,6 +36,7 @@ Use these links to ask questions, browse repositories, and follow open work.
 - [GitHub Discussions](https://github.com/orgs/NVIDIA-NeMo/discussions)
 - [All Repositories](https://github.com/orgs/NVIDIA-NeMo/repositories)
 - [Open Issues](https://github.com/search?q=org%3ANVIDIA-NeMo+is%3Aissue+is%3Aopen&type=issues)
+- [NeMo Assist](https://nemo-assist.nvidia.com/) for NeMo Framework docs and code questions
 
 ## License
 
