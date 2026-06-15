@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
  * SPDX-License-Identifier: Apache-2.0
  *
- * Canonical NGC containers for NeMo OSS — distinct from the 22-repo library catalog.
+ * Canonical NGC containers for NeMo Open Source Software — distinct from the 22-repo library catalog.
  * Update `latestTag` and `FRAMEWORK_RECENT_RELEASES` when a new Framework container ships.
  */
 
@@ -71,7 +71,7 @@ export const SOFTWARE_VERSIONS_URL =
 export const NGC_NEMO_TEAM_URL =
   "https://catalog.ngc.nvidia.com/orgs/nvidia/teams/nemo/containers";
 
-/** Published NeMo OSS containers on NGC (standalone + multi-library stack). */
+/** Published NeMo Open Source Software containers on NGC (standalone + multi-library stack). */
 export const NEMO_CONTAINERS: NemoContainer[] = [
   {
     name: "NeMo Framework",

@@ -1,6 +1,6 @@
-# NeMo OSS Hub
+# NeMo Open Source Software Hub
 
-Fern source for the **NeMo OSS** documentation hub: the lightweight entry point for open source repositories in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo).
+Fern source for the **NeMo Open Source Software** documentation hub: the lightweight entry point for open source repositories in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo).
 
 The hub helps readers answer three questions:
 

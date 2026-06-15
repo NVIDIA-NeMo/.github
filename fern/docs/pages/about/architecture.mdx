@@ -1,11 +1,11 @@
 ---
 title: Architecture
-subtitle: How NeMo OSS Libraries Fit Together
+subtitle: How NeMo Open Source Software Libraries Fit Together
 slug: about/architecture
 position: 3
 ---
 
-**NeMo OSS** is an ecosystem of focused repositories that you can use individually or together. Two named stacks organize those repos around common workflows:
+**NeMo Open Source Software** is an ecosystem of focused repositories that you can use individually or together. Two named stacks organize those repos around common workflows:
 
 - **NeMo Framework** — the **model lifecycle** (data → train → align → evaluate → deploy).
 - **NeMo Platform** — **agent integration** (evaluate, secure, tune, and deploy agents using selected libraries).
@@ -26,7 +26,7 @@ The architecture is easiest to read as libraries, the Framework stack, and the P
 
 ```mermaid
 flowchart TB
-    subgraph oss ["NeMo OSS"]
+    subgraph oss ["NeMo Open Source Software"]
         LIBS["Libraries — à la carte"]
         subgraph fw ["NeMo Framework — model lifecycle"]
             PIPE["Data → Pretraining → RL → Inference"]

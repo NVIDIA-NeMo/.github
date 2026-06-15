@@ -4,13 +4,13 @@ instances:
   - url: nemo.docs.buildwithfern.com/oss
     custom-domain: docs.nvidia.com/nemo/oss
 
-title: NeMo OSS
+title: NeMo Open Source Software
 
 global-theme: nvidia
 
 logo:
   href: /oss
-  right-text: NeMo OSS
+  right-text: NeMo Open Source Software
 
 # GitHub org link in the top-right header (Fern `github` navbar button).
 # If the link does not appear after publish, the `nvidia` global theme may override

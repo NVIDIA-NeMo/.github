@@ -1,6 +1,6 @@
 # NVIDIA-NeMo/.github
 
-GitHub organization profile and staged NeMo OSS hub documentation.
+GitHub organization profile and staged NeMo Open Source Software hub documentation.
 
 - **Org profile** — `profile/README.md` (shown on [github.com/NVIDIA-NeMo](https://github.com/NVIDIA-NeMo))
 - **Hub docs (Fern)** — `fern/` → planned `docs.nvidia.com/nemo/oss` publication target
