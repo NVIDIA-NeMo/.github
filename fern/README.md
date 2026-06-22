@@ -101,18 +101,25 @@ Prefer sources that reveal how external users frame tasks or confusion. Avoid co
 Prerequisites:
 
 - Node.js 22+
-- Fern CLI: `npm install -g fern-api`
+- `jq` (used by the root Makefile to pin the Fern CLI version from [fern.config.json](./fern.config.json))
 
-Run checks and preview:
+From the repo root:
 
 ```bash
-cd fern
-fern login
-fern check
-fern docs dev
+make docs-login    # first time only — dashboard sign-in + fern login
+make docs-check    # fern check + fern docs md check (same as CI)
+make docs          # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Run `make help` for preview and publish targets. Agents editing this site should read [agents.md](./agents.md).
+
+Equivalent raw CLI (from `fern/`):
+
+```bash
+npx -y fern-api@$(jq -r .version fern.config.json) login
+npx -y fern-api@$(jq -r .version fern.config.json) check
+npx -y fern-api@$(jq -r .version fern.config.json) docs dev
+```
 
 Custom React components must be imported in MDX:
 
