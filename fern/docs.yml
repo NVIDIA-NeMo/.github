@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://schema.buildwithfern.dev/docs-yml.json
 
 instances:
-  - url: nemo.docs.buildwithfern.com/oss
+  - url: nemo.docs.buildwithfern.com/nemo/oss
     custom-domain: docs.nvidia.com/nemo/oss
 
 title: NeMo Open Source Software
