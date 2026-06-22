@@ -1,0 +1,191 @@
+---
+title: Architecture
+subtitle: How NeMo Open Source Software Libraries Fit Together
+slug: about/architecture
+position: 3
+---
+
+**NeMo Open Source Software** is an ecosystem of focused repositories that you can use individually or together. Two named stacks organize those repos around common workflows:
+
+- **NeMo Framework** — the **model lifecycle** (data → train → align → evaluate → deploy).
+- **NeMo Platform** — **agent integration** (evaluate, secure, tune, and deploy agents using selected libraries).
+
+<Callout intent="info">
+For positioning within NVIDIA NeMo, refer to [Ecosystem](/about/ecosystem). For the organizing model, refer to [Concepts](/about/concepts).
+</Callout>
+
+## Three Layers
+
+The architecture is easiest to read as libraries, the Framework stack, and the Platform integration layer.
+
+| Layer | What it is | How you use it |
+| --- | --- | --- |
+| **Libraries** | 22 repos in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo), each with its own source, releases, and docs | `pip install`, per-library docs, or standalone NGC images |
+| **NeMo Framework** | Model-lifecycle stack — the pipeline below | Pick libraries by stage, or pull the multi-library Framework container |
+| **NeMo Platform** | Agent product — CLI, SDK, Studio | Follow [NeMo Platform setup](https://nvidia-nemo.github.io/nemo-platform/main/get-started/setup/) |
+
+```mermaid
+flowchart TB
+    subgraph oss ["NeMo Open Source Software"]
+        LIBS["Libraries — à la carte"]
+        subgraph fw ["NeMo Framework — model lifecycle"]
+            PIPE["Data → Pretraining → RL → Inference"]
+        end
+        subgraph plat ["NeMo Platform — agents"]
+            PCLI["CLI · SDK · Studio"]
+        end
+    end
+
+    LIBS -.-> fw
+    PCLI -.-> PIPE
+```
+
+Platform **composes** libraries such as Guardrails, Evaluator, and Data Designer into agent workflows. For model training, start with Framework libraries such as AutoModel or Megatron-Bridge.
+
+## NeMo Framework Pipeline
+
+The diagram shows representative libraries. The live list is [Libraries](/about/libraries) filtered by stage.
+
+```mermaid
+flowchart LR
+    subgraph Data
+        Curator
+        DataDesigner[Data Designer]
+    end
+
+    subgraph Pretraining
+        AutoModel
+        MBridge[Megatron-Bridge]
+        Speech[NeMo Speech]
+    end
+
+    subgraph RL
+        NeMoRL[NeMo RL]
+        Gym[NeMo Gym]
+    end
+
+    subgraph Inference
+        Evaluator
+        Export[Export-Deploy]
+        Guardrails
+    end
+
+    subgraph E2E
+        Run[NeMo Run]
+        Skills
+        Nemotron
+    end
+
+    Data --> Pretraining
+    Pretraining --> RL
+    Pretraining --> Inference
+    RL --> Inference
+
+    Run -.-> Pretraining
+    Skills -.-> Data
+    Skills -.-> Inference
+```
+
+Solid arrows are the typical **model lifecycle**. Dotted lines are **orchestration and reference assets** (Run, Skills, Nemotron) that span stages.
+
+## Functional Layers
+
+Functional layers describe the role each stage plays in model development.
+
+| Layer | Purpose |
+| --- | --- |
+| **Data** | Ingest, filter, deduplicate, synthesize, and govern datasets |
+| **Pretraining** | Train, fine-tune, and convert checkpoints |
+| **RL** | Post-training alignment and agent improvement |
+| **Inference** | Benchmark, export, serve, and apply guardrails |
+| **E2E** | Launch experiments, ship recipes, share reference assets |
+
+Which repos sit in each layer changes over time — use [Libraries](/about/libraries) (filtered by stage) as the live catalog.
+
+## Training Backends
+
+Two primary training paths coexist:
+
+```mermaid
+flowchart TB
+    subgraph HF["PyTorch / Hugging Face path"]
+        AM[AutoModel]
+        RL1[NeMo RL]
+    end
+
+    subgraph MCore["Megatron-Core path"]
+        MB[Megatron-Bridge]
+        RL2[NeMo RL]
+    end
+
+    Data2[Curated data] --> AM
+    Data2 --> MB
+    AM --> RL1
+    MB --> RL2
+    RL1 --> Eval[Evaluator / Export-Deploy]
+    RL2 --> Eval
+```
+
+- **HF path** — `pip install nemo-automodel`, Hugging Face models and trainers, scales to roughly 1,000 GPUs.
+- **Megatron path** — Megatron-Bridge on Megatron-Core, HF checkpoint conversion, scales to thousand-node clusters.
+
+Both paths can feed the same **RL**, **Evaluator**, and **Export-Deploy** libraries downstream.
+
+## NeMo Platform Overlay
+
+[NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) integrates NeMo libraries for **agent** workflows. Use Framework libraries such as AutoModel, Megatron-Bridge, and NeMo RL for model training and alignment.
+
+| Platform capability | Libraries and services involved |
+| --- | --- |
+| Secure agents | Guardrails, Anonymizer, Auditor |
+| Evaluate agents | Evaluator, Harbor-backed suites |
+| Tune agents | Skill optimization, Switchyard routing |
+| Build agents | NeMo Agent Toolkit (NAT), Inference Gateway |
+| Synthetic data | Data Designer |
+
+Platform has its own CLI, SDK, and Studio experience. Refer to [Framework and Platform](/about/concepts/framework-and-platform) for naming and [Ecosystem](/about/ecosystem#choose-framework-or-platform) for when to start here.
+
+<Cards>
+
+<Card title="NeMo Platform Setup" href="https://nvidia-nemo.github.io/nemo-platform/main/get-started/setup/">
+Setup, CLI reference, and API for agent hardening and evaluation.
+</Card>
+
+<Card title="Inference Get Started" href="/get-started/inference">
+Model evaluation, export, guardrails, and Platform entry points.
+</Card>
+
+</Cards>
+
+## NGC Containers
+
+NGC images bundle tested dependency sets for Framework libraries.
+
+| Image | Scope |
+| --- | --- |
+| `nvcr.io/nvidia/nemo` | Multi-library **Framework** stack (Megatron-Bridge, Evaluator, Export-Deploy, Run, Speech) |
+| `nvcr.io/nvidia/nemo-automodel` | Standalone AutoModel |
+| `nvcr.io/nvidia/nemo-rl` | Standalone NeMo RL |
+| `nvcr.io/nvidia/nemo-curator` | Standalone Curator |
+
+Refer to the [container catalog](/about/release-notes/containers) for pull commands and recent Framework tags.
+
+## Where to Go Next
+
+Use these pages when you are ready to choose an entry point or browse the catalog.
+
+<Cards>
+
+<Card title="Concepts" href="/about/concepts">
+How Framework, Platform, stages, libraries, and containers fit together.
+</Card>
+
+<Card title="Get Started" href="/get-started">
+Install paths and stage-specific entry points.
+</Card>
+
+<Card title="Libraries" href="/about/libraries">
+Full repo catalog with docs and GitHub links.
+</Card>
+
+</Cards>

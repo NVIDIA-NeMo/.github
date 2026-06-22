@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: Copyright (c) 2025-2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+#
+# Publishes the NeMo OSS hub Fern site.
+#   git tag docs/v0.1.0 && git push origin docs/v0.1.0
+# Requires org secret: DOCS_FERN_TOKEN
+
+name: Publish Fern Docs
+
+on:
+  push:
+    tags:
+      - 'docs/v*'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fern-publish-nemo-framework-hub
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+
+      - name: Install Fern CLI
+        run: npm install -g fern-api@$(jq -r .version fern/fern.config.json)
+
+      - name: Publish documentation
+        working-directory: ./fern
+        env:
+          FERN_TOKEN: ${{ secrets.DOCS_FERN_TOKEN }}
+        run: fern generate --docs

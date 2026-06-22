@@ -1,0 +1,167 @@
+---
+title: Known Issues
+subtitle: Cross-Component Issues for NeMo Framework Containers
+slug: about/release-notes/known-issues
+position: 3
+---
+
+Known issues for **NeMo Framework** NGC containers (`nvcr.io/nvidia/nemo`). Find your container tag on [Container releases](/about/release-notes/containers), then check the matching section below.
+
+<Cards>
+
+<Card title="Container Releases" href="/about/release-notes/containers">
+Recent container tags and bundled component versions.
+</Card>
+
+<Card title="Software Component Versions" href="https://docs.nvidia.com/nemo/megatron-bridge/latest/releases/software-versions.html">
+Pinned package versions for 26.02+ containers.
+</Card>
+
+</Cards>
+
+## 26.02
+
+See component release notes for library-specific known issues:
+
+- [Megatron-Bridge](https://docs.nvidia.com/nemo/megatron-bridge/latest/)
+- [Export-Deploy](https://docs.nvidia.com/nemo/export-deploy/latest/)
+- [Run](https://docs.nvidia.com/nemo/run/latest/)
+- [NeMo Speech](https://docs.nvidia.com/nemo/speech/nightly/)
+
+## 25.11
+
+See component release notes for library-specific known issues:
+
+- [Megatron-Bridge](https://docs.nvidia.com/nemo/megatron-bridge/latest/)
+- [Export-Deploy](https://docs.nvidia.com/nemo/export-deploy/latest/)
+- [Run](https://docs.nvidia.com/nemo/run/latest/)
+- [NeMo Speech](https://docs.nvidia.com/nemo/speech/nightly/)
+
+## 25.09
+
+The following issues apply to the 25.09 Framework container release.
+
+### AutoModel
+
+These notes apply to AutoModel workflows in this release.
+
+- Knowledge distillation validation has a known issue. Set `--step_scheduler.val_every_steps=9223372036854775807` to bypass the issue.
+
+### Megatron-Bridge
+
+These notes apply to Megatron-Bridge workflows in this release.
+
+- Pretraining DeepSeek in subchannel FP8 precision is not working. Pretraining DeepSeek with current scaling FP8 is a workaround, but MTP loss does not converge.
+
+## 25.07
+
+The following issues apply to the 25.07 Framework container release.
+
+- DeepSeek model pretraining has a memory spike at the end of training, after the validation loop and checkpoint saving. The memory spike is linked to the cross-entropy layer. This may lead to an NCCL error at the end of training.
+- When fine-tuning with CP > 1, you might need to set `calculate_per_token_loss = True` for some cases. It depends on the dataset you choose. Note that this will result in slightly different loss from before, but both will lead to model convergence.
+- TensorRT-LLM has to be installed in order to run the ONNX export tutorial for LLM embedding models in the Finetuning Llama 3.2 Model into Embedding Model tutorial. Use the [Export-Deploy install instructions](https://github.com/NVIDIA-NeMo/Export-Deploy).
+- Exporting with ONNX requires `transformers` v4.51. By default, the container comes with v4.53. Consider downgrading with `uv pip install transformers==4.51.0`. For use cases outside the container, use `pip install transformers==4.51.0`.
+- Distributed checkpoint saving fails for Nemotron-h 47B and 56B on GB200. No issues observed on H100 or B200.
+
+## 25.04.02 and 25.04.01
+
+The following issues apply to the 25.04.02 and 25.04.01 Framework container releases.
+
+- **Tensor-Parallel Communication Overlap:** Functional errors may occur with specific tensor-parallel communication overlap configurations, including AllGather+GEMM overlap and the ring-exchange algorithm when `aggregate=True`.
+- **LayerNorm Bias Accuracy:** Training models using LayerNorm with bias (e.g., StarCoder2) might exhibit accuracy issues. A fix is available in TransformerEngine commit 1569. This fix is not yet included in the current NeMo release container. **Workaround:** Manually mount or pip install the latest TransformerEngine version in your container.
+- **Large Model Checkpoint NaN Errors (T5 11B, StarCoder2 7B):** Loading trained checkpoints for fine-tuning T5 (11B) and StarCoder2 (7B) models may result in NaN values. This is suspected to be a checkpoint saving/loading error. A potential fix is in Megatron Core PR 48cc46f. This fix is currently under testing.
+- **MXFP8 Memory Usage:** MXFP8 is currently using more memory than expected. A fix is in progress.
+- **FP8 in AutoModel Workflow:** Using FP8 in the AutoModel workflow requires manually setting `use_linear_ce_loss` to `False`. Alternatively, upgrade NeMo to commit `64f0fa`. FP8 support for Mixture of Experts (MoE) models is planned for a future release.
+- **HF Export for Llama-3_3-Nemotron-Super-49B-v1:** Hugging Face export is not currently supported for the Llama-3_3-Nemotron-Super-49B-v1 model.
+
+## 25.04.00
+
+The following issues apply to the 25.04.00 Framework container release.
+
+- Llama 4 accuracy may degrade slightly due to an issue with the order of sigmoid application in the expert routing logic. This has been fixed in [Megatron-LM](https://github.com/NVIDIA/Megatron-LM). However, the fix is not yet included in the current NeMo release container. To apply the fix, manually mount the updated Megatron Core source when building or running your container.
+- Resuming from local checkpoints using the `get_global_step_from_global_checkpoint_path` utility function may face challenges with auto-inserted metrics in the path. This is fixed in [NeMo#13012](https://github.com/NVIDIA/NeMo/pull/13012). However, the fix is not yet included in the current NeMo release container.
+- Tensor-parallel communication overlap with AllGather+GEMM overlap and the ring-exchange algorithm with `aggregate=True` may have functional errors.
+- In `scripts/vlm/automodel.py`, the `gbs` argument is a string instead of an integer. Additionally, this script needs to be run via `torchrun` for devices > 1.
+- There might be accuracy issues when training models that use LayerNorm with bias (e.g., StarCoder2). This issue has been addressed in [TransformerEngine](https://github.com/NVIDIA/TransformerEngine). However, the fix is not yet included in the current NeMo release container. **Workaround:** Manually mount or pip install the latest TransformerEngine in your container.
+- T5 and StarCoder for large config models (11B for T5, 7B for StarCoder2) may get NaN values when loading trained checkpoints for fine-tuning. We suspect a checkpoint saving/loading error, which is supposed to be fixed with a recent Megatron Core PR. Currently we are testing this fix.
+- MXFP8 currently uses more memory than expected and we are still fixing it.
+- FP8 in the AutoModel workflow requires setting `use_linear_ce_loss` to `False` manually, or upgrading NeMo to commit `64f0fa`. FP8 support for MoE models is scheduled for a future release.
+- No HF export support for Llama-3_3-Nemotron-Super-49B-v1.
+
+## 25.02
+
+The following issues apply to the 25.02 Framework container release.
+
+### AutoModel
+
+These notes apply to AutoModel workflows in this release.
+
+- Primarily a functional release; performance improvements are planned for future versions.
+- For large models (e.g., > 40B) trained with FSDP2, checkpoint saving can take longer than expected.
+- Support for long sequences is currently limited, especially for large models > 30B.
+- Models with external dependencies may fail to run if dependencies are unavailable (e.g., missing package leading to failed import).
+- A small percentage of models available via `AutoModelForCausalLM` may only support inference, and have training capabilities explicitly disabled.
+- Support for FSDP2 with mixed weights models (e.g. FP8 + BF16) is scheduled for future releases.
+- Support for Context Parallelism with sequence packing + padding between sequences is currently broken (see [NeMo#12174](https://github.com/NVIDIA/NeMo/issues/12174)). Use 24.12 or upgrade to TE 2.0+ for working support.
+- MoE based models are seeing instability with training. Please continue to use 24.12 for MoE training until 25.02 is patched with the fix for MoE.
+
+## 24.12 and Earlier
+
+The following issues apply to 24.12 and earlier Framework container releases.
+
+### Framework and Training
+
+These notes apply to framework-level training behavior in older releases.
+
+- In 24.12, NeMo switched from `pytorch_lightning` to `lightning.pytorch`. If you have custom code that imports `pytorch_lightning`, replace the import with `lightning.pytorch`. Failing to do so results in `ValueError: Expected a parent`.
+- When using a 24.12 container or later with LM Evaluation Harness, upgrade LM Evaluation Harness to include the required commit. Otherwise you may see `ValueError: You selected an invalid strategy name...`.
+- Restoring model context for NeMo 2.0 checkpoints produced using the NeMo 24.09 container fails when building `OptimizerConfig` from `megatron.core.optimizer.optimizer_config`, as `overlap_grad_reduce` and `overlap_param_gather` were moved in Megatron Core. The `update_io_context.py` script drops unknown parameters from the checkpoint context to make it compatible with the latest container.
+- Griffin's (NeMo 1.0) full fine-tuning has checkpoint loading issues; the state dicts do not match between the provided checkpoint and the initialized model. Use the 24.07 container if this model is needed.
+- Pretrain Gemma 2 27b recipe needs at least 2 nodes; currently the recipe has the default number of nodes set to 1.
+- The Megatron Core Distributed Optimizer currently lacks memory capacity optimization, resulting in higher model state memory usage at small data parallel sizes.
+- The overlap of the data-parallel parameter AllGather with `optimizer.step` (`overlap_param_gather_with_optimizer=true`) does not work with distributed checkpointing.
+- Support for converting models from NeMo 2.0 to 1.0 is not yet available.
+- Transformer Engine changed checkpoint metadata after v1.10, which can cause checkpoint incompatibilities. **Workaround:** use `model.dist_ckpt_load_strictness=log_all` when working with Transformer Engine v1.10 or higher. See [software component versions](https://docs.nvidia.com/nemo/megatron-bridge/latest/releases/software-versions.html) for TE versions per container.
+- For data preparation of GPT models, use your own dataset or an online dataset legally approved by your organization.
+- A race condition in the NeMo experiment manager can occur when multiple processes or threads attempt to access and modify shared resources simultaneously.
+- The Mistral and Mixtral tokenizers require a Hugging Face login.
+
+### Export and Deployment
+
+These notes apply to export and deployment behavior in older releases.
+
+- Exporting Gemma, Starcoder, and Falcon 7B models to TRT-LLM only works with a single GPU. If you attempt to export with multiple GPUs, no descriptive error message is shown.
+- Export Llama70B vLLM causes an out-of-memory issue.
+- Export vLLM does not support LoRA and P-tuning.
+- In-framework (PyTorch level) deployment with 8 GPUs is encountering an error.
+- Query script under `scripts/deploy/nlp/query.py` returns the error `'output_generation_logits'` in the 24.12 container.
+
+### Notebooks and Tutorials
+
+The following notebooks had functional issues at the time of the 24.12 release:
+
+- `ASR_with_NeMo.ipynb`
+- `ASR_with_Subword_Tokenization.ipynb`
+- `AudioTranslationSample.ipynb`
+- `Megatron_Synthetic_Tabular_Data_Generation.ipynb`
+- `SpellMapper_English_ASR_Customization.ipynb`
+- `FastPitch_ChineseTTS_Training.ipynb`
+- `NeVA Tutorial.ipynb`
+- `NeMo_Forced_Aligner_Tutorial.ipynb` — use the 24.09 container if this notebook is needed.
+
+### Multimodal
+
+These notes apply to multimodal tutorials and workflows in older releases.
+
+- LITA tutorial: the data preparation part in `tutorials/multimodal/LITA_Tutorial.ipynb` requires you to manually download the YouMakeup dataset instead of using the provided script.
+- Add `exp_manager.checkpoint_callback_params.save_nemo_on_train_end=True` to the NeVA notebook pretraining procedure to ensure an end-to-end workflow.
+
+### ASR
+
+These notes apply to ASR workflows in older releases.
+
+- Timestamp misalignment occurs in FastConformer ASR models when using the ASR decoder for diarization. Related issue: [NeMo#8438](https://github.com/NVIDIA/NeMo/issues/8438).
+
+## Report a New Issue
+
+Open an issue or discussion in the [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) repository that owns the component — use [Libraries](/about/libraries) to find the right repo and docs site. For problems that span a container release, use [GitHub Discussions](https://github.com/orgs/NVIDIA-NeMo/discussions) and note your container tag (for example `nvcr.io/nvidia/nemo:26.02`).

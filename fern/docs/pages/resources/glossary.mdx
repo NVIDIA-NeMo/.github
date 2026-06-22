@@ -1,0 +1,162 @@
+---
+title: Glossary
+subtitle: Terms Used Across NeMo Open Source Software Documentation
+slug: resources/glossary
+---
+
+Use this glossary for quick lookup of NeMo Open Source Software terminology. For relationship-level explanations, use [Concepts](/about/concepts).
+
+## A
+
+AutoModel
+: PyTorch distributed training library for LLMs and VLMs with Hugging Face-native workflows. Use it when you want a PyTorch / Hugging Face training path.
+
+## C
+
+Catalog
+: The searchable library inventory on [Libraries](/about/libraries), organized by stage, kind, and tags.
+
+Checkpoint conversion
+: The process of moving model weights between formats, such as Hugging Face and Megatron. Megatron-Bridge provides the primary Hugging Face to Megatron conversion path.
+
+Colang
+: The modeling language used by NeMo Guardrails to define conversational flows, rails, and actions.
+
+Container
+: An NGC image that packages a tested runtime. NeMo Open Source Software uses both the multi-library Framework container and standalone containers for selected libraries.
+
+## D
+
+Data
+: The lifecycle stage for curating, filtering, synthesizing, anonymizing, or governing datasets before training or evaluation.
+
+Dask
+: A distributed Python computing framework. Older Curator workflows used Dask; current Curator docs describe the Ray-based pipeline architecture.
+
+## E
+
+E2E
+: End-to-end. The lifecycle stage for recipes, orchestration, experiment launch, and reference assets that span multiple stages.
+
+Evaluator
+: Library for scalable, reproducible model and agent evaluation across benchmarks and harnesses.
+
+Export-Deploy
+: Library for exporting and deploying NeMo and Hugging Face models to serving stacks such as TensorRT-LLM, vLLM, and ONNX-based paths.
+
+## F
+
+Framework container
+: The multi-library NGC image `nvcr.io/nvidia/nemo:<tag>`. It packages selected Framework components for tested workflows.
+
+Framework libraries
+: Libraries that participate in the NeMo Framework model lifecycle from data through deployment.
+
+## G
+
+GRPO
+: Group Relative Policy Optimization, a reinforcement learning method used in post-training workflows.
+
+Guardrails
+: Library for programmable guardrails for LLM-based conversational systems.
+
+Gym
+: Library for RL environments and benchmarks used to evaluate and improve models and agents.
+
+## H
+
+Hugging Face format
+: Model artifacts that follow Hugging Face `transformers` or related ecosystem conventions, such as configs, tokenizers, and safetensors weights. AutoModel uses Hugging Face-native paths; Megatron-Bridge converts between Hugging Face and Megatron formats.
+
+## I
+
+Inference
+: The lifecycle stage for evaluation, export, serving, deployment, and guardrails.
+
+Integration
+: A repo kind for products that compose several libraries behind one product surface. NeMo Platform is the primary example.
+
+## K
+
+Kind
+: The role a repo plays in the catalog: library, integration, reference, or infrastructure.
+
+## L
+
+Library
+: A focused open source repo with its own source, docs, releases, install paths, and issue tracker.
+
+Lifecycle stage
+: The primary workflow stage assigned to a repo: Data, Pretraining, RL, Inference, or E2E.
+
+## M
+
+Megatron-Bridge
+: Megatron-Core training library with bidirectional Hugging Face checkpoint conversion.
+
+Megatron format
+: Model artifacts organized for Megatron-Core training and parallelism. Use Megatron-Bridge when a workflow needs to move between Hugging Face and Megatron formats.
+
+## N
+
+NeMo Framework
+: The model-lifecycle stack for data, training, RL, evaluation, export, and deployment. In container contexts, the name can also refer to the `nvcr.io/nvidia/nemo` Framework container.
+
+NeMo Open Source Software
+: The public open source side of NVIDIA NeMo: the [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) GitHub organization, documentation, and related open source containers.
+
+NeMo Platform
+: Agent integration product with CLI, SDK, and Studio for evaluating, securing, tuning, and deploying agents using selected NeMo libraries.
+
+NeMo Speech
+: Speech AI documentation and source in the [NVIDIA-NeMo/NeMo](https://github.com/NVIDIA-NeMo/NeMo) repo.
+
+NGC
+: NVIDIA GPU Cloud, the catalog where NVIDIA publishes container images and model assets.
+
+## P
+
+Pretraining
+: The lifecycle stage for training, fine-tuning, adapting models, and converting training formats.
+
+## R
+
+RAG
+: Retrieval-augmented generation. A pattern where an application retrieves relevant context before generating an answer.
+
+Rail
+: A programmable Guardrails behavior that can guide, block, transform, retrieve, or execute logic around an LLM interaction.
+
+Ray
+: A distributed execution framework used by current Curator and RL workflows for scaling Python workloads.
+
+Reference
+: A repo kind for recipes, cookbooks, datasets, and example pipelines. Skills and Nemotron are examples.
+
+Repo
+: A GitHub repository in the [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo) organization.
+
+Reward model
+: A model or scoring function used to evaluate candidate outputs during alignment or reinforcement learning workflows.
+
+RL
+: Reinforcement learning. In NeMo Open Source Software, the RL stage includes post-training workflows such as SFT, DPO, GRPO, distillation, and agent improvement.
+
+Rollout
+: Model-generated trajectories or interactions used by RL training workflows, especially for agent or environment-based training.
+
+Runtime path
+: The setup family used to run a workflow: Framework container, standalone container, pip/source install, source checkout, or Platform setup.
+
+## S
+
+Stage
+: The primary lifecycle bucket used by the library catalog.
+
+Standalone container
+: A library-specific NGC image, such as AutoModel, RL, or Curator, used for workflows that fit a focused runtime.
+
+## T
+
+Tags
+: Catalog search facets for modality, technique, or role, such as `speech`, `agents`, `evaluation`, or `deployment`.

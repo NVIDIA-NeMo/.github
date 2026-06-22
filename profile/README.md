@@ -1,81 +1,47 @@
 <!--
-SPDX-FileCopyrightText: Copyright (c) 2024-2025 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+SPDX-FileCopyrightText: Copyright (c) 2024-2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 SPDX-License-Identifier: Apache-2.0
 -->
 
-## NVIDIA NeMo Framework Overview
+# NeMo Open Source Software
 
-NeMo Framework is NVIDIA's GPU accelerated, fully open-source, end-to-end training framework for large language models (LLMs), multi-modal models, diffusion and speech models. It enables seamless scaling of pretraining, post-training, and reinforcement learning workloads from single GPU to thousand-node clusters for both 🤗Hugging Face/PyTorch and Megatron models. This GitHub organization includes a suite of libraries and recipe collections to help users train models from end to end. 
+Build generative AI models and agents on NVIDIA GPUs with open source NVIDIA NeMo libraries for data curation, training, alignment, evaluation, deployment, guardrails, and end-to-end recipes.
 
-NeMo Framework is also a part of the NVIDIA NeMo software suite for managing the AI agent lifecycle.
+NeMo Open Source Software is part of the broader NVIDIA NeMo software suite. Use this GitHub organization for source code, examples, issue tracking, and repository-specific documentation.
 
-## Latest 📣 announcements and 🗣️ discussions 
+## Start With a Repository
 
-### 💬 NeMo Assist
-- [4/13/2026][Try NeMo Assist to chat with the NeMo Framework docs and code.](https://nemo-assist.nvidia.com/)
+Use this table to choose a starting repository based on your workflow. Teams can use the **Notes** column to add extra detail or context for their row.
 
-## Getting Started
+<!-- Notes column: optional space for individual teams to add extra detail or context (status, ownership, caveats, related links). Leave blank if unused. -->
 
-||Installation|Checkpoint Conversion HF<>Megatron|LLM example recipes and scripts|VLM example recipes and scripts|
-|-|-|-|-|-|
-|1 ～ 1,000 GPUs|[NeMo Automodel](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#getting-started), [NeMo RL](https://github.com/NVIDIA-NeMo/RL?tab=readme-ov-file#prerequisites)|No Need|[Pre-training](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#llm-pre-training), [SFT](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#llm-supervised-fine-tuning-sft), [LoRA](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#llm-parameter-efficient-fine-tuning-peft), [DPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_dpo.py), [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_grpo_math.py)|[SFT](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#vlm-supervised-fine-tuning-sft), [LoRA](https://github.com/NVIDIA-NeMo/Automodel?tab=readme-ov-file#vlm-parameter-efficient-fine-tuning-peft), [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_vlm_grpo.py)
-|Over 1,000 GPUs|[NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge?tab=readme-ov-file#-installation), [NeMo RL](https://github.com/NVIDIA-NeMo/RL?tab=readme-ov-file#prerequisites)|[Conversion](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/examples/conversion/README.md)|[Pretrain, SFT, and LoRA](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/llama/llama3.py), [DPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_dpo.py) with [megatron_cfg](https://github.com/NVIDIA-NeMo/RL/blob/fa379fffbc9c5580301fa748dbba269c7d90f883/examples/configs/dpo.yaml#L99), [GRPO](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/run_grpo_math.py) with [megatron_cfg](https://github.com/NVIDIA-NeMo/RL/blob/fa379fffbc9c5580301fa748dbba269c7d90f883/examples/configs/grpo_math_1B_megatron.yaml#L79)|[SFT, LoRA](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/src/megatron/bridge/recipes/qwen_vl/qwen25_vl.py), [GRPO megatron config](https://github.com/NVIDIA-NeMo/RL/blob/main/examples/configs/vlm_grpo_3B_megatron.yaml)|
+| Workflow | Use For | Repositories | Notes |
+| --- | --- | --- | --- |
+| **Data** | Curate, synthesize, anonymize, and prepare datasets | [Curator](https://github.com/NVIDIA-NeMo/Curator), [Data Designer](https://github.com/NVIDIA-NeMo/DataDesigner), [Anonymizer](https://github.com/NVIDIA-NeMo/Anonymizer) |  |
+| **Pretraining** | Train, fine-tune, adapt, and convert model checkpoints | [AutoModel](https://github.com/NVIDIA-NeMo/Automodel), [Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge), [NeMo Speech](https://github.com/NVIDIA-NeMo/NeMo) |  |
+| **RL** | Run SFT, DPO, GRPO, RL, environments, and rollouts | [NeMo RL](https://github.com/NVIDIA-NeMo/RL), [Gym](https://github.com/NVIDIA-NeMo/Gym), [ProRL Agent Server](https://github.com/NVIDIA-NeMo/ProRL-Agent-Server) |  |
+| **Inference** | Evaluate, export, serve, and add guardrails | [Evaluator](https://github.com/NVIDIA-NeMo/Evaluator), [Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy), [Guardrails](https://github.com/NVIDIA-NeMo/Guardrails) |  |
+| **Agents** | Evaluate, secure, tune, and deploy agent workflows | [NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) |  |
+| **End-to-End** | Launch experiments, follow recipes, and use reference assets | [Run](https://github.com/NVIDIA-NeMo/Run), [Skills](https://github.com/NVIDIA-NeMo/Skills), [Nemotron](https://github.com/NVIDIA-NeMo/Nemotron) |  |
 
-## Repo organization under NeMo Framework
+## Choose NeMo Framework or NeMo Platform
 
-### Summary of key functionalities and container strategy of each repo
+Use NeMo Framework for model lifecycle work, and use NeMo Platform for integrated agent workflows.
 
-Visit the individual repos to find out more 🔍, raise :bug:, contribute ✍️ and participate in discussion forums 🗣️!
+- **NeMo Framework** is the model-lifecycle stack: data, training, RL, evaluation, export, and deployment libraries across the repositories listed above.
+- **NeMo Platform** is the agent workflow entry point: [CLI, SDK, and Studio](https://github.com/NVIDIA-NeMo/nemo-platform) for evaluating, securing, tuning, and deploying agents.
 
-Note: The NeMo Framework is currently in the process of restructuring. The original NeMo 2.0 repository will now focus specifically on speech-related components, while other parts of the framework are being modularized into separate libraries such as NeMo Automodel, NeMo Gym, NeMo RL, and more. This transition aims to make NeMo more modular and developer-friendly.
-<p></p>
+## Community
 
-|Repo|Key Functionality & Documentation Link|Training Loop|Training Backends|Inference Backends|Model Coverage|Container|
-|-|-|-|-|-|-|-|
-|[NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge)|[Pretraining, LoRA, SFT](https://docs.nvidia.com/nemo/megatron-bridge/latest/)|PyT native loop|Megatron-core|NA|LLM & VLM|NeMo Framework Container
-|[NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel)|[Pretraining, LoRA, SFT](https://docs.nvidia.com/nemo/automodel/latest/index.html)|PyT native loop|PyTorch|NA|LLM, VLM, Omni, VFM|NeMo AutoModel Container|
-|[Previous NeMo 2.0 Repo -> will be repurposed to focus on Speech](https://github.com/NVIDIA-NeMo/NeMo)|[Pretraining,SFT](https://docs.nvidia.com/nemo-framework/user-guide/latest/speech_ai/index.html)|PyTorch Lightning Loop|Megatron-core & PyTorch|RIVA|Speech|NA|
-|[NeMo RL](https://github.com/NVIDIA-NeMo/RL)|[SFT, RL](https://docs.nvidia.com/nemo/rl/latest/index.html)|PyT native loop|Megatron-core & PyTorch|vLLM|LLM, VLM|NeMo RL container|
-|[NeMo Gym](https://github.com/NVIDIA-NeMo/Gym)|[RL Environment, integrate with RL Framework](https://docs.nvidia.com/nemo/gym/latest/index.html)|NA|NA|NA|NA|NeMo RL Container (WIP)|
-|[NeMo Curator](https://github.com/NVIDIA-NeMo/Curator)|[Data curation](https://docs.nvidia.com/nemo/curator/latest/)|NA|NA|NA|Agnostic|NeMo Curator Container|
-|[NeMo Evaluator](https://github.com/NVIDIA-NeMo/Evaluator)|[Model evaluation](https://docs.nvidia.com/nemo/evaluator/latest/)|NA|NA||Agnostic|NeMo Framework Container|
-|[NeMo Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy)|[Export to Production](https://docs.nvidia.com/nemo/export-deploy/latest/index.html)|NA|NA|vLLM, TRT, TRTLLM, ONNX|Agnostic|NeMo Framework Container|
-|[NeMo Run](https://github.com/NVIDIA-NeMo/Run)|[Experiment launcher](https://docs.nvidia.com/nemo/run/latest/)|NA|NA|NA|Agnostic|NeMo Framework Container|
-|[NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails)|[Guardrail model response](https://docs.nvidia.com/nemo/guardrails/latest/)|NA|NA|NA||NA|
-|[NeMo Skills](https://github.com/NVIDIA-NeMo/Skills)|[Reference pipeline for SDG & Eval](https://nvidia.github.io/NeMo-Skills/)|NA|NA|NA|Agnostic|NA|
-|[NeMo Emerging Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers)|[Collection of Optimizers](https://docs.nvidia.com/nemo/emerging-optimizers/0.1.0/index.html)|NA|Agnostic|NA|NA|NA|
-|[Nemotron](https://github.com/NVIDIA-NeMo/Nemotron)|Developer asset hub for Nemotron models|NA|NA|NA|Nemotron models|NA|
-|[NeMo Data Designer](https://github.com/NVIDIA-NeMo/DataDesigner)|[Synthetic data generation library](https://docs.nvidia.com/nemo/microservices/latest/design-synthetic-data-from-scratch-or-seeds/)|NA|NA|NA|NA|NA|
-|[NeMo Safe Synthesizer](https://github.com/NVIDIA-NeMo/Safe-Synthesizer)|[Privacy-preserving synthetic tabular data](https://docs.nvidia.com/nemo/microservices/latest/generate-private-synthetic-data/)|HF Trainer|PyTorch, Opacus|vLLM|LLM|NA|
-|[NeMo Anonymizer](https://github.com/NVIDIA-NeMo/Anonymizer)|PII detection and anonymization|NA|NA|NA|Agnostic|NA|
+Use these links to ask questions, browse repositories, and follow open work.
 
-<div align="center">
-  Table 1. NeMo Framework Repos
-</div>
-<p></p>
-
-### Diagram Ilustration of Repos under NeMo Framework (WIP)
-
-  ![image](/RepoDiagram.png)
-  
-<div align="center">
-  Figure 1. NeMo Framework Repo Overview
-</div>
-<p></p>
-
-### Some background motivations and historical contexts
-The NeMo GitHub Org and its repo collections are created to address the following problems
-* **Need for composability**: The [Previous NeMo 2.0 version](https://github.com/NVIDIA/NeMo) is monolithic and encompasses too many things, making it hard for users to find what they need. Container size is also an issue. Breaking down the Monolithic repo into a series of functional-focused repos to facilitate code discovery.
-* **Need for customizability**: The [Previous NeMo 2.0 version](https://github.com/NVIDIA/NeMo) uses PyTorch Lighting as the default trainer loop, which provides some out of the box functionality but making it hard to customize. [NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge), [NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel), and [NeMo RL](https://github.com/NVIDIA-NeMo/RL) have adopted pytorch native custom loop to improve flexibility and ease of use for developers. 
-
-<!--
-## Contribution & Support
-
-- Follow [Contribution Guidelines](../CONTRIBUTING.md)
-- Report issues via GitHub Discussions
-- Enterprise support available through NVIDIA AI Enterprise
--->
+- [GitHub Discussions](https://github.com/orgs/NVIDIA-NeMo/discussions)
+- [All Repositories](https://github.com/orgs/NVIDIA-NeMo/repositories)
+- [Open Issues](https://github.com/search?q=org%3ANVIDIA-NeMo+is%3Aissue+is%3Aopen&type=issues)
+- [NeMo Assist](https://nemo-assist.nvidia.com/) for NeMo Framework docs and code questions
 
 ## License
 
-Apache 2.0 licensed with third-party attributions documented in each repository.
+Review the license terms before using or contributing to NeMo Open Source Software repositories.
+
+Apache 2.0. Third-party attributions are documented in each repository.

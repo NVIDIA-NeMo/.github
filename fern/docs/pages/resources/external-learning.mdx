@@ -1,0 +1,95 @@
+---
+title: External Learning
+subtitle: Community Writeups, Videos, and Partner Examples
+slug: resources/external-learning
+---
+
+These third-party resources can help you see how developers approach NeMo Open Source Software in the wild. Treat commands and version pins as examples, and verify current setup steps in the linked library docs.
+
+## Guardrails
+
+These resources show how external authors frame Guardrails for safety, RAG, and application control.
+
+<Cards>
+
+<Card title="Pinecone: NeMo Guardrails, The Missing Manual" href="https://www.pinecone.io/learn/nemo-guardrails-intro/">
+Practical walkthrough of safety rails, deterministic dialogue, RAG, and tool use.
+</Card>
+
+<Card title="AWS: Guardrails on SageMaker JumpStart" href="https://aws.amazon.com/blogs/machine-learning/enhancing-llm-capabilities-with-nemo-guardrails-on-amazon-sagemaker-jumpstart/">
+Cloud integration example for adding Guardrails around LLM applications.
+</Card>
+
+<Card title="Data Science Dojo: Guardrails Live Demo" href="https://www.classcentral.com/course/youtube-building-trustworthy-ai-with-nvidia-nemo-guardrails-live-demo-ai-guardrails-461665">
+Short video listing for a hands-on Guardrails demo.
+</Card>
+
+</Cards>
+
+Common themes: Colang, rail types, LangChain/RAG integration, provider setup, latency and cost, and how Guardrails compares with model-based classifiers such as Llama Guard.
+
+## Data Curation
+
+These resources show how external authors approach Curator pipelines, modality setup, and training-data preparation.
+
+<Cards>
+
+<Card title="PaaSup: Text Curation Pipeline" href="https://ideas.paasup.io/global/nemo-curator-en/">
+Walkthrough of a practical text curation flow with NeMo Curator.
+</Card>
+
+<Card title="Spheron: Pretraining Data Curation on GPU Cloud" href="https://www.spheron.network/blog/ai-pretraining-data-curation-nemo-curator-datatrove-fineweb-gpu-cloud/">
+Task-oriented view of web-data curation, deduplication, and training-ready shards.
+</Card>
+
+<Card title="DeepWiki: Curator Tutorials and Examples" href="https://deepwiki.com/NVIDIA/NeMo-Curator/7-tutorials-and-examples/">
+Generated map of Curator tutorial structure and source-linked examples.
+</Card>
+
+</Cards>
+
+Common themes: modality-specific setup, Ray execution, GPU and FFmpeg prerequisites, cluster scale, and the move from raw data to training-ready outputs.
+
+## Training, RL, and Checkpoints
+
+These resources show how external authors approach post-training, backend choice, rollout infrastructure, and checkpoint flow.
+
+<Cards>
+
+<Card title="Vadi Taslim: Getting Started With NeMo RL" href="https://www.vaditaslim.com/blog/ai/nemo-rl-getting-started">
+Beginner-oriented framing of SFT, DPO, GRPO, and RL for LLMs.
+</Card>
+
+<Card title="SkyPilot: NeMo RL Example" href="https://docs.skypilot.co/en/v0.10.5/examples/training/nemorl.html">
+Cloud launch example for NeMo RL training jobs.
+</Card>
+
+<Card title="Mind Lab: Trillion-Parameter Reasoning RL" href="https://macaron.im/mindlab/research/building-trillion-parameter-reasoning-rl-with-10-gpus">
+Large-scale example using Megatron-Bridge and verl for LoRA RL.
+</Card>
+
+<Card title="Hugging Face: NeMo Gym Integration" href="https://huggingface.co/docs/trl/v0.29.1/en/nemo_gym">
+Example of using NeMo Gym environments with TRL.
+</Card>
+
+</Cards>
+
+Common themes: backend choice, rollout and training separation, Hugging Face tokens, checkpoint formats, and multi-node orchestration.
+
+## Hugging Face Ecosystem
+
+These resources show how AutoModel appears in Hugging Face-native workflows.
+
+<Cards>
+
+<Card title="Transformers: NeMo AutoModel Integration" href="https://huggingface.co/docs/transformers/community_integrations/nemo_automodel_finetuning">
+Shows AutoModel as a Hugging Face-compatible training path for LLMs and VLMs.
+</Card>
+
+<Card title="Diffusers: NeMo AutoModel Integration" href="https://huggingface.co/docs/diffusers/training/nemo_automodel">
+Shows AutoModel for diffusion fine-tuning with Diffusers-format models.
+</Card>
+
+</Cards>
+
+Common themes: Hugging Face-native workflows, no checkpoint conversion for AutoModel paths, model coverage, data preprocessing, and distributed launch configuration.

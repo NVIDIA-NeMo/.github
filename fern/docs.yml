@@ -1,0 +1,124 @@
+# yaml-language-server: $schema=https://schema.buildwithfern.dev/docs-yml.json
+
+instances:
+  - url: nemo.docs.buildwithfern.com/nemo/oss
+    custom-domain: docs.nvidia.com/nemo/oss
+
+title: NeMo Open Source Software
+
+global-theme: nvidia
+
+logo:
+  href: /oss
+  right-text: NeMo Open Source Software
+
+# GitHub org link in the top-right header (Fern `github` navbar button).
+# If the link does not appear after publish, the `nvidia` global theme may override
+# navbar-links — request an override in fern-components or add site-specific links there.
+navbar-links:
+  - type: github
+    value: https://github.com/NVIDIA-NeMo
+
+footer-links:
+  github: https://github.com/NVIDIA-NeMo
+
+experimental:
+  mdx-components:
+    - ./components
+
+redirects:
+  - source: "/oss/repositories"
+    destination: "/oss/libraries"
+  - source: "/oss/libraries"
+    destination: "/oss/about/libraries"
+  - source: "/oss/containers"
+    destination: "/oss/about/release-notes/containers"
+  - source: "/oss/about/containers"
+    destination: "/oss/about/release-notes/containers"
+  - source: "/oss/release-notes"
+    destination: "/oss/about/release-notes"
+  - source: "/oss/releases"
+    destination: "/oss/about/release-notes"
+  - source: "/oss/getting-started"
+    destination: "/oss/get-started"
+  - source: "/oss/community"
+    destination: "/oss/resources/community"
+  - source: "/oss/index.html"
+    destination: "/oss"
+  - source: "/oss/index"
+    destination: "/oss"
+  - source: "/oss/:path*/index.html"
+    destination: "/oss/:path*"
+  - source: "/oss/:path*.html"
+    destination: "/oss/:path*"
+
+navigation:
+  - section: About
+    path: docs/pages/index.mdx
+    icon: fa-duotone fa-house
+    contents:
+      - page: Ecosystem
+        path: docs/pages/about/ecosystem.mdx
+        icon: fa-duotone fa-sitemap
+      - page: Architecture
+        path: docs/pages/about/architecture.mdx
+        icon: fa-duotone fa-diagram-project
+      - folder: ./docs/pages/about/concepts
+        title: Concepts
+        slug: about/concepts
+        icon: fa-duotone fa-lightbulb
+        title-source: frontmatter
+      - page: Libraries
+        path: docs/pages/about/libraries.mdx
+        icon: fa-duotone fa-grid-2
+      - folder: ./docs/pages/about/release-notes
+        title: Release Notes
+        slug: about/release-notes
+        icon: fa-duotone fa-tag
+        title-source: frontmatter
+  - section: Get Started
+    path: docs/pages/get-started/index.mdx
+    icon: fa-duotone fa-rocket
+    contents:
+      - page: Task Map
+        path: docs/pages/get-started/task-map.mdx
+        icon: fa-duotone fa-map
+      - page: Quickstart
+        path: docs/pages/get-started/quickstart.mdx
+        icon: fa-duotone fa-bolt
+      - page: Installation
+        path: docs/pages/get-started/installation.mdx
+        icon: fa-duotone fa-download
+      - page: Runtime Chooser
+        path: docs/pages/get-started/runtime-chooser.mdx
+        icon: fa-duotone fa-box
+      - section: By lifecycle stage
+        contents:
+          - page: Data
+            path: docs/pages/get-started/data.mdx
+            icon: fa-duotone fa-database
+          - page: Pretraining
+            path: docs/pages/get-started/pretraining.mdx
+            icon: fa-duotone fa-microchip
+          - page: RL
+            path: docs/pages/get-started/rl.mdx
+            icon: fa-duotone fa-arrows-rotate
+          - page: Inference
+            path: docs/pages/get-started/inference.mdx
+            icon: fa-duotone fa-gauge
+          - page: E2E
+            path: docs/pages/get-started/e2e.mdx
+            icon: fa-duotone fa-diagram-project
+  - section: Resources
+    path: docs/pages/resources/index.mdx
+    icon: fa-duotone fa-book-open
+    contents:
+      - page: Glossary
+        path: docs/pages/resources/glossary.mdx
+        icon: fa-duotone fa-book
+      - page: External Learning
+        path: docs/pages/resources/external-learning.mdx
+        icon: fa-duotone fa-arrow-up-right-from-square
+      - page: Community
+        path: docs/pages/resources/community.mdx
+        icon: fa-duotone fa-comments

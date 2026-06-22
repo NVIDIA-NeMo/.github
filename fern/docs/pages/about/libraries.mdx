@@ -1,0 +1,65 @@
+---
+title: Libraries
+subtitle: Open Source Libraries in the NVIDIA-NeMo GitHub Organization
+slug: about/libraries
+position: 5
+---
+
+import RepoCatalog from "@/components/RepoCatalog";
+
+Browse **22 open source repositories** in [NVIDIA-NeMo](https://github.com/NVIDIA-NeMo). Most are **NeMo Framework** libraries for the model lifecycle; [NeMo Platform](https://github.com/NVIDIA-NeMo/nemo-platform) composes several libraries into an agent integration experience.
+
+For positioning, refer to [Ecosystem](/about/ecosystem). For pipeline structure, refer to [Architecture](/about/architecture).
+
+## Common Routes
+
+Use these routes when you know the work you want to do before you know the repo name.
+
+<Cards>
+
+<Card title="Curate Data" href="/get-started/task-map">
+Curator, Data Designer, Anonymizer, Safe-Synthesizer, and Skills.
+</Card>
+
+<Card title="Fine-Tune or Train" href="/get-started/pretraining">
+AutoModel for PyTorch / Hugging Face workflows, Megatron-Bridge for Megatron-Core scale.
+</Card>
+
+<Card title="Post-Train With RL" href="/get-started/rl">
+NeMo RL, Gym, and ProRL Agent Server.
+</Card>
+
+<Card title="Evaluate, Guardrail, or Deploy" href="/get-started/inference">
+Evaluator, Guardrails, Export-Deploy, and NeMo Platform.
+</Card>
+
+<Card title="Choose a Runtime" href="/get-started/runtime-chooser">
+Framework container, standalone container, pip/source install, or Platform setup.
+</Card>
+
+</Cards>
+
+<RepoCatalog />
+
+## How Repos Are Grouped
+
+Each card shows a **stage** and a **kind**:
+
+| Kind | Role | Examples |
+| --- | --- | --- |
+| **Library** | Focused product for a stage | Curator, AutoModel, RL, Evaluator |
+| **Integration** | Composes libraries into one product | NeMo Platform |
+| **Reference** | Recipes, cookbooks, pipelines | Skills, Nemotron |
+| **Infrastructure** | Shared project infrastructure | FW-CI-templates |
+
+| Stage | What lives here |
+| --- | --- |
+| **Data** | Curation, synthetic data, PII handling, SDG pipelines |
+| **Pretraining** | Model training and fine-tuning (AutoModel, Megatron-Bridge, NeMo Speech, optimizers) |
+| **RL** | Post-training alignment, environments, agent rollout |
+| **Inference** | Evaluation, export, serving, guardrails (and Platform for agent integration) |
+| **E2E** | Reference pipelines, recipes, experiment orchestration |
+
+Use **tags** on each card (or the search box) for cross-cutting facets like `speech`, `evaluation`, or `agents`.
+
+Some cards link directly to library docs; others link to the best available README or product documentation. Speech AI documentation is at [NeMo Speech](https://docs.nvidia.com/nemo/speech/nightly/).

@@ -1,0 +1,98 @@
+---
+title: Installation
+subtitle: Pip, Containers, and Choosing a Backend
+slug: get-started/installation
+position: 3
+---
+
+How to install NeMo Open Source Software libraries, choose Platform setup for agents, and pick a backend for your GPU scale. For a minimal first run, start with [Quickstart](/get-started/quickstart). For a setup decision before commands, use [Runtime chooser](/get-started/runtime-chooser).
+
+## Pip Install (Recommended for Development)
+
+Use package installs for local development, notebooks, and lightweight experiments when the library docs recommend them.
+
+| Workload | Install | Docs |
+| --- | --- | --- |
+| Hugging Face large language model (LLM) and vision language model (VLM) training | `pip install nemo-automodel` | [AutoModel installation](https://docs.nvidia.com/nemo/automodel/latest/guides/installation.html) |
+| Alignment (DPO, GRPO, SFT) | NeMo RL repo | [NeMo RL installation](https://docs.nvidia.com/nemo/rl/latest/about/installation.html) |
+| Speech ASR/TTS | `pip install nemo_toolkit[asr,tts]` | [NeMo Speech installation](https://docs.nvidia.com/nemo/speech/nightly/starthere/install.html) |
+| Data curation | Curator repo | [Curator installation](https://docs.nvidia.com/nemo/curator/get-started/installation) |
+| Integrated agent workflows | NeMo Platform repo | [NeMo Platform setup](https://nvidia-nemo.github.io/nemo-platform/main/get-started/setup/) |
+
+Each library publishes install extras and version pins in its own documentation. Use [Libraries](/about/libraries) to find the repo and docs site for your stage.
+
+## NGC Containers (Recommended for Production Stacks)
+
+Pre-built images bundle tested dependency sets. Use the [container catalog](/about/release-notes/containers) for current tags and pull commands.
+
+The **NeMo Framework** image (`nvcr.io/nvidia/nemo`) is the multi-library training stack. Standalone images exist for AutoModel, RL, and Curator.
+
+| Runtime path | Typical fit |
+| --- | --- |
+| **Framework container** | Cross-library Framework workflows and tested component sets. |
+| **Standalone container** | Focused library workflows with dedicated images. |
+| **pip or source install** | Local development, notebooks, and contribution workflows. |
+| **Platform setup** | Integrated agent workflows with CLI, SDK, and Studio. |
+
+See [Runtime chooser](/get-started/runtime-chooser) for setup guidance.
+
+## NeMo Platform Setup
+
+Use NeMo Platform when you want an integrated agent workflow with CLI, SDK, and Studio rather than one standalone library.
+
+<Cards>
+
+<Card title="NeMo Platform Setup" href="https://nvidia-nemo.github.io/nemo-platform/main/get-started/setup/">
+Follow the current setup path for agent evaluation, guardrails, tuning, and deployment.
+</Card>
+
+<Card title="NeMo Platform Repository" href="https://github.com/NVIDIA-NeMo/nemo-platform">
+Browse source, examples, issues, and release notes for the Platform entry point.
+</Card>
+
+</Cards>
+
+## Scale and Backends
+
+Use scale and checkpoint needs to choose between the Hugging Face-native path and the Megatron-Core path.
+
+| GPUs | Libraries | Checkpoint conversion | Notes |
+| --- | --- | --- | --- |
+| 1–1,000 | [AutoModel](https://github.com/NVIDIA-NeMo/Automodel), [NeMo RL](https://github.com/NVIDIA-NeMo/RL) | Not required for HF-native training | PyTorch / Hugging Face path |
+| 1,000+ | [Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge), [NeMo RL](https://github.com/NVIDIA-NeMo/RL) | [HF ↔ Megatron](https://github.com/NVIDIA-NeMo/Megatron-Bridge/blob/main/examples/conversion/README.md) | Megatron-Core at scale |
+
+Stage-specific libraries and entry points:
+
+<Cards>
+
+<Card title="Data" href="/get-started/data">
+Curator, Data Designer, anonymization, SDG.
+</Card>
+
+<Card title="Pretraining" href="/get-started/pretraining">
+AutoModel, Megatron-Bridge, Speech, optimizers.
+</Card>
+
+<Card title="RL" href="/get-started/rl">
+NeMo RL, Gym, agent server.
+</Card>
+
+<Card title="Inference" href="/get-started/inference">
+Evaluator, Export-Deploy, Guardrails.
+</Card>
+
+<Card title="E2E" href="/get-started/e2e">
+Skills, Nemotron recipes, NeMo Run.
+</Card>
+
+</Cards>
+
+## Experiment Tracking
+
+Use NeMo Run when setup choices need to carry into repeatable experiment launch and tracking.
+
+<Card title="NeMo Run" href="https://docs.nvidia.com/nemo/run/nightly/guides/quickstart.html">
+Launch and track experiments on local machines, SLURM, and Kubernetes.
+</Card>
+
+Also listed under [E2E](/get-started/e2e).

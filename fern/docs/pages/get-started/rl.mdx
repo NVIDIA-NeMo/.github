@@ -1,0 +1,39 @@
+---
+title: RL
+subtitle: Get Started With Alignment and Reinforcement Learning
+slug: get-started/rl
+position: 12
+---
+
+import StageGuide from "@/components/StageGuide";
+
+Libraries for **RL** — SFT, DPO, GRPO, on-policy distillation, RL environments, and agent rollout infrastructure.
+
+```mermaid
+flowchart LR
+    DATA["Data"] --> PRE["Pretraining"] --> RL["RL"] --> INF["Inference"]
+    E2E["E2E"] -.-> DATA & PRE & RL & INF
+
+    classDef active fill:#76B900,stroke:#3d5c00,stroke-width:3px,color:#fff
+    classDef dim fill:#f5f5f5,stroke:#ccc,color:#666
+
+    class DATA,PRE,INF,E2E dim
+    class RL active
+```
+
+<StageGuide stage="rl" />
+
+## Common Entry Points
+
+Use these entry points to choose between post-training algorithms, RL environments, and agent rollout infrastructure.
+
+| Technique | Start in docs | Library |
+| --- | --- | --- |
+| GRPO, DPO, SFT | [NeMo RL examples](https://docs.nvidia.com/nemo/rl/latest/) | NeMo RL |
+| RL environments | [NeMo Gym](https://docs.nvidia.com/nemo/gym/main/about/) | Gym |
+
+Train base models first through [Pretraining](/get-started/pretraining), then align here. Evaluate with [Inference](/get-started/inference) libraries.
+
+<Card title="NeMo RL on NGC" href="https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo-rl">
+Pre-built alignment and RL container.
+</Card>
