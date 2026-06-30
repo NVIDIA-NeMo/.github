@@ -48,6 +48,7 @@ Note: The NeMo Framework is currently in the process of restructuring. The origi
 |[NeMo Data Designer](https://github.com/NVIDIA-NeMo/DataDesigner)|[Synthetic data generation library](https://docs.nvidia.com/nemo/microservices/latest/design-synthetic-data-from-scratch-or-seeds/)|NA|NA|NA|NA|NA|
 |[NeMo Safe Synthesizer](https://github.com/NVIDIA-NeMo/Safe-Synthesizer)|[Privacy-preserving synthetic tabular data](https://docs.nvidia.com/nemo/microservices/latest/generate-private-synthetic-data/)|HF Trainer|PyTorch, Opacus|vLLM|LLM|NA|
 |[NeMo Anonymizer](https://github.com/NVIDIA-NeMo/Anonymizer)|PII detection and anonymization|NA|NA|NA|Agnostic|NA|
+|[Switchyard](https://github.com/NVIDIA-NeMo/Switchyard)|[Model routing, API translation & observability (OpenAI / Anthropic)](https://github.com/NVIDIA-NeMo/Switchyard)|NA|NA|Agnostic (OpenAI-compatible)|Agnostic|NA|
 
 <div align="center">
   Table 1. NeMo Framework Repos
