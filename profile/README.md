@@ -34,7 +34,7 @@ Note: The NeMo Framework is currently in the process of restructuring. The origi
 |-|-|-|-|-|-|-|
 |[NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge)|[Pretraining, LoRA, SFT](https://docs.nvidia.com/nemo/megatron-bridge/latest/)|PyT native loop|Megatron-core|NA|LLM & VLM|NeMo Framework Container
 |[NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel)|[Pretraining, LoRA, SFT](https://docs.nvidia.com/nemo/automodel/latest/index.html)|PyT native loop|PyTorch|NA|LLM, VLM, Omni, VFM|NeMo AutoModel Container|
-|[NeMo Speech](https://github.com/NVIDIA-NeMo/NeMo)|[Pretraining,SFT](https://docs.nvidia.com/nemo-framework/user-guide/latest/speech_ai/index.html)|PyTorch Lightning Loop|Megatron-core & PyTorch|RIVA|Speech|NA|
+|[NeMo Speech](https://github.com/NVIDIA-NeMo/Speech)|[Pretraining,SFT](https://docs.nvidia.com/nemo-framework/user-guide/latest/speech_ai/index.html)|PyTorch Lightning Loop|Megatron-core & PyTorch|RIVA|Speech|NA|
 |[NeMo RL](https://github.com/NVIDIA-NeMo/RL)|[SFT, RL](https://docs.nvidia.com/nemo/rl/latest/index.html)|PyT native loop|Megatron-core & PyTorch|vLLM|LLM, VLM|NeMo RL container|
 |[NeMo Gym](https://github.com/NVIDIA-NeMo/Gym)|[RL Environment, Eval, Sandboxing](https://docs.nvidia.com/nemo/gym/latest/index.html)|NA|NA|NA|NA|NeMo RL Container (WIP)|
 |[NeMo Curator](https://github.com/NVIDIA-NeMo/Curator)|[Data curation](https://docs.nvidia.com/nemo/curator/latest/)|NA|NA|NA|Agnostic|NeMo Curator Container|
