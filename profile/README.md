@@ -34,14 +34,14 @@ Note: The NeMo Framework is currently in the process of restructuring. The origi
 |-|-|-|-|-|-|-|
 |[NeMo Megatron-Bridge](https://github.com/NVIDIA-NeMo/Megatron-Bridge)|[Pretraining, LoRA, SFT](https://docs.nvidia.com/nemo/megatron-bridge/latest/)|PyT native loop|Megatron-core|NA|LLM & VLM|NeMo Framework Container
 |[NeMo AutoModel](https://github.com/NVIDIA-NeMo/Automodel)|[Pretraining, LoRA, SFT](https://docs.nvidia.com/nemo/automodel/latest/index.html)|PyT native loop|PyTorch|NA|LLM, VLM, Omni, VFM|NeMo AutoModel Container|
-|[Previous NeMo 2.0 Repo -> will be repurposed to focus on Speech](https://github.com/NVIDIA-NeMo/NeMo)|[Pretraining,SFT](https://docs.nvidia.com/nemo-framework/user-guide/latest/speech_ai/index.html)|PyTorch Lightning Loop|Megatron-core & PyTorch|RIVA|Speech|NA|
+|[NeMo Speech](https://github.com/NVIDIA-NeMo/Speech)|[Pretraining,SFT](https://docs.nvidia.com/nemo-framework/user-guide/latest/speech_ai/index.html)|PyTorch Lightning Loop|Megatron-core & PyTorch|RIVA|Speech|NA|
 |[NeMo RL](https://github.com/NVIDIA-NeMo/RL)|[SFT, RL](https://docs.nvidia.com/nemo/rl/latest/index.html)|PyT native loop|Megatron-core & PyTorch|vLLM|LLM, VLM|NeMo RL container|
-|[NeMo Gym](https://github.com/NVIDIA-NeMo/Gym)|[RL Environment, integrate with RL Framework](https://docs.nvidia.com/nemo/gym/latest/index.html)|NA|NA|NA|NA|NeMo RL Container (WIP)|
+|[NeMo Gym](https://github.com/NVIDIA-NeMo/Gym)|[RL Environment, Eval, Sandboxing](https://docs.nvidia.com/nemo/gym/latest/index.html)|NA|NA|NA|NA|NeMo RL Container (WIP)|
 |[NeMo Curator](https://github.com/NVIDIA-NeMo/Curator)|[Data curation](https://docs.nvidia.com/nemo/curator/latest/)|NA|NA|NA|Agnostic|NeMo Curator Container|
+|[NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails)|[Guardrail model response](https://docs.nvidia.com/nemo/guardrails/latest/)|NA|NA|NA||NA|
 |[NeMo Evaluator](https://github.com/NVIDIA-NeMo/Evaluator)|[Model evaluation](https://docs.nvidia.com/nemo/evaluator/latest/)|NA|NA||Agnostic|NeMo Framework Container|
 |[NeMo Export-Deploy](https://github.com/NVIDIA-NeMo/Export-Deploy)|[Export to Production](https://docs.nvidia.com/nemo/export-deploy/latest/index.html)|NA|NA|vLLM, TRT, TRTLLM, ONNX|Agnostic|NeMo Framework Container|
 |[NeMo Run](https://github.com/NVIDIA-NeMo/Run)|[Experiment launcher](https://docs.nvidia.com/nemo/run/latest/)|NA|NA|NA|Agnostic|NeMo Framework Container|
-|[NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails)|[Guardrail model response](https://docs.nvidia.com/nemo/guardrails/latest/)|NA|NA|NA||NA|
 |[NeMo Skills](https://github.com/NVIDIA-NeMo/Skills)|[Reference pipeline for SDG & Eval](https://nvidia.github.io/NeMo-Skills/)|NA|NA|NA|Agnostic|NA|
 |[NeMo Emerging Optimizers](https://github.com/NVIDIA-NeMo/Emerging-Optimizers)|[Collection of Optimizers](https://docs.nvidia.com/nemo/emerging-optimizers/0.1.0/index.html)|NA|Agnostic|NA|NA|NA|
 |[Nemotron](https://github.com/NVIDIA-NeMo/Nemotron)|Developer asset hub for Nemotron models|NA|NA|NA|Nemotron models|NA|
