@@ -33,13 +33,7 @@ Knowledge distillation (KD) transfers behavior from a stronger **teacher** model
 
 <!-- more -->
 
-<div style="text-align: center;">
-  <video controls playsinline preload="metadata" style="display: block; width: 100%; max-width: 960px; min-height: 360px; margin: 0 auto; background: #000;">
-    <source src="/discussions/cross-tokenizer-mopd-knowledge-distillation/assets/xtoken-kd-overview.mp4" type="video/mp4">
-    <source src="https://raw.githubusercontent.com/NVIDIA-NeMo/.github/discussions/discussions/posts/cross-tokenizer-mopd-knowledge-distillation/assets/xtoken-kd-overview.mp4" type="video/mp4">
-    Your browser does not support embedded video. <a href="/discussions/cross-tokenizer-mopd-knowledge-distillation/assets/xtoken-kd-overview.mp4">Open the X-Token overview video</a>.
-  </video>
-</div>
+https://github.com/user-attachments/assets/949529b4-23d2-4b87-af8d-52b248032ac5
 
 ## X-Token knowledge distillation
 
