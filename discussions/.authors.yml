@@ -111,6 +111,14 @@ authors:
     name: Sharath Turuvekere Sreenivas
     description: Senior Deep Learning Algorithm Engineer
     avatar: assets/images/authors/sharath_ts.png
+  adithya_hanasoge:
+    name: Adithya Hanasoge
+    description: NVIDIA Engineer
+    avatar: assets/images/authors/adithya_hanasoge.svg
+  mingyu_yang:
+    name: Mingyu Yang
+    description: NVIDIA Engineer
+    avatar: assets/images/authors/mingyu_yang.svg
   aditya_vavre:
     name: Aditya Vavre
     description: Deep Learning Algorithm Engineer

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Placeholder portrait for Adithya Hanasoge</title>
+  <rect width="256" height="256" rx="128" fill="#1f2937"/>
+  <circle cx="128" cy="90" r="45" fill="#9ca3af"/>
+  <path d="M45 230c8-52 39-81 83-81s75 29 83 81" fill="#9ca3af"/>
+  <circle cx="202" cy="202" r="35" fill="#76b900"/>
+  <text x="202" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#fff">AH</text>
+</svg>
