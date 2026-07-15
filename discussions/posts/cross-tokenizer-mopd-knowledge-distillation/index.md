@@ -8,6 +8,7 @@ authors:
   - mingyu_yang
   - yifu_wu
   - wenwen_gao
+  - pavlo_molchanov
 categories:
   - NeMo-RL
   - On-Policy Distillation
@@ -23,7 +24,7 @@ tags:
 <!--
 nemo_discussion: {
   "repo": "https://github.com/NVIDIA-NeMo/RL",
-  "authors": ["sharathts", "avenkateshha", "mingyyang", "yfw", "snowmanwwg"]
+  "authors": ["sharathts", "avenkateshha", "mingyyang", "yfw", "snowmanwwg", "pamolchanov"]
 }
 -->
 

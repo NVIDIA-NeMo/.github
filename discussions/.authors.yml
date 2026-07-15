@@ -127,3 +127,7 @@ authors:
     name: Nima Tajbakhsh
     description: NeMo Engineering Manager
     avatar: assets/images/authors/nima_tajbakhsh.png
+  pavlo_molchanov:
+    name: Pavlo Molchanov
+    description: Research Director
+    avatar: assets/images/authors/pavlo_molchanov.png
