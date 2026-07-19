@@ -114,7 +114,7 @@ authors:
   adithya_hanasoge:
     name: Adithya Hanasoge
     description: NVIDIA Engineer
-    avatar: assets/images/authors/adithya_hanasoge.svg
+    avatar: assets/images/authors/adithya_hanasoge.jpg
   mingyu_yang:
     name: Mingyu Yang
     description: NVIDIA Engineer
@@ -131,3 +131,11 @@ authors:
     name: Pavlo Molchanov
     description: Research Director
     avatar: assets/images/authors/pavlo_molchanov.png
+  yu_yao:
+    name: Yu Yao
+    description: Senior Deep Learning Algorithm Engineer
+    avatar: assets/images/authors/yu_yao.png
+  songlin_jiang:
+    name: Songlin Jiang
+    description: NVIDIA NeMo Intern
+    avatar: assets/images/authors/songlin_jiang.png
