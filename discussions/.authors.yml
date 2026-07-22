@@ -51,6 +51,10 @@ authors:
     name: Guyue Huang
     description: Deep Learning Architect
     avatar: assets/images/authors/guyue_huang.png
+  youngeun_kwon:
+    name: Youngeun Kwon
+    description: Deep Learning Architect
+    avatar: assets/images/authors/youngeun_kwon.png
   zhiyu_li:
     name: Zhiyul Li
     description: Deep Learning Algorithm Engineer
