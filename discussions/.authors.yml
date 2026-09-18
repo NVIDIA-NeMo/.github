@@ -56,9 +56,25 @@ authors:
     description: Deep Learning Architect
     avatar: assets/images/authors/youngeun_kwon.png
   zhiyu_li:
-    name: Zhiyul Li
+    name: Zhiyu Li
     description: Deep Learning Algorithm Engineer
     avatar: assets/images/authors/zhiyu_li.png
+  yan_xu:
+    name: Yan Xu
+    description: Deep Learning Algorithm Engineer
+    avatar: assets/images/authors/yan_xu.png
+  eric_harper:
+    name: Eric Harper
+    description: Megatron Engineering Manager
+    avatar: https://avatars.githubusercontent.com/ericharper
+  ashwath_aithal:
+    name: Ashwath Aithal
+    description: Director, AI/DL Systems & Algorithms
+    avatar: assets/images/authors/ashwath_aithal.png
+  santosh_bhavani:
+    name: Santosh Bhavani
+    description: Product Manager - Megatron Core, Transformer Engine, RecSys
+    avatar: assets/images/authors/santosh_bhavani.png
   hemil_desai:
     name: Hemil Desai
     description: Senior Deep Learning Algorithm Engineer
