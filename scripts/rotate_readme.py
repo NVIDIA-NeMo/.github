@@ -150,12 +150,16 @@ def render_cards(names, by_name, config):
     return "<table>\n" + "\n".join(rows) + "\n</table>"
 
 
+def placeholder(values, key):
+    if key not in values:
+        raise ValueError(f"unknown template placeholder {{{{{key}}}}}")
+    return values[key]
+
+
 def validate(readme, names, config, root):
     for ref in re.findall(r'src="(assets/[^"]+)"', readme):
         if not (root / "profile" / ref).is_file():
             raise ValueError(f"missing asset {ref}")
-    if "{{" in readme:
-        raise ValueError("unfilled placeholder")
     for name in config["excluded"]:
         if f"/{ORG}/{name}\"" in readme:
             raise ValueError(f"excluded repo {name} is featured")
@@ -188,7 +192,9 @@ def main():
     month_year = args.date.strftime("%B %Y")
     cards = render_cards(names, by_name, config)
     template = (root / "profile/README.template.md").read_text()
-    readme = template.replace("{{month_year}}", month_year).replace("{{featured_cards_html}}", cards)
+    values = {"month_year": month_year, "featured_cards_html": cards}
+    # One pass, so braces inside repo descriptions are never treated as placeholders.
+    readme = re.sub(r"\{\{(\w+)\}\}", lambda m: placeholder(values, m.group(1)), template)
     validate(readme, names, config, root)
 
     print(f"{month_year}: {', '.join(names)}")

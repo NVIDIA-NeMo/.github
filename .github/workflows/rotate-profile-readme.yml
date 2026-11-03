@@ -5,6 +5,13 @@ on:
     # Mondays 14:00 UTC. The first run of each month is the first Monday, which starts
     # that month's rotation; later runs only refresh the catalog and reuse the selection.
     - cron: "0 14 * * 1"
+  pull_request:
+    # Exercises the script on a real runner; never commits.
+    paths:
+      - ".github/workflows/rotate-profile-readme.yml"
+      - "scripts/**"
+      - "rotation/**"
+      - "profile/**"
   workflow_dispatch:
     inputs:
       date:
@@ -32,10 +39,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DATE: ${{ inputs.date }}
-        run: python3 scripts/rotate_readme.py ${DATE:+--date "$DATE"}
+          DRY_RUN: ${{ (github.event_name == 'pull_request' || inputs.dry_run) && '1' || '' }}
+        run: python3 scripts/rotate_readme.py ${DATE:+--date "$DATE"} ${DRY_RUN:+--dry-run}
 
       - name: Commit and push
-        if: ${{ !inputs.dry_run }}
+        if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.dry_run) }}
         run: |
           git add profile rotation
           if git diff --cached --quiet; then
