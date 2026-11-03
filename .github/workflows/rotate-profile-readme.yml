@@ -23,7 +23,7 @@ on:
         default: false
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: rotate-profile-readme
@@ -32,8 +32,23 @@ concurrency:
 jobs:
   rotate:
     runs-on: ubuntu-latest
+    env:
+      PUSH: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.dry_run) }}
     steps:
+      # The push to main is made by the nemo-automation-bot app, which is allowed to
+      # bypass the pull request requirement. GITHUB_TOKEN stays read-only.
+      - name: Create bot token
+        id: bot
+        if: ${{ env.PUSH == 'true' }}
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          app-id: ${{ vars.BOT_ID }}
+          private-key: ${{ secrets.BOT_KEY }}
+          permission-contents: write
+
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          token: ${{ steps.bot.outputs.token || github.token }}
 
       - name: Render README and catalog
         env:
@@ -43,14 +58,18 @@ jobs:
         run: python3 scripts/rotate_readme.py ${DATE:+--date "$DATE"} ${DRY_RUN:+--dry-run}
 
       - name: Commit and push
-        if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.dry_run) }}
+        if: ${{ env.PUSH == 'true' }}
+        env:
+          GH_TOKEN: ${{ steps.bot.outputs.token }}
+          BOT_SLUG: ${{ steps.bot.outputs.app-slug }}
         run: |
           git add profile rotation
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          bot_id=$(gh api "/users/${BOT_SLUG}[bot]" --jq .id)
+          git config user.name "${BOT_SLUG}[bot]"
+          git config user.email "${bot_id}+${BOT_SLUG}[bot]@users.noreply.github.com"
           git commit -m "chore: rotate org profile README ($(date -u +%Y-%m))"
           git push
