@@ -91,24 +91,32 @@ def is_eligible(entry, config):
 def select(period, state, by_name, config):
     """Return this period's featured names, updating state in place.
 
-    A period already in history is reused, swapping out repos that are no longer
-    eligible. A new period takes the next eligible repos from the cursor, wrapping
-    around the order, so a short final batch is topped up from the start.
+    A new period takes the eligible repos in the next `cards_per_month` positions of
+    the order and always advances the cursor by that many, so later batches never
+    shift. Any shortfall, from ineligible repos or a mid-month replacement, is filled
+    from the positions after the window without moving the cursor. Such a repo is
+    featured again in its own slot. A period already in history is reused.
     """
     count = config["cards_per_month"]
     eligible = {name for name, entry in by_name.items() if is_eligible(entry, config)}
     order = state["order"]
     order.extend(sorted(eligible - set(order), key=str.lower))
 
-    chosen = [n for n in state["history"].get(period, []) if n in eligible]
-    start = state["cursor"] % len(order)
+    if period in state["history"]:
+        chosen = [n for n in state["history"][period] if n in eligible]
+    else:
+        start = state["cursor"] % len(order)
+        window = [order[(start + step) % len(order)] for step in range(count)]
+        chosen = list(dict.fromkeys(n for n in window if n in eligible))
+        state["cursor"] = (start + count) % len(order)
+
+    cursor = state["cursor"] % len(order)
     for step in range(len(order)):
         if len(chosen) >= count:
             break
-        index = (start + step) % len(order)
-        if order[index] in eligible and order[index] not in chosen:
-            chosen.append(order[index])
-            state["cursor"] = (index + 1) % len(order)
+        name = order[(cursor + step) % len(order)]
+        if name in eligible and name not in chosen:
+            chosen.append(name)
     state["history"][period] = chosen
     return chosen
 
