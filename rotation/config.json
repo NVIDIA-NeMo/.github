@@ -1,0 +1,16 @@
+{
+  "cards_per_month": 6,
+  "excluded": {
+    ".github": "Org infrastructure",
+    "FW-CI-templates": "Org infrastructure",
+    "agent-hardener": "Excluded by request, 2026-10-29",
+    "DataDesignerPlugins": "Excluded by request, 2026-10-29",
+    "Export-Deploy": "Excluded by request, 2026-10-29",
+    "Evaluator": "Excluded by request, 2026-10-29",
+    "SDG-PGMs": "No pushes since 2026-09-28"
+  },
+  "display_names": {
+    "Automodel": "NeMo AutoModel",
+    "Nemotron": "Nemotron"
+  }
+}
