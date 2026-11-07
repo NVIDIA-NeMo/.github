@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "organization": "NVIDIA-NeMo",
-  "generated_at": "2026-10-30T15:45:41.915283+00:00",
+  "generated_at": "2026-11-07T01:31:30.722820+00:00",
   "source_url": "https://api.github.com/orgs/NVIDIA-NeMo/repos",
   "scope": "All public repositories, including archived repos and repos excluded from promotion.",
   "field_notes": {
     "categories": "Derived only from the five documented nemo category topics. Empty means unclassified.",
     "research_preview": "True means the nemo-research-preview topic is present. Null means unspecified, not stable or production-ready.",
     "homepage_url": "Repository owner supplied homepage; it is not necessarily documentation.",
-    "license": "GitHub-reported license metadata, not a review of repository terms. Null or NOASSERTION means no specific license was identified by GitHub.",
-    "excluded_from_featured": "Promotion exclusion only. Does not remove the repo from this catalog."
+    "license": "GitHub-reported license metadata, not a review of repository terms. Null or NOASSERTION means no specific license was identified by GitHub. A license with source 'manual override' was set from rotation/config.json where GitHub could not match the repo's license file.",
+    "excluded_from_featured": "True if the repo has the nemo-exclude-featured topic or is excluded in rotation/config.json. Promotion exclusion only. Does not remove the repo from this catalog."
   },
   "category_topics": {
     "nemo-data": "NeMo Data",
@@ -34,7 +34,7 @@
       "archived": false,
       "disabled": false,
       "fork": false,
-      "excluded_from_featured": false
+      "excluded_from_featured": true
     },
     {
       "name": "agent-hardener",
@@ -57,7 +57,7 @@
       "archived": false,
       "disabled": false,
       "fork": false,
-      "excluded_from_featured": false
+      "excluded_from_featured": true
     },
     {
       "name": "Anonymizer",
@@ -232,7 +232,7 @@
       "archived": false,
       "disabled": false,
       "fork": false,
-      "excluded_from_featured": false
+      "excluded_from_featured": true
     },
     {
       "name": "DFM",
@@ -255,7 +255,7 @@
       "archived": true,
       "disabled": false,
       "fork": false,
-      "excluded_from_featured": false
+      "excluded_from_featured": true
     },
     {
       "name": "Emerging-Optimizers",
@@ -324,7 +324,7 @@
       "archived": false,
       "disabled": false,
       "fork": false,
-      "excluded_from_featured": false
+      "excluded_from_featured": true
     },
     {
       "name": "Export-Deploy",
@@ -347,7 +347,7 @@
       "archived": false,
       "disabled": false,
       "fork": false,
-      "excluded_from_featured": false
+      "excluded_from_featured": true
     },
     {
       "name": "FW-CI-templates",
@@ -370,7 +370,7 @@
       "archived": false,
       "disabled": false,
       "fork": false,
-      "excluded_from_featured": false
+      "excluded_from_featured": true
     },
     {
       "name": "Guardrails",
@@ -380,11 +380,12 @@
       "readme_api_url": "https://api.github.com/repos/NVIDIA-NeMo/Guardrails/readme",
       "homepage_url": "https://docs.nvidia.com/nemo/guardrails/latest/index.html",
       "license": {
-        "key": "other",
-        "name": "Other",
-        "spdx_id": "NOASSERTION",
-        "url": null,
-        "node_id": "MDc6TGljZW5zZTA="
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "source": "manual override",
+        "note": "LICENSE.md declares Apache-2.0 (SPDX-License-Identifier header and the standard short notice); GitHub reports NOASSERTION because it cannot match the file to a standard license."
       },
       "default_branch": "develop",
       "topics": [
@@ -481,11 +482,12 @@
       "readme_api_url": "https://api.github.com/repos/NVIDIA-NeMo/labs-OO-Agents/readme",
       "homepage_url": null,
       "license": {
-        "key": "other",
-        "name": "Other",
-        "spdx_id": "NOASSERTION",
-        "url": null,
-        "node_id": "MDc6TGljZW5zZTA="
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "source": "manual override",
+        "note": "LICENSE declares Apache-2.0 (full Apache License 2.0 text plus an appended copyright notice); GitHub reports NOASSERTION because it cannot match the file to a standard license."
       },
       "default_branch": "main",
       "topics": [],
@@ -765,7 +767,7 @@
       "archived": false,
       "disabled": false,
       "fork": false,
-      "excluded_from_featured": false
+      "excluded_from_featured": true
     },
     {
       "name": "Skills",

@@ -198,6 +198,20 @@ def main():
         entries = previous["repositories"]
     else:
         entries = [to_entry(r) for r in fetch_repos(os.environ.get("GITHUB_TOKEN"))]
+    for entry in entries:
+        entry["excluded_from_featured"] = EXCLUDE_TOPIC in entry["topics"] or entry["name"] in config["excluded"]
+        override = config.get("license_overrides", {}).get(entry["name"])
+        current = entry["license"]
+        # Only fill gaps: never replace a license GitHub identified.
+        if override and (not current or current["spdx_id"] == "NOASSERTION"):
+            entry["license"] = {
+                "key": override["key"],
+                "name": override["name"],
+                "spdx_id": override["spdx_id"],
+                "url": f"https://api.github.com/licenses/{override['key']}",
+                "source": "manual override",
+                "note": override["note"],
+            }
     by_name = {e["name"]: e for e in entries}
     catalog = build_catalog(entries, previous)
 

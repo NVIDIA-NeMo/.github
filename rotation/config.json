@@ -3,6 +3,7 @@
   "excluded": {
     ".github": "Org infrastructure",
     "FW-CI-templates": "Org infrastructure",
+    "DFM": "Archived",
     "agent-hardener": "Excluded by request, 2026-10-29",
     "DataDesignerPlugins": "Excluded by request, 2026-10-29",
     "Export-Deploy": "Excluded by request, 2026-10-29",
@@ -12,5 +13,19 @@
   "display_names": {
     "Automodel": "NeMo AutoModel",
     "Nemotron": "Nemotron"
+  },
+  "license_overrides": {
+    "Guardrails": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "note": "LICENSE.md declares Apache-2.0 (SPDX-License-Identifier header and the standard short notice); GitHub reports NOASSERTION because it cannot match the file to a standard license."
+    },
+    "labs-OO-Agents": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "note": "LICENSE declares Apache-2.0 (full Apache License 2.0 text plus an appended copyright notice); GitHub reports NOASSERTION because it cannot match the file to a standard license."
+    }
   }
 }
