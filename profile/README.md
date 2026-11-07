@@ -1,3 +1,5 @@
+![NVIDIA NeMo](assets/nemo-header-tm.png)
+
 ### Featured repositories · November 2026
 
 <table>
