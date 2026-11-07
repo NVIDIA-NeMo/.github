@@ -14,9 +14,6 @@ on:
       - "profile/**"
   workflow_dispatch:
     inputs:
-      date:
-        description: "Render as of this date (YYYY-MM-DD). Blank means today."
-        required: false
       dry_run:
         description: "Print the selection without committing"
         type: boolean
@@ -53,9 +50,8 @@ jobs:
       - name: Render README and catalog
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DATE: ${{ inputs.date }}
           DRY_RUN: ${{ env.PUSH != 'true' && '1' || '' }}
-        run: python3 scripts/rotate_readme.py ${DATE:+--date "$DATE"} ${DRY_RUN:+--dry-run}
+        run: python3 scripts/rotate_readme.py ${DRY_RUN:+--dry-run}
 
       - name: Commit and push
         if: ${{ env.PUSH == 'true' }}
