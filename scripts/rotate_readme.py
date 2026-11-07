@@ -101,6 +101,8 @@ def select(period, state, by_name, config):
     eligible = {name for name, entry in by_name.items() if is_eligible(entry, config)}
     order = state["order"]
     order.extend(sorted(eligible - set(order), key=str.lower))
+    if not order:
+        raise ValueError("no eligible repositories to feature")
 
     if period in state["history"]:
         chosen = [n for n in state["history"][period] if n in eligible]
@@ -184,6 +186,10 @@ def main():
     args = parser.parse_args()
     root = args.root
 
+    today = datetime.datetime.now(datetime.timezone.utc).date()
+    if not args.dry_run and (args.date.year, args.date.month) != (today.year, today.month):
+        raise ValueError(f"--date {args.date} is not in the current UTC month; use --dry-run to preview other months")
+
     config = json.loads((root / "rotation/config.json").read_text())
     state = json.loads((root / "rotation/state.json").read_text())
     previous = json.loads((root / "profile/repositories.json").read_text())
@@ -197,6 +203,8 @@ def main():
 
     period = args.date.strftime("%Y-%m")
     names = select(period, state, by_name, config)
+    if not names:
+        raise ValueError("selection is empty; refusing to publish an empty README")
     month_year = args.date.strftime("%B %Y")
     cards = render_cards(names, by_name, config)
     template = (root / "profile/README.template.md").read_text()
