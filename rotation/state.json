@@ -1,0 +1,47 @@
+{
+  "order": [
+    "Curator",
+    "RL",
+    "Automodel",
+    "Megatron-Bridge",
+    "Guardrails",
+    "Gym",
+    "Safe-Synthesizer",
+    "Switchyard",
+    "eval-author",
+    "labs-molt",
+    "Lens",
+    "Nemotron",
+    "labs-Voice-Agent",
+    "nemo-helix",
+    "nemo-compass",
+    "Skills",
+    "UserSim",
+    "DataDesigner",
+    "Anonymizer",
+    "Emerging-Optimizers",
+    "Speech",
+    "Run",
+    "labs-OO-Agents",
+    "ProRL-Agent-Server"
+  ],
+  "cursor": 12,
+  "history": {
+    "2026-10": [
+      "Curator",
+      "RL",
+      "Automodel",
+      "Megatron-Bridge",
+      "Guardrails",
+      "Gym"
+    ],
+    "2026-11": [
+      "Safe-Synthesizer",
+      "Switchyard",
+      "eval-author",
+      "labs-molt",
+      "Lens",
+      "Nemotron"
+    ]
+  }
+}
