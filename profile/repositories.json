@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "organization": "NVIDIA-NeMo",
-  "generated_at": "2026-11-16T14:20:14.653431+00:00",
+  "generated_at": "2026-11-23T14:09:03.018781+00:00",
   "source_url": "https://api.github.com/orgs/NVIDIA-NeMo/repos",
   "scope": "All public repositories, including archived repos and repos excluded from promotion.",
   "field_notes": {
@@ -344,7 +344,7 @@
       "topics": [],
       "categories": [],
       "research_preview": null,
-      "archived": false,
+      "archived": true,
       "disabled": false,
       "fork": false,
       "excluded_from_featured": true
@@ -375,7 +375,7 @@
     {
       "name": "Guardrails",
       "full_name": "NVIDIA-NeMo/Guardrails",
-      "description": "NeMo Guardrails is an open-source toolkit for easily adding programmable guardrails to LLM-based conversational systems.",
+      "description": "NeMo Guardrails is an open-source library for applying programmable safety and security controls to LLM and agentic applications.",
       "repository_url": "https://github.com/NVIDIA-NeMo/Guardrails",
       "readme_api_url": "https://api.github.com/repos/NVIDIA-NeMo/Guardrails/readme",
       "homepage_url": "https://docs.nvidia.com/nemo/guardrails/latest/index.html",
